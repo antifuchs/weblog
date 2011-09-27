@@ -1,0 +1,18 @@
+--- 
+layout: post
+title: aliens are taking over SB-GROVEL!
+mt_id: 1
+date: 2004-05-16 12:44:12 -07:00
+---
+<p>I spent the last few months of my spare time hacking on <a href="http://boinkor.net/SB-GROVEL.html">SB-GROVEL</a>,
+trying to port its structure types from the C-like simplicity (and
+simple-mindedness that comes with non-typechecked data) to
+SB-ALIEN. There are a few memory leaks in other contribs, now. (The
+previous SB-GROVEL used lisp objects that are garbage collected, the
+new one doesn&#8217;t. Choose your poison!)</p>
+
+<p>I think it was worth the effort. Foreign Function definitions can now
+use the neat alien types, and don&#8217;t have to rely on (* t) types where
+they&#8217;d expect a structure. And application programmers now get usable
+alien objects back, without having to frob them through
+SB-INT::FOREIGN-ARRAY or whatever. Yay!</p> 

@@ -1,0 +1,25 @@
+--- 
+layout: post
+title: Security considerations when using Lisp features
+mt_id: 14
+date: 2004-11-24 13:06:22 -08:00
+categories: Lisp
+---
+<p>Today, <a href="http://www.b9.com">Kevin Rosenberg</a> asked on IRC how to prevent code insertion when
+<a href="http://www.lispworks.com/reference/HyperSpec/Body/f_rd_rd.htm"><code>READ</code></a>ing data from a string. A solution to that problem is binding
+<a href="http://www.lispworks.com/reference/HyperSpec/Body/v_rd_eva.htm"><code>*READ-EVAL*</code></a> to NIL in code using READ.</p>
+
+<p>Now, that got me wondering: which other security pitfalls are there in
+lisp? These are the other READ-related ones that came up in the
+<a href="http://meme.b9.com/cview.html?channel=lisp&amp;utime=3310324468#utime_requested">discussion</a> that followed:</p>
+
+<ul>
+<li><p><code>READ</code> can intern symbols in packages other than the one you want it
+to (could lead to bugs further down in the application)</p></li>
+<li><p><code>READ</code> (again) can produce self-referential objects (via <a href="http://www.lispworks.com/reference/HyperSpec/Body/02_dho.htm"><code>#n=</code></a>) that can make your application go into endless loops/recursion</p></li>
+<li><p>And of course, <a href="http://www.lispworks.com/reference/HyperSpec/Body/f_eval.htm"><code>EVAL</code></a>ing code that you get from the outside world is always a bad idea. As is writing it to a file and using <a href="http://www.lispworks.com/reference/HyperSpec/Body/f_cmp.htm"><code>COMPILE</code></a>/<a href="http://www.lispworks.com/reference/HyperSpec/Body/f_load.htm">LOAD</a>.</p></li>
+</ul>
+
+<p>So, any others? I&#8217;m sure there are. Having them collected in a central
+place would be a really good thing. Improved awareness of security
+problems might help prevent stuff like <a href="http://archives.neohapsis.com/archives/snort/2000-11/0146.html">this bug in an intrusion detection system that did not set <code>*READ-EVAL*</code></a>.</p> 

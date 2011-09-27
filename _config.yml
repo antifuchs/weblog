@@ -2,17 +2,17 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://boinkor.net
+title: Andreas Fuchs' Journal
+subtitle: I hack on things for people.
+author: Andreas Fuchs
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: asf@boinkor.net
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -20,12 +20,12 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:day/:title/
+permalink: /archives/:year/:month/:title.html
 source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-category_dir: blog/categories
+category_dir: archives/
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
@@ -41,21 +41,21 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 # blog_index_asides:
-# post_asides:
-# page_asides:
+post_asides: []
+page_asides: []
 
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
 
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: antifuchs
+github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: antifuchs
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -63,20 +63,20 @@ twitter_show_follower_count: false
 twitter_tweet_button: true
 
 # Google Plus
-google_plus_one: true
+google_plus_one: false
 google_plus_one_size: medium
 
 # Pinboard
-pinboard_user:
-pinboard_count: 3
+pinboard_user: antifuchs
+pinboard_count: 0
 
 # Delicious
-delicious_user:
-delicious_count: 3
+delicious_user: 
+delicious_count: 0
 
 # Disqus Comments
 disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-20002026-1
