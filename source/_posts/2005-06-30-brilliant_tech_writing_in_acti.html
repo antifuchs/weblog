@@ -1,0 +1,35 @@
+--- 
+layout: post
+title: Brilliant tech writing in action
+mt_id: 27
+date: 2005-06-30 09:11:00 -07:00
+---
+<p>Yesterday, I needed to reverse the characters of a file on my linux box. That is, print the last character in the file first, then the second-to-last, and so on. Luckily, there are two programs to do this: rev and tac. They do slightly different things, and I never can remember which of these does what, so I tried looking at the whatis(1) output for <a href="http://www.rt.com/man/rev.1.html">rev(1)</a>.</p>
+
+<pre><code>    $ whatis rev
+    rev (1)              - reverse lines of a file
+    $
+</code></pre>
+
+<p>We are left to guess what this description really means. Either:</p>
+
+<ul>
+<li>Reverse the order of lines of a file</li>
+<li>Reverse the order of characters within each line of a file.</li>
+</ul>
+
+<p>Um. My guess at the time was the first option. Let&#8217;s see what <a href="http://www.rt.com/man/tac.1.html">tac(1)</a> does, then!</p>
+
+<pre><code>    $ whatis tac
+    tac (1)              - concatenate and print files in reverse
+    $
+</code></pre>
+
+<p>Hey, I can write a descripiton that&#8217;s worse than this!</p>
+
+<pre><code>    $ phantasy-whatis tac
+    tac (1)              - reverse lines of a file
+    $
+</code></pre>
+
+<p>Turns out that the solution to my problem was <tt>tac | rev</tt>. Try and figure out which does what. Hint: the actual DESCRIPTION section in each man page really explains what the command does.</p> 

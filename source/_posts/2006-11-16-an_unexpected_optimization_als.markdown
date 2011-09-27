@@ -17,33 +17,35 @@ So, this is how you use it:
 0. Install mel-base.
 1. Create a file passwords.lisp in the same directory as message-archiver.lisp, with contents like these:
 
-            (setf *me* "username")
-            (setf *my-pass* "password")
-            (setf *my-host* "imap-server")
+``` cl
+(setf *me* "username")
+(setf *my-pass* "password")
+(setf *my-host* "imap-server")
+```
 2. load message-archiver.lisp.
 3. run `(imap-archiver:archive-messages "lisp.phemlock")` ; and it will move all mails in the mailbox "mail.lisp.phemlock" to the mailbox "archive.&lt;year&gt;.lisp.phemlock", with &lt;year&gt; being the year in the message's Date: header field.
 
 But wait! This is very slow on current versions of mel-base (0.7-2)! Why? The code that copies a message from one folder to another works the same for all folder types: it reads the entire message from the server and sends it back again. As a side effect, this removes all marks. Ow. But we're lucky that Jochen Schmidt is a good hacker and designed mel such that this is easily fixed.
 
 Like everything else in mel-base, operations on a folder have their own protocol, and copying messages from a folder to another has its own generic function, copy-message-using-folders:
-
-        (defgeneric COPY-MESSAGE-USING-FOLDERS (message message-folder sink-folder))
-
+```cl
+(defgeneric COPY-MESSAGE-USING-FOLDERS (message message-folder sink-folder))
+```
 As it is, we can easily make a method that specializes on the case where we copy a message from an imap folder to another imap folder. We only need to check that they're on the same server (for that, I assume they're the same if the server name, port, user name and password are the same), and issue the correct UID COPY command to the imap server, and we're good to go:
-
-        (in-package :mel.folders.imap)
-        (defmethod copy-message-using-folders :around ((message message) (message-folder imap-folder) (sink-folder imap-folder))
-          "Copy a message between two imap folders. We can optimize this case if the folders are on the same server."
-          (if (and (equal (host message-folder) (host sink-folder))
-                   (equal (username message-folder) (username sink-folder))
-                   (equal (password message-folder) (password sink-folder))
-                   (equal (imap-port message-folder) (imap-port sink-folder)))
-              (progn
-                (send-command message-folder "~A uid copy ~A ~A" "UID" (uid message) (mailbox sink-folder))
-                (process-response message-folder :on-uid (lambda (m) m)))
-              ;; if we're not using the same server, play it safe
-              (call-next-method)))
-
+``` cl
+(in-package :mel.folders.imap)
+(defmethod copy-message-using-folders :around ((message message) (message-folder imap-folder) (sink-folder imap-folder))
+  "Copy a message between two imap folders. We can optimize this case if the folders are on the same server."
+  (if (and (equal (host message-folder) (host sink-folder))
+           (equal (username message-folder) (username sink-folder))
+           (equal (password message-folder) (password sink-folder))
+           (equal (imap-port message-folder) (imap-port sink-folder)))
+      (progn
+        (send-command message-folder "~A uid copy ~A ~A" "UID" (uid message) (mailbox sink-folder))
+        (process-response message-folder :on-uid (lambda (m) m)))
+      ;; if we're not using the same server, play it safe
+      (call-next-method)))
+```
 Evaluate this, and suddenly everything is 10 times as fast, and marks are preserved after moving the message.
 
 The lesson for today: Good libraries provide functionality that works well enough for the typical use case. Great libraries let you extend them to support your own use cases. 
