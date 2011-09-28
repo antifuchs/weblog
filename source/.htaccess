@@ -1,11 +1,18 @@
+### Spelling errors in blog posts (heh)
+
+RedirectPermanent /archives/2011/09/basic-lisp-technique-for-sale-on-amazon.html http://boinkor.net/archives/2011/09/basic-lisp-techniques-for-sale-on-amazon.html
+
+
 ### Redirects for stuff (crawl errors, etc):
 
 # TODO: come up with a useful page for this:
 RedirectPermanent /ns/clhs-semantics/ http://boinkor.net/archives/2010/09/visualizing_the_clhs_interlink.html
 
-RedirectPermanent /weblog http://boinkor.net/
+# Moved to github:
+RedirectPermanent /qs/QSSSHPlugin https://github.com/antifuchs/QSSSHPlugin
+RedirectPermanent /qs/QSSSHPlugin.git git://github.com/antifuchs/QSSSHPlugin.git
 
-RedirectPermanent /archives/2011/09/basic-lisp-technique-for-sale-on-amazon.html http://boinkor.net/archives/2011/09/basic-lisp-techniques-for-sale-on-amazon.html
+RedirectPermanent /weblog http://boinkor.net/
 
 
 ### Files that are gone permanently
@@ -16,29 +23,10 @@ Redirect gone /lisp/eclm2005
 
 # Files that moved to static.boinkor.net:
 
+RedirectPermanent /qs http://static.boinkor.net/qs
 RedirectPermanent /qs/SSH%20Plugin.debug.dmg http://static.boinkor.net/qs/SSH%20Plugin.debug.dmg
 RedirectPermanent /qs/SSH%20Plugin.dmg http://static.boinkor.net/qs/SSH%20Plugin.dmg
-RedirectPermanent /qs/QSSSHPlugin http://static.boinkor.net/qs/QSSSHPlugin
-RedirectPermanent /qs/QSSSHPlugin/ReadMe.txt http://static.boinkor.net/qs/QSSSHPlugin/ReadMe.txt
-RedirectPermanent /qs/QSSSHPlugin/.git http://static.boinkor.net/qs/QSSSHPlugin/.git
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin_Prefix.pch http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin_Prefix.pch
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.xcodeproj http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.xcodeproj
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/alcor.mode1 http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/alcor.mode1
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/alcor.pbxuser http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/alcor.pbxuser
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/asf.mode1 http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/asf.mode1
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/project.pbxproj http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/project.pbxproj
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/asf.pbxuser http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.xcodeproj/asf.pbxuser
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPluginSource.h http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPluginSource.h
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPluginSource.m http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPluginSource.m
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPluginAction.h http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPluginAction.h
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPluginAction.m http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPluginAction.m
-RedirectPermanent /qs/QSSSHPlugin/bltrversion http://static.boinkor.net/qs/QSSSHPlugin/bltrversion
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.h http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.h
-RedirectPermanent /qs/QSSSHPlugin/QSSSHPlugin.m http://static.boinkor.net/qs/QSSSHPlugin/QSSSHPlugin.m
-RedirectPermanent /qs/QSSSHPlugin/COPYING http://static.boinkor.net/qs/QSSSHPlugin/COPYING
-RedirectPermanent /qs/QSSSHPlugin/Info.plist http://static.boinkor.net/qs/QSSSHPlugin/Info.plist
 RedirectPermanent /qs/QSSSHPlugin.tar.gz http://static.boinkor.net/qs/QSSSHPlugin.tar.gz
-RedirectPermanent /qs/QSSSHPlugin.git http://static.boinkor.net/qs/QSSSHPlugin.git
 RedirectPermanent /uni http://static.boinkor.net/uni
 RedirectPermanent /code http://static.boinkor.net/code
 RedirectPermanent /code/lisp http://static.boinkor.net/code/lisp
