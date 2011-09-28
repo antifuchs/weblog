@@ -1,3 +1,20 @@
+### Redirects for stuff (crawl errors, etc):
+
+# TODO: come up with a useful page for this:
+RedirectPermanent /ns/clhs-semantics/ /archives/2010/09/visualizing_the_clhs_interlink.html
+
+RedirectPermanent /weblog /
+
+
+### Files that are gone permanently
+
+Redirect gone /pix
+Redirect gone /lisp/eclm2005
+Redirect gone /archives
+
+
+# Files that moved to static.boinkor.net:
+
 RedirectPermanent /qs/SSH%20Plugin.debug.dmg http://static.boinkor.net/qs/SSH%20Plugin.debug.dmg
 RedirectPermanent /qs/SSH%20Plugin.dmg http://static.boinkor.net/qs/SSH%20Plugin.dmg
 RedirectPermanent /qs/QSSSHPlugin http://static.boinkor.net/qs/QSSSHPlugin
@@ -161,6 +178,7 @@ RedirectPermanent /lisp/clim-lastfm-0.0.tar.gz http://static.boinkor.net/lisp/cl
 RedirectPermanent /lisp/clx-darcs-2005-07-14.tar.gz http://static.boinkor.net/lisp/clx-darcs-2005-07-14.tar.gz
 RedirectPermanent /lisp/beirc-snapshot-0.0.2.tar.bz2 http://static.boinkor.net/lisp/beirc-snapshot-0.0.2.tar.bz2
 RedirectPermanent /lisp/message-archiver.lisp http://static.boinkor.net/lisp/message-archiver.lisp
+RedirectPermanent /lisp/rt-clim http://static.boinkor.net/lisp/rt-clim.lisp
 RedirectPermanent /lisp/rt-clim.lisp http://static.boinkor.net/lisp/rt-clim.lisp
 RedirectPermanent /lisp/xmlisp_asd.patch http://static.boinkor.net/lisp/xmlisp_asd.patch
 RedirectPermanent /lisp/wb1.lisp http://static.boinkor.net/lisp/wb1.lisp
@@ -1036,3 +1054,4 @@ RedirectPermanent /jquery.piemenu/index.html http://static.boinkor.net/jquery.pi
 RedirectPermanent /openvpn http://static.boinkor.net/openvpn
 RedirectPermanent /openvpn/viscosity-it9.png http://static.boinkor.net/openvpn/viscosity-it9.png
 RedirectPermanent /openvpn/vpn.boinkor.net.conf http://static.boinkor.net/openvpn/vpn.boinkor.net.conf
+
