@@ -16,9 +16,13 @@ To learn what I'm up to as it happens, read my [weblog](http://boinkor.net). Her
 
 ##asf on the web
 
-* I [Tweet](http://twitter.com/antifuchs).
-* I keep bookmarks in [pinboard.in](http://pinboard.in): [antifuchs' pinboard.in bookmarks](http://pinboard.in/u:antifuchs)
-* I have a [last.fm](http://last.fm) profile: [antifuchs at last.fm](http://www.last.fm/user/antifuchs/)
+* I tweet as [@antifuchs](http://twitter.com/antifuchs). An @ reply is
+  the preferred method for commenting on this site.
+* My public projects are on [my github account](https://github.com/antifuchs).
+* I keep bookmarks in [pinboard.in](http://pinboard.in):
+  [antifuchs' pinboard.in bookmarks](http://pinboard.in/u:antifuchs)
+* I have a [last.fm](http://last.fm) profile:
+  [antifuchs at last.fm](http://www.last.fm/user/antifuchs/)
 * Find out [What google knows about me](http://www.google.at/search?q=antifuchs)
 
 This site was generated with [Octopress](http://octopress.org/).
