@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "A Weird Problem With ASDF on NFS (and a workaround)"
-date: 2011-10-05 22:05
+date: 2011-10-06 22:37
 comments: true
-categories: lisp
+categories: Lisp
 ---
 
 Recently, we at Franz have been seeing weird failures when building a
