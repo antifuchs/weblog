@@ -1,2 +1,24 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+// Reduce widths of blocks (from
+// http://citizen428.net/blog/2011/10/10/octopress-customizations/)
+
+body {
+  max-width: 1100px;
+}
+time {
+  font-size: 14px;
+}
+h1 {
+  font-size: 2.2em;
+}
+section {
+  > h1 {
+    font-size: 1.5em;
+  }
+}
+codeblock {
+    font-size: 1.1em;
+}
+
