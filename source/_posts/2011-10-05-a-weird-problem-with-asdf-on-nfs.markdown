@@ -2,6 +2,7 @@
 layout: post
 title: "A Weird Problem With ASDF on NFS (and a workaround)"
 date: 2011-10-06 22:37
+updated: 2011-10-11
 comments: true
 categories: Lisp
 ---
@@ -14,6 +15,11 @@ more often when we compiled during certain timeslots.
 This was a weird one, and I think it would be nice to record what this
 is, and how we figured out what's going on (and how we arrived at our
 work-around).
+
+**Update 2011-10-11**: Faré
+[informs](http://lists.common-lisp.net/pipermail/asdf-devel/2011-October/002196.html)
+me that this problem is fixed (all the way, no need for a workaround)
+in ASDF 2.017.9!
 
 ## The Symptom
 
