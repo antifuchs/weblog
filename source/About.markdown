@@ -8,7 +8,7 @@ footer: true
 ---
 ##Some Trivia
 
-Born in 1982, connected to the TCP/IP network since 1996. Also known as [asf@boinkor.net](mailto:asf@boinkor.net) or antifuchs on IRC. Beware: I am using [Reverse Smileys (aka left-handed smileys)](/reverse_smileys.html).
+Born in 1982, connected to the global TCP/IP network since 1996. Also known as [asf@boinkor.net](mailto:asf@boinkor.net) (GPG key ID [7D14ADF4F332BDEA](http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x7D14ADF4F332BDEA)) or antifuchs on IRC. Beware: I use [Reverse Smileys (aka left-handed smileys)](/reverse_smileys.html).
 
 ##What is Andreas Fuchs doing right now?
 
@@ -27,4 +27,4 @@ To learn what I'm up to as it happens, read my [weblog](http://boinkor.net). Her
 
 This site was generated with [Octopress](http://octopress.org/).
 
-If you want to know more, just ask me at [asf@boinkor.net](mailto:asf@boinkor.net). 
+If you want to know more, just ask me at [asf@boinkor.net](mailto:asf@boinkor.net).
