@@ -1,17 +1,11 @@
 // JSON-P Twitter fetcher for Octopress
-// (c) Brandon Mathis // MIT Lisence
-
-// jXHR.js (JSON-P XHR) | v0.1 (c) Kyle Simpson | MIT License | http://mulletxhr.com/
-// uncompressed version available in source/javascripts/libs/jXHR.js
-(function(c){var b=c.setTimeout,d=c.document,a=0;c.jXHR=function(){var e,g,n,h,m=null;function l(){try{h.parentNode.removeChild(h)}catch(o){}}function k(){g=false;e="";l();h=null;i(0)}function f(p){try{m.onerror.call(m,p,e)}catch(o){throw new Error(p)}}function j(){if((this.readyState&&this.readyState!=="complete"&&this.readyState!=="loaded")||g){return}this.onload=this.onreadystatechange=null;g=true;if(m.readyState!==4){f("Script failed to load ["+e+"].")}l()}function i(o,p){p=p||[];m.readyState=o;if(typeof m.onreadystatechange==="function"){m.onreadystatechange.apply(m,p)}}m={onerror:null,onreadystatechange:null,readyState:0,open:function(p,o){k();internal_callback="cb"+(a++);(function(q){c.jXHR[q]=function(){try{i.call(m,4,arguments)}catch(r){m.readyState=-1;f("Script failed to run ["+e+"].")}c.jXHR[q]=null}})(internal_callback);e=o.replace(/=\?/,"=jXHR."+internal_callback);i(1)},send:function(){b(function(){h=d.createElement("script");h.setAttribute("type","text/javascript");h.onload=h.onreadystatechange=function(){j.call(h)};h.setAttribute("src",e);d.getElementsByTagName("head")[0].appendChild(h)},0);i(2)},setRequestHeader:function(){},getResponseHeader:function(){return""},getAllResponseHeaders:function(){return[]}};k();return m}})(window);
-
+// (c) Brandon Mathis // MIT License
 
 /* Sky Slavin, Ludopoli. MIT license.  * based on JavaScript Pretty Date * Copyright (c) 2008 John Resig (jquery.com) * Licensed under the MIT license.  */
 function prettyDate(time) {
   if (navigator.appName === 'Microsoft Internet Explorer') {
     return "<span>&infin;</span>"; // because IE date parsing isn't fun.
   }
-
   var say = {
     just_now:    " now",
     minute_ago:  "1m",
@@ -20,6 +14,7 @@ function prettyDate(time) {
     hours_ago:   "h",
     yesterday:   "1d",
     days_ago:    "d",
+    last_week:   "1w",
     weeks_ago:   "w"
   };
 
@@ -40,16 +35,26 @@ function prettyDate(time) {
     diff < 86400 && Math.floor(diff / 3600) + say.hours_ago) ||
     day_diff === 1 && say.yesterday ||
     day_diff < 7 && day_diff + say.days_ago ||
+    day_diff === 7 && say.last_week ||
     day_diff > 7 && Math.ceil(day_diff / 7) + say.weeks_ago;
 }
 
 function linkifyTweet(text, url) {
-  for (var u in url) {
-    var shortUrl = new RegExp(url[u].url, 'g');
-    text = text.replace(shortUrl, '<a href="' + url[u].expanded_url + '">' + url[u].expanded_url.replace(/https?:\/\//, '') + '</a>');
-  }
-  return text.replace(/(^|\W)@(\w+)/g, '$1<a href="http://twitter.com/$2">@$2</a>')
+  // Linkify urls, usernames, hashtags
+  text = text.replace(/(https?:\/\/)([\w\-:;?&=+.%#\/]+)/gi, '<a href="$1$2">$2</a>')
+    .replace(/(^|\W)@(\w+)/g, '$1<a href="http://twitter.com/$2">@$2</a>')
     .replace(/(^|\W)#(\w+)/g, '$1<a href="http://search.twitter.com/search?q=%23$2">#$2</a>');
+
+  // Use twitter's api to replace t.co shortened urls with expanded ones.
+  for (var u in url) {
+    if(url[u].expanded_url != null){
+      var shortUrl = new RegExp(url[u].url, 'g');
+      text = text.replace(shortUrl, url[u].expanded_url);
+      var shortUrl = new RegExp(">"+(url[u].url.replace(/https?:\/\//, '')), 'g');
+      text = text.replace(shortUrl, ">"+url[u].display_url);
+    }
+  }
+  return text
 }
 
 function showTwitterFeed(tweets, twitter_user) {
@@ -63,15 +68,11 @@ function showTwitterFeed(tweets, twitter_user) {
 }
 
 function getTwitterFeed(user, count, replies) {
-  var feed = new jXHR();
-  feed.onerror = function (msg,url) {
-    $('#tweets li.loading').addClass('error').text("Twitter's busted");
-  };
-  feed.onreadystatechange = function(data){
-    if (feed.readyState === 4) { showTwitterFeed(data, user); }
-  };
-
-  // Documentation: https://dev.twitter.com/docs/api/1/get/statuses/user_timeline
-  feed.open("GET","http://api.twitter.com/1/statuses/user_timeline/" + user + ".json?trim_user=true&count=" + (parseInt(count, 10)) + "&include_entities=1&exclude_replies=" + (replies ? "0" : "1") + "&callback=?");
-  feed.send();
+  count = parseInt(count, 10);
+  $.ajax({
+      url: "http://api.twitter.com/1/statuses/user_timeline/" + user + ".json?trim_user=true&count=" + (count + 20) + "&include_entities=1&exclude_replies=" + (replies ? "0" : "1") + "&callback=?"
+    , type: 'jsonp'
+    , error: function (err) { $('#tweets li.loading').addClass('error').text("Twitter's busted"); }
+    , success: function(data) { showTwitterFeed(data.slice(0, count), user); }
+  })
 }
