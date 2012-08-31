@@ -3,7 +3,7 @@ layout: post
 title: "git.boinkor.net outage"
 date: 2012-08-24 19:07
 comments: true
-categories: lisp
+categories: Lisp
 ---
 I'm currently moving some of boinkor.net's services off the creaky old
 machine that used to host it, over to another machine. This affects
