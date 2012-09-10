@@ -4,7 +4,7 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "asf@care"
+ssh_user       = "asf@boots.boinkor.net"
 ssh_port       = "22"
 document_root  = "~/www/boinkor.net/"
 rsync_delete   = true
