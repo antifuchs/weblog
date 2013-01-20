@@ -47,7 +47,7 @@ this:</p>
 <li>Then, check out a revision into the directory "sbcl--main" (you can change the destination directory, of course). I'll assume that you want to get the latest revision in the 0.9 (current) branch:
 <pre class="example">baz get sbcl@boinkor.net--2005/sbcl--main--0.9 sbcl--main
 </pre></li>
-</ol><p></p>
+</ol>
 
 <p>For further information about arch, see <a href="http://wiki.gnuarch.org/moin.cgi/Learning_20Arch_20commands_20for_20CVS_20users">the Arch introduction for CVS</a> users and <a href="http://regexps.srparish.net/tutorial-tla/arch.html">the Arch tutorial</a>.</p>
 

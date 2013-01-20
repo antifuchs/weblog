@@ -43,27 +43,27 @@ it failed consistently until it was time to go home. Huh.
 
 Not everyone might be familiar with how ASDF works (if you are, feel
 free to skip to the next section, or stay and nitpick (-:), so here's
-a small primer on what happens when you type `(asdf:load-system
-:some-system)`. Here's a little walkthrough:
+a small primer on what happens when you type `(asdf:load-system :some-system)`.
+Here's a little walkthrough:
 
 1. ASDF runs the generic function `traverse` with the system and the
    operation as parameters.
-   
+
 2. `traverse` walks the dependencies of the system and the contents of
    the system itself, and determines which operations are not yet
    done.
-   
+
    For a `load-op` on a CL source file, `traverse` will try to
    generate a `load-op` for the input-file of that load-op (the .fasl
    file), check if that .fasl file exists, and if it doesn't, then it
    will also generate a `compile-op` for the corresponding .lisp file.
-  
+
 3. As a result, `traverse` returns a list of operations that must be
    performed on each component (or module, or system). For a clean
    source tree, that list looks something like:
-       ((compile-op . source-1) (load-op . source-1) 
+       ((compile-op . source-1) (load-op . source-1)
         (compile-op . source-2) (load-op . source-2) ...)
-   
+
 4. `operate` takes that list and just performes each operation on its
    component in order.
 
@@ -147,19 +147,19 @@ int main(int argc, char **argv) {
   int fd;
   struct timeval tv1, tv2;
   struct stat sb1, sb2;
-  
+
   char buf[1024];
 
   while (1) {
     gettimeofday(&tv1, NULL);
     printf("%u.%u\n", tv1.tv_sec, tv1.tv_usec);
-    
+
     fd=open(argv[1], O_WRONLY|O_CREAT|O_TRUNC, 0660);
-    
+
     write(fd, buf, sizeof(buf));
     write(fd, buf, sizeof(buf));
     write(fd, buf, sizeof(buf));
-    
+
     gettimeofday(&tv1, NULL);
     stat(argv[1], &sb1);
     close(fd);

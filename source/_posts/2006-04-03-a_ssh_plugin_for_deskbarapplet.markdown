@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: A ssh plugin for deskbar-applet
 mt_id: 44
@@ -10,6 +10,6 @@ I've started using [Ubuntu](http://www.ubuntu.com/) GNU/Linux on my laptop, and 
 
 Well, not anymore. Download [the deskbar plugin ssh.py](http://boinkor.net/misc/deskbar/ssh.py) into your ~/.gnome2/deskbar-applet/handlers/ directory, put the [ssh-to](http://boinkor.net/misc/deskbar/ssh-to) script into a directory on your PATH, select the "ssh" plugin in the deskbar preferences, and you're ready to go.
 
-The plugin searches through non-encrypted entries in your ~/.ssh/known_hosts and Host entries in ~/.ssh/config. To open a SSH connection to a host, activate deskbar, type in a host name (ssh://hostname is also accepted) and select the "SSH to [hostname]" option. A new terminal window that contains your ssh connection should pop up.
+The plugin searches through non-encrypted entries in your ~/.ssh/known_hosts and Host entries in ~/.ssh/config. To open a SSH connection to a host, activate deskbar, type in a host name (`ssh://hostname` is also accepted) and select the "SSH to (hostname)" option. A new terminal window that contains your ssh connection should pop up.
 
-Hint for ex-ion users like me: I made the SSH the highest-priority plugin and set the deskbar activation key to F4, so I have to type just F4, the hostname, and return. (-: 
+Hint for ex-ion users like me: I made the SSH the highest-priority plugin and set the deskbar activation key to F4, so I have to type just F4, the hostname, and return. (-:

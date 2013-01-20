@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Broadcatching, iTunes, a "mini" Apple TV
 mt_id: 91
@@ -15,4 +15,4 @@ One thing that I find very useful is the ability to import movie files (that one
 
 The files thus imported will pop up in the nicely remote-controllable interface, marked as "unwatched," and wait for me to finally get some spare time to sit down and watch them. (Which might very well be after the [WGA strike](http://en.wikipedia.org/wiki/2007_Writers_Guild_of_America_strike) ends, so it all should work out nicely in the end.)
 
-If you find yourself wishing for a similar solution, download [this file](http://boinkor.net/mac/Save as TV show.scpt), read the comments in the beginning, skip over the MIT-style licence, and read the code until you are convinced I'm not doing anything stupid or malicious. Then, have fun using it!
+If you find yourself wishing for a similar solution, download [this file](http://boinkor.net/mac/Save%20as%20TV%20show.scpt), read the comments in the beginning, skip over the MIT-style licence, and read the code until you are convinced I'm not doing anything stupid or malicious. Then, have fun using it!

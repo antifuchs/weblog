@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: "Hacking Objective C for fun and profit: An SSH plugin for Quicksilver"
 mt_id: 51
@@ -10,6 +10,6 @@ Of course, it's possible to make a safari/mozilla/omniweb bookmark of the form `
 
 Quicksilver is pretty badly documented, but the kind people on [#quicksilver](irc://irc.freenode.net/#quicksilver) were very helpful -- thanks, ytrewq2! -- and so I managed to create a working plugin.
 
-Here's a pretest version that reads in known_hosts (user and system-wide) and the ssh client config and makes them available as ssh URLs. I have some bigger plans with that, but for now this works well enough for me: [**updated** DMG](http://boinkor.net/qs/SSH Plugin.dmg) ([see](http://boinkor.net/archives/2006/11/more_quicksilverification.html)), [source (MIT licenced)](http://boinkor.net/qs/QSSSHPlugin.tar.gz), [git repository](http://boinkor.net/qs/QSSSHPlugin.git/)
+Here's a pretest version that reads in known_hosts (user and system-wide) and the ssh client config and makes them available as ssh URLs. I have some bigger plans with that, but for now this works well enough for me: [**updated** DMG](http://boinkor.net/qs/SSH%20Plugin.dmg) ([see](http://boinkor.net/archives/2006/11/more_quicksilverification.html)), [source (MIT licenced)](http://boinkor.net/qs/QSSSHPlugin.tar.gz), [git repository](http://boinkor.net/qs/QSSSHPlugin.git/)
 
-Incidentally, this was my first contact with Objective C. It feels like a nice language, and the development environment ([Xcode](http://developer.apple.com/tools/xcode/)) is pretty awesome. There's very high-quality documentation for everything included -- except Quicksilver internals, of course. (-: 
+Incidentally, this was my first contact with Objective C. It feels like a nice language, and the development environment ([Xcode](http://developer.apple.com/tools/xcode/)) is pretty awesome. There's very high-quality documentation for everything included -- except Quicksilver internals, of course. (-:

@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Starting daemonized lisp images in debian
 mt_id: 40
@@ -39,7 +39,7 @@ this:
 
 	# The user to whom to switch before running the lisp image
 	RUN_AS="asf"
-	
+
 	# these paths must be absolute:
 	# Base directory; we chdir to it before running the lisp
 	ABROOT="/home/asf/dl/svn/chavatar"
@@ -47,10 +47,10 @@ this:
 	VARROOT=$ABROOT/+var
 	# Directory where detachtty dribble output goes
 	LOGROOT=$ABROOT/+log
-	
+
 	# The command that we use to run the lisp.
 	LISP_LOAD="/home/asf/bin/sbcl --noinform --userinit $ABROOT/+web-userinit.lisp"
-	
+
 	# The port where we start swank on demand.
 	SWANKPORT=4008
 
@@ -63,7 +63,7 @@ To attach to the lisp, run `/etc/init.d/lisp-images attach image-name`.
 
 Init.d operation is easy, too: /etc/init.d/lisp-images operates on all
 lisp images, if no images are given on the command line. This means
-that you can create symlinks in /etc/rc*.d/ and the images will be
+that you can create symlinks in `/etc/rc*.d/` and the images will be
 automatically started on startup and stopped on shutdown.
 
 If you want more information on how to use this setup, once it's
@@ -75,4 +75,4 @@ patch and the original ucwctl, from which most of
 start-stop-lisp-image's meat is copied; and to Helmut Eller, not only
 for the awesome SLIME, but also for figuring out that sbcl in
 detachtty has no `*debug-io*`, which prevented the scripts' swank functionality
-from working. 
+from working.
