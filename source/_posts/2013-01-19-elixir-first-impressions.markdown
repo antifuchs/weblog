@@ -134,11 +134,4 @@ is really pretty cool, and I wish more emacs modes used it (-:
 That's all so far. I urge you to check out Elixir, and hope you have
 as much fun with it as I do!
 
-[^1]: Why write a new tool over using
-[offlineimap](http://offlineimap.org/)? Offlineimap is a huge pain -
-when used with gmail, it'll sometimes run into UIDVALIDITY mismatches
-(which require a re-download of potentially huge mailboxes, which run
-for days), it's slow, and its thread-based design is so horrible that
-it manages to mess up its own UI even when using a single worker
-thread, and then it can't even exit cleanly on anything other than a
-SIGKILL. Arrrrgh.
+[^1]: Why write a new tool over using [offlineimap](http://offlineimap.org/)? Offlineimap is a huge pain - when used with gmail, it'll sometimes run into UIDVALIDITY mismatches (which require a re-download of potentially huge mailboxes, which run for days), it's slow, and its thread-based design is so horrible that it manages to mess up its own UI even when using a single worker thread, and then it can't even exit cleanly on anything other than a SIGKILL. Arrrrgh.
