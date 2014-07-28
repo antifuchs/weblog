@@ -12,3 +12,6 @@ source/stylesheets/screen.css
 vendor
 _import
 node_modules
+
+# This file contains my access keys, don't accidentally commit this:
+/.envrc
