@@ -24,7 +24,7 @@ Here's a little benchmark thing (as noted in the article, "a?<sup>n</sup>a<sup>n
 
 which gives me (on an intel iMac):
 
-```
+``` repl
 CL-USER> (match-n 100)
 Evaluation took:
   0.008 seconds of real time
