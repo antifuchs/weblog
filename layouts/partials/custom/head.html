@@ -1,2 +1,4 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+{{ if in .Params.additional_syntax "cl" }}
 <link rel="stylesheet" href="/css/highlight-lisp/github.css">
+{{ end }}
