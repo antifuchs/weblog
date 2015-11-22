@@ -1,6 +1,8 @@
 ---
 categories: ["Lisp"]
 date: 2007-02-13T19:13:59Z
+additional_syntax:
+- cl
 mt_id: 74
 title: A silly CL-PPCRE performance test
 aliases:
@@ -12,7 +14,7 @@ I read ["Regular Expression Matching can be Simple and Fast"](http://swtch.com/~
 
 Here's a little benchmark thing (as noted in the article, "a?<sup>n</sup>a<sup>n</sup>" translates to e.g. "a?a?a?aaa" for n=3):
 
-```
+``` cl
 (defun match-n (n)
   (let* ((as (make-list n :initial-element #\a))
          (regex (format nil "~{~A?~}~{~A~}" as as))

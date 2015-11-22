@@ -1,5 +1,7 @@
 ---
 categories: ["Lisp"]
+additional_syntax:
+- cl
 comments: true
 date: 2011-12-21T00:00:00Z
 title: IDNA Now Supports Punycode Decoding

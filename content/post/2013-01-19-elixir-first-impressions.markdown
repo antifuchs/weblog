@@ -119,7 +119,7 @@ Non-modifiable data structures are way less of a pain than I'd
 imagined (they are in fact pretty pleasing). The pattern matching
 makes things much easier to follow, and the way updates (which return
 a new object) work is also pretty cool: You can write stuff like:
-``` ruby
+``` elixir
 some_record.buffer("foo").number(20)
 ```
 ...and this returns a record that is like some_record, except its `buffer`

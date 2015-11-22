@@ -5,6 +5,8 @@ title: Explaining some features of asdf-dependency-grovel
 aliases:
 - /archives/2007/01/explaining_some_features_of_as.html
 atom_id: http://boinkor.net/archives/2007/01/explaining_some_features_of_as
+additional_syntax:
+- cl
 ---
 
 Some people asked me why asdf-dependency-grovel (abbreviated adg, to save my fingers) merges systems. Since I wrote it, a few more questions came up, and so I'll try to answer them.
@@ -60,10 +62,10 @@ Sure thing. Assuming you have one (or more) horribly long :serial t system(s):
 You rename the system to indicate that it's the serial one, then add this argument to the defsystem form: `:default-component-type asdf-dependency-grovel:instrumented-cl-source-file`, and replace occurrences of `:module` with `asdf-dependency-grovel:instrumented-module`. The result would look like this:
 
 ``` cl
- (defsystem something-awful/serial
-            :serial t
-            :default-component-class asdf-dependency-grovel:instrumented-cl-source-file
-            :components ((asdf-dependency-grovel:instrumented-module "foo" :components (#| lots #| )))
+(defsystem something-awful/serial
+           :serial t
+           :default-component-class asdf-dependency-grovel:instrumented-cl-source-file
+           :components ((asdf-dependency-grovel:instrumented-module "foo" :components (#| lots #| )))
 ```
 
 (If it's more than one system, you have to do the previous step for all the systems that are involved.) Then you define a second system that discovers the dependencies:
@@ -81,6 +83,7 @@ You rename the system to indicate that it's the serial one, then add this argume
 I suggest you put the definitions for the /dependencies system and the /serial system(s) in a separate file, and then, in the original system definition file, define your new `something-awful` system like this:
 
 ``` cl
+<<<<<<< HEAD
  (defsystem something-awful
    :components
    #.(let ((component-file (make-pathname :name "something-awful-components"
@@ -89,6 +92,25 @@ I suggest you put the definitions for the /dependencies system and the /serial s
        (when (probe-file component-file)
          (with-open-file (f component-file :direction :input)
            (read f)))))
+||||||| parent of fce7929... Apply syntax-highlighting changes to old posts
+ (defsystem something-awful
+   :components
+   #.(let ((component-file (make-pathname :name "something-awful-components"
+                                          :type "lisp-expr"
+                                          :defaults *load-truename*)))
+       (when (probe-file component-file)
+         (with-open-file (f component-file :direction :input)
+           (read f)))))
+=======
+(defsystem something-awful
+  :components
+  #.(let ((component-file (make-pathname :name "something-awful-components"
+                                         :type "lisp-expr"
+                                         :defaults *load-truename*)))
+      (when (probe-file component-file)
+        (with-open-file (f component-file :direction :input)
+          (read f)))))
+>>>>>>> fce7929... Apply syntax-highlighting changes to old posts
 ```
 
 And that's it. You can now load the separate file, run `(asdf:oos 'asdf:dependency-op :something-awful/dependencies)` and have it emit the component information into something-awful-components.lisp-expr. Done! Your users can now load the new system and hack on it, and ASDF can rely on the dependency information in that file.

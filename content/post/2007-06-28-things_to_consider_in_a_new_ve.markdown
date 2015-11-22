@@ -1,6 +1,8 @@
 ---
 categories: ["Lisp"]
 date: 2007-06-28T01:05:18Z
+additional_syntax:
+- cl
 mt_id: 86
 title: Things to consider in a new version of ASDF
 aliases:
@@ -23,7 +25,7 @@ Here's a selection of the things that I think would be good candidates for revie
 * Speaking of :depends-on, it should really be up to the operation and the component to decide what something on the :depends-on list means, not to `ASDF::PARSE-COMPONENT-FORM`. I think something like
 
 ``` cl
-defmethod component-dependency-meaning (operation component depended-on-component)
+(defmethod component-dependency-meaning (operation component depended-on-component))
 ```
 
  should work. Oh, and drop [do-first](http://article.gmane.org/gmane.lisp.cclan.general/674). (-:

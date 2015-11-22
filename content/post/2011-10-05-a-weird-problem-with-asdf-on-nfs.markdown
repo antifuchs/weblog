@@ -1,5 +1,7 @@
 ---
 categories: ["Lisp"]
+additional_syntax:
+- cl
 comments: true
 date: 2011-10-05T00:00:00Z
 title: A Weird Problem With ASDF on NFS (and a workaround)
