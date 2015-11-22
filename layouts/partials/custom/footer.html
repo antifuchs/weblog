@@ -1,5 +1,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 <script>
+  hljs.configure({languages: []}) // No autodetection.
   hljs.initHighlightingOnLoad();
 </script>
 {{ if in .Params.additional_syntax "cl" }}
