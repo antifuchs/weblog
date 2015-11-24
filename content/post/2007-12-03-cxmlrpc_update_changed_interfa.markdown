@@ -10,7 +10,7 @@ additional_syntax:
 ---
 
 I didn't really like the DWIM interface for type translations on the client, so I made the type information mandatory. (-:
-
+<!--more-->
 This means that instead of:
 
 ``` cl

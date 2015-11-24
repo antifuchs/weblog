@@ -11,7 +11,7 @@ atom_id: http://boinkor.net/archives/2007/02/a_silly_clppcre_performance_te
 ---
 
 I read ["Regular Expression Matching can be Simple and Fast"](http://swtch.com/~rsc/regexp/regexp1.html) today (via [DF](http://daringfireball.net/linked/2007/february#tue-13-cox_regex)), and I immediately had to try its test for exponential-ness with Edi Weitz's excellent [cl-ppcre](http://weitz.de/cl-ppcre/).
-
+<!--more-->
 Here's a little benchmark thing (as noted in the article, "a?<sup>n</sup>a<sup>n</sup>" translates to e.g. "a?a?a?aaa" for n=3):
 
 ``` cl

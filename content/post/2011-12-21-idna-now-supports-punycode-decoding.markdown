@@ -12,6 +12,7 @@ atom_id: http://boinkor.net/archives/2011/12/idna-now-supports-punycode-decoding
 
 My [IDNA library](http://github.com/antifuchs/idna) now supports
 decoding IDNA strings via the to-unicode function:
+<!--more-->
 
 ``` cl
 (to-unicode "xn--mller-kva.example.com")
