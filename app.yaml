@@ -184,20 +184,24 @@ handlers:
 # letsencrypt challenges
 - url: /(\.well-known/acme-challenge/.*)
   script: letsencrypt
+  secure: optional  # These need to be able to be HTTP for bootstrapping.
 
 # index files
 - url: /(.+)/
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
   expiration: "0m"
+  secure: always
 
 - url: /(.+)
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
   expiration: "0m"
+  secure: always
 
 # site root
 - url: /
   static_files: public/index.html
   upload: public/index.html
   expiration: "0m"
+  secure: always
