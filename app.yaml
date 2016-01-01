@@ -31,6 +31,12 @@ handlers:
   upload: public/(.*\.atom)
   expiration: "1h"
 
+- url: /(.*/index\.xml)
+  mime_type: application/atom+xml
+  static_files: public/\1
+  upload: public/(.*\.rss)
+  expiration: "1h"
+
 - url: /(.*\.crx)
   mime_type: application/x-chrome-extension
   static_files: public/\1
