@@ -3,7 +3,8 @@ categories: ["Lisp"]
 comments: true
 date: 2011-09-27T00:00:00Z
 title: '"Basic Lisp Techniques" for sale on Amazon'
-url: /archives/2011/09/basic-lisp-techniques-for-sale-on-amazon.html
+aliases:
+- /archives/2011/09/basic-lisp-techniques-for-sale-on-amazon.html
 atom_id: http://boinkor.net/archives/2011/09/basic-lisp-techniques-for-sale-on-amazon
 ---
 

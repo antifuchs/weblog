@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2007-03-17T01:02:22Z
 mt_id: 77
 title: Simple visualization tool for string search
-url: /archives/2007/03/simple_visualization_tool_for.html
+aliases:
+- /archives/2007/03/simple_visualization_tool_for.html
 atom_id: http://boinkor.net/archives/2007/03/simple_visualization_tool_for
 ---
 

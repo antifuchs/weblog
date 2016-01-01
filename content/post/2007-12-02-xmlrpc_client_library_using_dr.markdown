@@ -2,7 +2,8 @@
 date: 2007-12-02T16:30:37Z
 mt_id: 89
 title: XML-RPC client library using Drakma and CXML
-url: /archives/2007/12/xmlrpc_client_library_using_dr.html
+aliases:
+- /archives/2007/12/xmlrpc_client_library_using_dr.html
 atom_id: http://boinkor.net/archives/2007/12/xmlrpc_client_library_using_dr
 ---
 

@@ -3,7 +3,8 @@ categories: ["Lisp"]
 comments: true
 date: 2012-09-09T00:00:02Z
 title: Some more updates
-url: /archives/2012/09/some-more-updates.html
+aliases:
+- /archives/2012/09/some-more-updates.html
 atom_id: http://boinkor.net/archives/2012/09/some-more-updates
 ---
 

@@ -2,7 +2,8 @@
 date: 2006-11-16T22:55:40Z
 mt_id: 59
 title: An unexpected optimization (also, archiving IMAP mail with mel-base)
-url: /archives/2006/11/an_unexpected_optimization_als.html
+aliases:
+- /archives/2006/11/an_unexpected_optimization_als.html
 atom_id: http://boinkor.net/archives/2006/11/an_unexpected_optimization_als
 ---
 

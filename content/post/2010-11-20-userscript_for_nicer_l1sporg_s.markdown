@@ -3,7 +3,8 @@ categories: ["Hacks", "Lisp"]
 date: 2010-11-20T08:28:00Z
 mt_id: 105
 title: Userscript for nicer l1sp.org search
-url: /archives/2010/11/userscript_for_nicer_l1sporg_s.html
+aliases:
+- /archives/2010/11/userscript_for_nicer_l1sporg_s.html
 atom_id: http://boinkor.net/archives/2010/11/userscript_for_nicer_l1sporg_s
 ---
 

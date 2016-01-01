@@ -2,7 +2,8 @@
 date: 2006-01-26T19:49:21Z
 mt_id: 39
 title: What's so sexy about boinkmarks?
-url: /archives/2006/01/whats_so_sexy_about_boinkmarks.html
+aliases:
+- /archives/2006/01/whats_so_sexy_about_boinkmarks.html
 atom_id: http://boinkor.net/archives/2006/01/whats_so_sexy_about_boinkmarks
 ---
 

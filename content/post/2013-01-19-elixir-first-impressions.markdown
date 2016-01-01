@@ -3,7 +3,8 @@ categories: ["Hacks"]
 comments: true
 date: 2013-01-19T00:00:00Z
 title: 'Elixir: First Impressions'
-url: /archives/2013/01/elixir-first-impressions.html
+aliases:
+- /archives/2013/01/elixir-first-impressions.html
 atom_id: http://boinkor.net/archives/2013/01/elixir-first-impressions
 ---
 

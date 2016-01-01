@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2008-04-01T17:34:53Z
 mt_id: 93
 title: Perfectstorm by Johann Korndoerfer
-url: /archives/2008/04/perfectstorm_by_johann_korndoe.html
+aliases:
+- /archives/2008/04/perfectstorm_by_johann_korndoe.html
 atom_id: http://boinkor.net/archives/2008/04/perfectstorm_by_johann_korndoe
 ---
 

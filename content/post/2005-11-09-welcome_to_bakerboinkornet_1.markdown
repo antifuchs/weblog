@@ -2,7 +2,8 @@
 date: 2005-11-09T23:13:47Z
 mt_id: 37
 title: Welcome to baker.boinkor.net
-url: /archives/2005/11/welcome_to_bakerboinkornet_1.html
+aliases:
+- /archives/2005/11/welcome_to_bakerboinkornet_1.html
 atom_id: http://boinkor.net/archives/2005/11/welcome_to_bakerboinkornet_1
 ---
 

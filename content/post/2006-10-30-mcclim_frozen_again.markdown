@@ -2,7 +2,8 @@
 date: 2006-10-30T21:09:08Z
 mt_id: 48
 title: McCLIM frozen. Again.
-url: /archives/2006/10/mcclim_frozen_again.html
+aliases:
+- /archives/2006/10/mcclim_frozen_again.html
 atom_id: http://boinkor.net/archives/2006/10/mcclim_frozen_again
 ---
 

@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2007-06-28T01:05:18Z
 mt_id: 86
 title: Things to consider in a new version of ASDF
-url: /archives/2007/06/things_to_consider_in_a_new_ve.html
+aliases:
+- /archives/2007/06/things_to_consider_in_a_new_ve.html
 atom_id: http://boinkor.net/archives/2007/06/things_to_consider_in_a_new_ve
 ---
 

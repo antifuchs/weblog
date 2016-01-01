@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2010-04-28T19:51:47Z
 mt_id: 102
 title: I think this is going to be pretty sweet.
-url: /archives/2010/04/i_think_this_is_going_to_be_pr.html
+aliases:
+- /archives/2010/04/i_think_this_is_going_to_be_pr.html
 atom_id: http://boinkor.net/archives/2010/04/i_think_this_is_going_to_be_pr
 ---
 

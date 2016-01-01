@@ -2,7 +2,8 @@
 date: 2006-11-05T19:24:31Z
 mt_id: 53
 title: More Quicksilverification
-url: /archives/2006/11/more_quicksilverification.html
+aliases:
+- /archives/2006/11/more_quicksilverification.html
 atom_id: http://boinkor.net/archives/2006/11/more_quicksilverification
 ---
 

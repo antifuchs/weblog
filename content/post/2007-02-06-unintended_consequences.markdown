@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2007-02-06T23:43:38Z
 mt_id: 73
 title: Unintended consequences
-url: /archives/2007/02/unintended_consequences.html
+aliases:
+- /archives/2007/02/unintended_consequences.html
 atom_id: http://boinkor.net/archives/2007/02/unintended_consequences
 ---
 

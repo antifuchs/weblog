@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2007-02-13T19:13:59Z
 mt_id: 74
 title: A silly CL-PPCRE performance test
-url: /archives/2007/02/a_silly_clppcre_performance_te.html
+aliases:
+- /archives/2007/02/a_silly_clppcre_performance_te.html
 atom_id: http://boinkor.net/archives/2007/02/a_silly_clppcre_performance_te
 ---
 

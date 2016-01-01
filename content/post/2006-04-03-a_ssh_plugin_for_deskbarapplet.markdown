@@ -2,7 +2,8 @@
 date: 2006-04-03T16:19:24Z
 mt_id: 44
 title: A ssh plugin for deskbar-applet
-url: /archives/2006/04/a_ssh_plugin_for_deskbarapplet.html
+aliases:
+- /archives/2006/04/a_ssh_plugin_for_deskbarapplet.html
 atom_id: http://boinkor.net/archives/2006/04/a_ssh_plugin_for_deskbarapplet
 ---
 

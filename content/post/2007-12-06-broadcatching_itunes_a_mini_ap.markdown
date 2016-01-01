@@ -2,7 +2,8 @@
 date: 2007-12-06T01:18:37Z
 mt_id: 91
 title: Broadcatching, iTunes, a "mini" Apple TV
-url: /archives/2007/12/broadcatching_itunes_a_mini_ap.html
+aliases:
+- /archives/2007/12/broadcatching_itunes_a_mini_ap.html
 atom_id: http://boinkor.net/archives/2007/12/broadcatching_itunes_a_mini_ap
 ---
 

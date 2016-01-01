@@ -3,7 +3,8 @@ categories: null
 comments: true
 date: 2015-12-31T17:33:22Z
 title: 2015 in books
-url: /archives/2015/12/2015-in-books.html
+aliases:
+- /archives/2015/12/2015-in-books.html
 atom_id: http://boinkor.net/archives/2015/12/2015-in-books
 ---
 

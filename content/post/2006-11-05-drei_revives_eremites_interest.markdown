@@ -2,7 +2,8 @@
 date: 2006-11-05T01:51:50Z
 mt_id: 52
 title: DREI Raises Engineer's Interest
-url: /archives/2006/11/drei_revives_eremites_interest.html
+aliases:
+- /archives/2006/11/drei_revives_eremites_interest.html
 atom_id: http://boinkor.net/archives/2006/11/drei_revives_eremites_interest
 ---
 

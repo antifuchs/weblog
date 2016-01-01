@@ -2,7 +2,8 @@
 date: 2007-04-11T09:33:38Z
 mt_id: 83
 title: ILC07 the inspirational lisp conference
-url: /archives/2007/04/ilc07_the_inspirational_lisp_c.html
+aliases:
+- /archives/2007/04/ilc07_the_inspirational_lisp_c.html
 atom_id: http://boinkor.net/archives/2007/04/ilc07_the_inspirational_lisp_c
 ---
 

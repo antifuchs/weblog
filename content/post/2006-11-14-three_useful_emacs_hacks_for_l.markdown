@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2006-11-14T12:50:10Z
 mt_id: 57
 title: Three useful .emacs hacks for lispers
-url: /archives/2006/11/three_useful_emacs_hacks_for_l.html
+aliases:
+- /archives/2006/11/three_useful_emacs_hacks_for_l.html
 atom_id: http://boinkor.net/archives/2006/11/three_useful_emacs_hacks_for_l
 ---
 

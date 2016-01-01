@@ -2,7 +2,8 @@
 date: 2007-03-20T14:31:53Z
 mt_id: 78
 title: Text search visualizer an unexpected success
-url: /archives/2007/03/text_search_visualizer_an_unex.html
+aliases:
+- /archives/2007/03/text_search_visualizer_an_unex.html
 atom_id: http://boinkor.net/archives/2007/03/text_search_visualizer_an_unex
 ---
 

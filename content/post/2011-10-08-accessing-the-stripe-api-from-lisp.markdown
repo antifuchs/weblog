@@ -3,7 +3,8 @@ categories: ["Lisp"]
 comments: true
 date: 2011-10-08T00:00:00Z
 title: Accessing the Stripe API From Lisp
-url: /archives/2011/10/accessing-the-stripe-api-from-lisp.html
+aliases:
+- /archives/2011/10/accessing-the-stripe-api-from-lisp.html
 atom_id: http://boinkor.net/archives/2011/10/accessing-the-stripe-api-from-lisp
 ---
 

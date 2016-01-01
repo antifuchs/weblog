@@ -2,7 +2,8 @@
 date: 2007-09-10T17:10:47Z
 mt_id: 87
 title: Blagging about blagging
-url: /archives/2007/09/blagging_about_blagging.html
+aliases:
+- /archives/2007/09/blagging_about_blagging.html
 atom_id: http://boinkor.net/archives/2007/09/blagging_about_blagging
 ---
 

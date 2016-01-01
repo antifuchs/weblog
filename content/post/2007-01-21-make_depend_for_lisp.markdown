@@ -2,7 +2,8 @@
 date: 2007-01-21T13:58:24Z
 mt_id: 70
 title: '"make depend" for lisp'
-url: /archives/2007/01/make_depend_for_lisp.html
+aliases:
+- /archives/2007/01/make_depend_for_lisp.html
 atom_id: http://boinkor.net/archives/2007/01/make_depend_for_lisp
 ---
 

@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2006-11-03T11:13:41Z
 mt_id: 50
 title: Using git bisect to locate bugs in SBCL
-url: /archives/2006/11/using_git_bisect_to_locate_bug_1.html
+aliases:
+- /archives/2006/11/using_git_bisect_to_locate_bug_1.html
 atom_id: http://boinkor.net/archives/2006/11/using_git_bisect_to_locate_bug_1
 ---
 

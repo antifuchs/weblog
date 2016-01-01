@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2008-01-15T16:15:06Z
 mt_id: 92
 title: A public service announcement
-url: /archives/2008/01/a_public_service_announcement.html
+aliases:
+- /archives/2008/01/a_public_service_announcement.html
 atom_id: http://boinkor.net/archives/2008/01/a_public_service_announcement
 ---
 

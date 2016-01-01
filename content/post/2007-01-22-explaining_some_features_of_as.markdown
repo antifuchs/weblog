@@ -2,7 +2,8 @@
 date: 2007-01-22T00:45:16Z
 mt_id: 71
 title: Explaining some features of asdf-dependency-grovel
-url: /archives/2007/01/explaining_some_features_of_as.html
+aliases:
+- /archives/2007/01/explaining_some_features_of_as.html
 atom_id: http://boinkor.net/archives/2007/01/explaining_some_features_of_as
 ---
 

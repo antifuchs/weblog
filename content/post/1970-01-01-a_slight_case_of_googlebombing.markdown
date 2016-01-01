@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 1970-01-01T10:03:04Z
 mt_id: 88
 title: A slight case of googlebombing
-url: /archives/1970/01/a_slight_case_of_googlebombing.html
+aliases:
+- /archives/1970/01/a_slight_case_of_googlebombing.html
 atom_id: http://boinkor.net/archives/1970/01/a_slight_case_of_googlebombing
 ---
 

@@ -3,7 +3,8 @@ categories: ["Lisp"]
 date: 2010-08-11T00:09:39Z
 mt_id: 103
 title: Huge life changes ahead.
-url: /archives/2010/08/huge_life_changes_ahead.html
+aliases:
+- /archives/2010/08/huge_life_changes_ahead.html
 atom_id: http://boinkor.net/archives/2010/08/huge_life_changes_ahead
 ---
 

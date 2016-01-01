@@ -2,7 +2,8 @@
 date: 2006-11-13T20:14:38Z
 mt_id: 56
 title: Some UI improvements to boinkmarks
-url: /archives/2006/11/some_ui_improvements_to_boinkm.html
+aliases:
+- /archives/2006/11/some_ui_improvements_to_boinkm.html
 atom_id: http://boinkor.net/archives/2006/11/some_ui_improvements_to_boinkm
 ---
 

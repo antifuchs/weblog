@@ -2,7 +2,8 @@
 date: 2007-05-23T23:26:49Z
 mt_id: 85
 title: Ok, so this was lame.
-url: /archives/2007/05/ok_so_this_was_lame.html
+aliases:
+- /archives/2007/05/ok_so_this_was_lame.html
 atom_id: http://boinkor.net/archives/2007/05/ok_so_this_was_lame
 ---
 
