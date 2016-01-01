@@ -1,5 +1,3 @@
-# TODO: Update index file expiry to be longer than "0s"
-
 application: plated-analyzer-117711
 version: 1
 runtime: go
@@ -190,25 +188,24 @@ handlers:
 - url: /(.+)/
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
-  expiration: "0m"
+  expiration: "2m"
   secure: always
 
 - url: /(.+)
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
-  expiration: "0m"
+  expiration: "2m"
   secure: always
 
 - url: /(.*/index\.xml)
   mime_type: application/atom+xml
   static_files: public/\1
   upload: public/(.*\.xml)
-  # expiration: "1h"
-  expiration: "0m"
+  expiration: "1h"
 
 # site root
 - url: /
   static_files: public/index.html
   upload: public/index.html
-  expiration: "0m"
+  expiration: "2m"
   secure: always
