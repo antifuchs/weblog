@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+
+    <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    {{.Hugo.Generator}}
+    <meta name="twitter:card" content="summary">
+    {{ with .Site.Params.twitter }}<meta name="twitter:site" content="{{ . }}" />{{ end }}
+    <meta name="twitter:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
+    <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    {{ "<!--[if lte IE 8]>" | safeHTML }}
+            <link rel="stylesheet" href="/css/all-old-ie.min.css">
+    {{ "<![endif]-->" | safeHTML }}
+    {{ "<!--[if gt IE 8]><!-->" | safeHTML }}
+            <link rel="stylesheet" href="/css/all.min.css">
+    {{ "<!--<![endif]-->" | safeHTML }}
+
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="/index.xml" />
+
+    <link href="/favicon.png" rel="icon">
+</head>
+<body>
