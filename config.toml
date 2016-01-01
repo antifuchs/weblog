@@ -6,6 +6,10 @@ title = "Andreas Fuchs' Journal"
 metaDataFormat = "yaml"
 newContentEditor = "/usr/local/bin/emacsclient"
 
+[author]
+  name = "Andreas Fuchs"
+  email = "asf@boinkor.net"
+
 # Backwards-compatible URLs:
 uglyUrls = true
 [permalinks]
