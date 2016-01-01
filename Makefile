@@ -2,11 +2,12 @@ CERTS = certs/testblog.boinkor.net.key.pem certs/testblog.boinkor.net.cert.pem
 THEME = themes/purehugo
 THEME_GIT = https://github.com/toru-mano/purehugo
 
-all: deploy
+all: deploy_test
 
-deploy: $(THEME)
-	hugo
-	goapp deploy
+deploy_test: deploy_deps
+	scripts/build https://testblog.boinkor.net plated-analyzer-117711
+
+deploy_deps: $(THEME)
 
 demo:
 	hugo serve
@@ -31,4 +32,4 @@ certs/testblog.boinkor.net.key.pem: certs
 certs/testblog.boinkor.net.cert.pem: certs
 	sudo cat /etc/letsencrypt/live/testblog.boinkor.net/fullchain.pem > $@
 
-.PHONY: phony all deploy certificates demo
+.PHONY: phony all deploy_test certificates demo deploy_deps
