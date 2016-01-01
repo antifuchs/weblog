@@ -13,6 +13,6 @@ So I wrote a little program that crawls (a local copy of) the HyperSpec, and cre
 
 Lots of tools exist to visualize and manipulate the facts in an RDF graph already; Here's a screen shot of [gruff](http://www.franz.com/agraph/gruff/) with a small trace through the HyperSpec:
 
-{% img /assets/images/gruff-with-hyperspec-rdf.png Gruff with Hyperspec RDF %}
+![Gruff with Hyperspec RDF](/assets/images/gruff-with-hyperspec-rdf.png)
 
 You can get the code to create the RDF graph [at github](http://github.com/antifuchs/clsem/).

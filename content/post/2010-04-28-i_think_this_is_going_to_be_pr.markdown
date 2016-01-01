@@ -7,7 +7,7 @@ url: /archives/2010/04/i_think_this_is_going_to_be_pr.html
 atom_id: http://boinkor.net/archives/2010/04/i_think_this_is_going_to_be_pr
 ---
 
-{% img /assets/images/clucumber-baby-steps.png Clucumber baby steps %}
+![Clucumber baby steps](/assets/images/clucumber-baby-steps.png)
 
 I've been toying around with making a Common Lisp adapter to [Cucumber](http://cukes.info/), a behavior-driven development tool. I think this will really be very sweet.
 
