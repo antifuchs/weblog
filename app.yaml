@@ -5,6 +5,17 @@ api_version: go1
 
 default_expiration: "30d"
 
+skip_files:
+- "^(.*/)?#.*#$"
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^/\.git/.*
+- ^/letsencrypt/.*
+- ^/source/.*
+- ^/content/.*
+
 handlers:
 - url: /(.*\.(appcache|manifest))
   mime_type: text/cache-manifest
@@ -167,6 +178,10 @@ handlers:
 - url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
   static_files: public/\1
   upload: public/(.*\.(bz2|gz|rar|tar|tgz|zip))
+
+# letsencrypt challenges
+- url: /(\.well-known/acme-challenge/.*)
+  script: letsencrypt
 
 # index files
 - url: /(.+)/
