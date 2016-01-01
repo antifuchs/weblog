@@ -1,5 +1,5 @@
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atomworkaround="http://www.w3.org/2005/Atom">
-<atomworkaround:title type="html">{{ `<![CDATA[ ` | safeHTML }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }} ]]></atomworkaround:title>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:title type="html">{{ `<![CDATA[ ` | safeHTML }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }} ]]></atom:title>
 <link href="{{ .Permalink }}index.xml" rel="self"/>
 <link href="{{ .Permalink }}"/>
 <updated>{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</updated>
@@ -8,10 +8,10 @@
 <name>{{ "<![CDATA[ " | safeHTML }}{{ $.Site.Author.name | safeHTML }} ]]></name>
 <email>{{ "<![CDATA[ " | safeHTML }}{{ $.Site.Author.email }} ]]></email>
 </author>
-<generator uri="http://gohogo.io/">Hugo</generator>
+<generator uri="http://gohugo.io/">Hugo</generator>
 {{ range first 15 .Data.Pages }}
 <entry>
-<atomworkaround:title type="html">{{ "<![CDATA[ " | safeHTML }}{{ .Title }} ]]></atomworkaround:title>
+<atom:title type="html">{{ "<![CDATA[ " | safeHTML }}{{ .Title }} ]]></atom:title>
 <link href="{{ .Permalink }}"/>
 <updated>{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}</updated>
 <id>{{if .Params.atom_id }}{{.Params.atom_id | safeHTML }}{{else}}{{ .Permalink }}{{end}}</id>
