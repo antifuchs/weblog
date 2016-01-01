@@ -16,11 +16,12 @@ node_modules
 # This file contains my access keys, don't accidentally commit this:
 /.envrc
 
-# Letsencrypt checkout
-/letsencrypt/
-
 # Certificates from letsencrypt
 /certs/
 
 # Themes are immutable I guess
 /themes/
+
+# Stuff for generating certs:
+/letsencrypt.sh/
+/letsencrypt.go

@@ -19,18 +19,13 @@ And visit https://testblog.boinkor.net
 I use letsencrypt. This requires renewing certs every 3 months. But
 it's fairly painless, except you have to text-edit a bunch of stuff.
 
-1. Make sure you are on the main branch & nothing is uncommitted.
-1. Run `./letsencrypt-auto --debug -a manual certonly -d boinkor.net -d testblog.boinkor.net`
-2. Copy each of the challenge/response pairs and paste them into [letsencrypt.go](blob/letsencrypt.go)
-3. Run `make deploy deploy_test`
-4. Wait until you can `curl` the challenge URL, then hit return in the letsencrypt challenge / response prompt and hope that they found the response.
-5. Run `make certificates`
-6. pbcopy each certificate/private key and paste it into a new cert on
-  * https://console.cloud.google.com/appengine/settings/certificates?project=plated-analyzer-117711&moduleId=default&versionId=1
-  * https://console.cloud.google.com/appengine/settings/certificates?project=plated-analyzer-117711&moduleId=default&versionId=1 and
+Step 0: Have `~/.letsencrypt`
 
+1. Make sure you are on the main branch & nothing is uncommitted.
+2. Run `make certificates`
+3. If it doesn't give you instructions and you know you must do a thing, run:
+   `./scripts/letsencrypt-hook deploy_certificate boinkor.net ./certs/boinkor.net/privkey.pem ./certs/boinkor.net/cert.pem ./certs/boinkor.net/fullchain.pem`
 
 ## TODO
 
 * Redirects
-* Fully automatic letsencrypt cert renewal flow
