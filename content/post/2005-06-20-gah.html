@@ -1,0 +1,35 @@
+---
+date: 2005-06-20T18:52:00Z
+mt_id: 28
+title: Gah.
+url: /2005/06/20/gah/
+---
+
+<p>This is not a lisp-related entry, but a rant about open-source
+things that I discovered in the time at or around work.</p>
+
+<p>Spent a lot of time and engery at work in the last two months. This is
+due to my focusing on my bachelor&#8217;s degree in the next few
+semesters. This resulted in me being being angry at a few things.</p>
+
+<ul>
+<li><p>OpenLDAP 2.0, for letting users create objects that can never be
+found again, not to mention deleted. This may or may not be a
+deficiency in LDAP itself.</p></li>
+<li><p>Asterisk, for the silliest and most badly-designed programming/extension language since BASIC (yes, far worse than PHP). For your amusement, here&#8217;s an example:</p>
+
+<pre>exten => _.,1,ODBCget(sipuser=${EXTEN}/alias)</pre>
+
+<p>(uses the ODBGget thing from <a href="http://www.voip-info.org/tiki-index.php?page=Asterisk%20app_dbodbc">http://www.voip-info.org/tiki-index.php?page=Asterisk%20app_dbodbc</a>). What this does is look up a row in a 3-column table (family, key, row, where family= the EXTEN variable&#8217;s content and key=&#8221;alias&#8221;). It then either sets the variable sipuser to that value, or jumps to line number 1+101, if that row is not found. It appears that this &#8220;jump to priority+101&#8221; behavior is typical for telephone systems, so the developers of that extension thought it would be a good idea to copy that.</p>
+
+<p>There is no If statement that works on code blocks. Conditional jumps (GotoIf) only.</p>
+
+<p>Extensions to the extension language (called &#8220;applications&#8221;) must all provide their own argument parsing code. Will be interesting to see how many exploits for SIP or H323 voicemail servers come out before this is fixed.</p>
+
+<p>Oh, and it doesn&#8217;t really run on any platform that isn&#8217;t x86/Linux. Sure, there is a FreeBSD port, but that seems to exist only to give you a false sense of security.</p>
+
+<p>All that is enough to provide you with happy maintainer fun for the rest of your life. At first, I found it funny that these configuration files all seem to be valid window-style .INI files. Not anymore.</p></li>
+<li><p>By far least of all, PHP. Of course, there&#8217;s some background angriness, yet among that insane heap of hacks and bugs that is asterisk, and other sysadmin-related tasks I&#8217;ve been doing over the last few months, hacking up web sites using PHP was what kept me sane.</p></li>
+</ul>
+
+<p>I must have turned mad already.</p> 

@@ -1,0 +1,16 @@
+---
+date: 2005-06-21T12:38:00Z
+mt_id: 26
+title: Anger management 2
+url: /2005/06/21/anger_management_2/
+---
+
+<p>Currently, I&#8217;m angry about: FreeBSD&#8217;s SMP support in combination with walrus.boinkor.net (the machine hosting <a href="http://boinkor.net/">this blog</a>, <a href="http://lemonodor.com/">lemonodor</a>, <a href="http://sbcl.boinkor.net/bench/">sbcl boinkmarks</a> and a few other things).</p>
+
+<p>The reason for this anger is that every now and then (e.g., yesterday and this morning), it stops working. This is very interesting to watch (for the first few times): the machine answers ICMP ECHO requests, and it is possible to open TCP connections. What doesn&#8217;t work is spawning new processes. That means that no HTTP request, no shell command line and not a lot else is ever processed. It also means that previously running processes like <a href="http://www.freebsd.org/cgi/man.cgi?query=top&amp;apropos=0&amp;sektion=1&amp;manpath=FreeBSD+4.11-RELEASE&amp;format=html">top(1)</a> and IRC bouncers etc. continue to work until they try something stupid like <a href="http://www.freebsd.org/cgi/man.cgi?query=fork&amp;apropos=0&amp;sektion=2&amp;manpath=FreeBSD+4.11-RELEASE&amp;format=html">fork(2)</a>.</p>
+
+<p><a href="http://www.freebsd.org/cgi/man.cgi?query=top&amp;apropos=0&amp;sektion=1&amp;manpath=FreeBSD+4.11-RELEASE&amp;format=html">top(1)</a> output is also very interesting to watch: it shows processes that never leave the &#8220;sbwait&#8221; state. My current explanation is that there is a race condition that leads to a coarse-grained lock never being unlocked. A Big Giant Deadlock!</p>
+
+<p>My previous prime suspect was the adaptec driver, but that doesn&#8217;t seem right, because after walrus starts misbehaving, things are still written to and read from disk just fine. Having run out of ideas, I am now preparing to replace both the hardware (with something that contains only one CPU) and the operating system running on it (with something that is easier to maintain). </p>
+
+<p>This will hopefully lead to a set of problems that is less frustrating to deal with.</p> 

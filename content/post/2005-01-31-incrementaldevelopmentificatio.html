@@ -1,0 +1,56 @@
+---
+date: 2005-01-31T13:08:28Z
+mt_id: 16
+title: Incremental-developmentification of McCLIM
+url: /2005/01/31/incrementaldevelopmentificatio/
+---
+
+<p>Upgrading <a href="http://common-lisp.net/project/mcclim/">McCLIM</a> (or even hacking on it) is hard work for your
+computer. That&#8217;s due to the use of <code>:serial t</code> in the
+system definition that manages to be compatible to <a href="http://cliki.net/asdf/">ASDF</a> (which has an
+idea of &#8220;real&#8221; dependencies) and other defsystems (for example,
+<a href="http://cliki.net/mk-defsystem">MK:DEFSYSTEM</a> and the ones in LispWorks and Allegro CL) because of
+this.</p>
+
+<p>So whenever you update a file, your defsystem must recompile all the
+files that are listed after it in the McCLIM system definition. This
+can result in 20 files that need to be recompiled for changes to a
+file that only 6 files actually depend on.</p>
+
+<p>This has resulted in lots of gnashing of teeth from people who want to
+spend their time hacking cool stuff with McCLIM, and less time waiting
+for it to finish compiling.</p>
+
+<p>(Here&#8217;s the bragging part. Skip below for actual code.) So I
+sat down and wrote a bit of awful code, which essentially does this:</p>
+
+<ul>
+<li>Find out which &#8220;interesting&#8221; symbols a defsystem&#8217;s components use</li>
+<li>Find out which components use which symbols (establishing
+file->symbols and symbol->files mappings)</li>
+<li>Order the components according to the existing :serial definition
+and use the first component for group of files as the dependency
+target for the others.</li>
+</ul>
+
+<p>This (and the symbol finder, which really wants to be an XREF thing)
+is a bit conservative, in that it generates dependencies when in doubt
+- if a file uses <code>CLIMI::Q</code> and another file uses CLIMI::Q as a
+temporary variable, the code emits a dependency. But then, the
+resulting system definition works as good as the original
+mcclim/system.lisp file worked for me.</p>
+
+<p>(Skip to this point to escape the bragging part.) You can get the ASDF
+system definition that i tested from <a href="http://paste.lisp.org/display/5396#4">lisppaste</a>, at. Just replace mcclim&#8217;s
+system.lisp file with it and load the components as you normally
+would. I would like to hear from you if it works or breaks for
+you. Tell me at #lisp / irc.freenode.net. I&#8217;m &#8220;antifuchs&#8221;.</p>
+
+<p>Things to test:</p>
+
+<ul>
+<li>Building &#8220;from scratch&#8221;: remove all .fasl files and rebuild with
+the new system definition in place</li>
+<li>reloading a system after files have changed: touch random .lisp
+files and <code>(asdf:oos 'asdf:load-op :clim) ; for example</code></li>
+</ul> 

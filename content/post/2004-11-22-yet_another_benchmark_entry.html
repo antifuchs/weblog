@@ -1,0 +1,27 @@
+---
+date: 2004-11-22T13:07:06Z
+mt_id: 15
+title: Yet another benchmark entry
+url: /2004/11/22/yet_another_benchmark_entry/
+---
+
+<p>A few months ago, <a href="http://www.advogato.org/person/crhodes/">Christophe</a> suggested that
+autobuilding/autobenchmarking of <a href="http://clisp.cons.org">CLisp</a> would be nice to have in
+<a href="http://sbcl.boinkor.net/benchmark/">Boinkmarks</a>. I tried, but couldn&#8217;t make it fit into the ugly bunch of
+shell scripts. This was when I decided to rewrite them in Common
+Lisp, and to add a nice web interface using <a href="http://ww.telent.net/araneida/">araneida.</a></p>
+
+<p>That is now finished. See the results at
+<a href="http://sbcl.boinkor.net/benchmark/">http://sbcl.boinkor.net/benchmark/</a> (<a href="http://sbcl.boinkor.net/benchmark.old/">old version</a>, for contrast).</p>
+
+<p>So, was it worth it? The rewrite doesn&#8217;t bring me that much closer to
+my goal of actually benchmarking CLisp; but adding that functionality
+is now much easier with the new CLOS-based protocol for
+building/caching/benchmarking implementation binaries (especially when
+compared to these <a href="http://boinkor.net/misc/boinkmarks/run-benchmark-for">ugly</a> <a href="http://boinkor.net/misc/boinkmarks/plot">shell</a> <a href="http://boinkor.net/misc/boinkmarks/build-this-version">constructs</a>). Another great advantage is
+that I now have a chance of understanding what I have written when I
+have to fix it in a few months.</p>
+
+<p>Watch this space, there are a few benchmarking-related announcements
+waiting to be made in the near future (the release of the benchmarking
+tool, for one) (-:</p> 

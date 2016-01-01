@@ -1,0 +1,14 @@
+---
+date: 2005-09-14T23:04:00Z
+mt_id: 33
+title: Hacking on beirc
+url: /2005/09/14/hacking_on_beirc/
+---
+
+<p>I&#8217;ve spent some time lately hacking on <a href="http://common-lisp.net/project/beirc/">beirc</a>, the <a href="http://common-lisp.net/project/mcclim/">McCLIM</a>-optimized CLIM IRC client by Gilbert Baumann. The version you find in the CVS repository at common-lisp.net comes with a neat channel selector that may remind you of xchat. Channels are shown red if there was activity on the channel that you didn&#8217;t see yet and blue if there were messages on the channel that contained your nickname.</p>
+
+<p>You can see it in action <a href="http://boinkor.net/lisp/porn/beirc-with-channel-selector-doing-stuff.png
+">in this screenshot</a>.</p>
+
+<p>I really like how easy CLIM makes adding new features like this channel selector. The code for the actual selector, including the activity indicator is only a few tens of lines. (the new channel selection mechanism I had to implement is a bit more than that, but that&#8217;s GUI toolkit independent)</p>
+ 
