@@ -2,7 +2,7 @@
 date: 2006-11-17T00:16:09Z
 mt_id: 60
 title: A negligibly inconvenient truth
-url: /2006/11/17/a_negligiblyinconvenient_truth/
+url: /archives/2006/11/a_negligiblyinconvenient_truth.html
 ---
 
 Xach [writes](http://xach.livejournal.com/91271.html):

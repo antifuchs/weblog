@@ -3,7 +3,7 @@ categories: ["Lisp"]
 date: 2006-11-03T11:13:41Z
 mt_id: 50
 title: Using git bisect to locate bugs in SBCL
-url: /2006/11/03/using_git_bisect_to_locate_bug_1/
+url: /archives/2006/11/using_git_bisect_to_locate_bug_1.html
 ---
 
 I've announced the git repository a few weeks ago. Here's something very nice you can do with it: Run a binary search on revisions to find out the version of SBCL that caused a bug. This helps enormously when searching for the cause of bugs.
@@ -31,7 +31,7 @@ Here's how you do it:
   This will give you output similar to:
   <pre>Bisecting:        9 revisions left to test after this
 [90a83478829f33b91f6300c183b374a968bc13c6] 0.9.18.20: correct step-frame logic on non-x86oids</pre>
-  
+
   From now on, after every step, you can look at a first bisection history in gitk: `git bisect visualize`
 
 7. Start the actual bisection: `git bisect next`
@@ -43,7 +43,7 @@ $ cat version.lisp-expr
 [...]
 "0.9.18.20"</pre>
 
-8. Run the test script. 
+8. Run the test script.
 
  * If it fails, use `git bisect bad` to mark the current revision as bad,
  * if it succeeds, use `git bisect good` to mark it as good.
@@ -51,7 +51,7 @@ $ cat version.lisp-expr
   You'll get something like:
 
   <pre>Bisecting:        5 revisions left to test after this
-[7bad074650949dc5427711b93ff615d9c17308d9] 0.9.18.25:</pre>  
+[7bad074650949dc5427711b93ff615d9c17308d9] 0.9.18.25:</pre>
 
   As mentioned above, you can always view the bisection history using `git bisect visualize`.
 9. Repeat steps 7 and 8, until there are no more versions to bisect. After running the final test and marking the version with `git bisect good` or `git bisect bad`, You'll get something like the following output:
@@ -75,4 +75,4 @@ If you want to cancel or pause bisection at any time, you can use the following 
 
 To resume bisection from a log file, use `git bisect replay bisection-logfile`.
 
-I hope this guide helps you identify bugs quickly. Good hunting! 
+I hope this guide helps you identify bugs quickly. Good hunting!

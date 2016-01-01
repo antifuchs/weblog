@@ -3,7 +3,7 @@ categories: ["Hacks"]
 comments: true
 date: 2012-12-26T00:00:00Z
 title: 'Write gmail filters in a nice Ruby DSL: gmail-britta'
-url: /2012/12/26/write-gmail-filters-in-a-nice-ruby-dsl-gmail-britta/
+url: /archives/2012/12/write-gmail-filters-in-a-nice-ruby-dsl-gmail-britta.html
 ---
 
 I've just finished (mostly) documenting and writing tests for my

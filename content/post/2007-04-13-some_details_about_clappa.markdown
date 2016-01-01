@@ -2,7 +2,7 @@
 date: 2007-04-13T13:50:53Z
 mt_id: 84
 title: Some details about CLAPPA
-url: /2007/04/13/some_details_about_clappa/
+url: /archives/2007/04/some_details_about_clappa.html
 ---
 
 First of all, thanks to all who congratulated me on this, and to [Nicolas](http://www.cl-user.net/asp/zMJO6/sdataQv5utS5j$sUiDQ30nH8X8yBX8yBXnMq=/sdataQu3F$sSHnB==) for starting it all.

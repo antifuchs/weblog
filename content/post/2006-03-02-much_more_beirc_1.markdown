@@ -2,7 +2,7 @@
 date: 2006-03-02T23:09:04Z
 mt_id: 41
 title: MUCH MORE BEIRC
-url: /2006/03/02/much_more_beirc_1/
+url: /archives/2006/03/much_more_beirc_1.html
 ---
 
 While [several](http://www.lisphacker.com/) [others](http://cyrusharmon.org/cl/blog/) are busy porting [sbcl](http://www.sbcl.org) to [platforms](http://www.microsoft.com/windows/default.mspx) [that God itself hates](http://www.apple.com/imac/), I've been hacking on something much more trivial, but much more fun (and rewarding, in the short term): [beirc][b].
@@ -17,4 +17,4 @@ Some recent changes:
 
 So, I think you definitely should have a look at [beirc][b]. Outside of work (where I have to use [irssi](http://www.irssi.org/) in a [screen]( http://www.gnu.org/software/screen/) instance), I use it exclusively now. It really is that good. I'm an IRC addict, you can trust me. (-:
 
-[b]: http://common-lisp.net/project/beirc/ 
+[b]: http://common-lisp.net/project/beirc/

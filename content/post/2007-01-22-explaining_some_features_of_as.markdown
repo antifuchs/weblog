@@ -2,7 +2,7 @@
 date: 2007-01-22T00:45:16Z
 mt_id: 71
 title: Explaining some features of asdf-dependency-grovel
-url: /2007/01/22/explaining_some_features_of_as/
+url: /archives/2007/01/explaining_some_features_of_as.html
 ---
 
 Some people asked me why asdf-dependency-grovel (abbreviated adg, to save my fingers) merges systems. Since I wrote it, a few more questions came up, and so I'll try to answer them.
@@ -24,7 +24,7 @@ Suppose that file "a" in system FOO changes; if you load system BAR, file "a" wi
 
 There are two solutions for this problem:
 
-* Make ASDF track compilation across system boundaries - expensive, as every user would need to update asdf, and now every user would have to sit through endless recompilation sessions if only a comment in a low-level system changes. 
+* Make ASDF track compilation across system boundaries - expensive, as every user would need to update asdf, and now every user would have to sit through endless recompilation sessions if only a comment in a low-level system changes.
 * Merge systems where it makes sense. adg ensures that dependencies are kept up-to-date and minimal: only those things that are actual compile-time (or load-time) dependencies are recorded.
 
 This exact problem is what bit us in mcclim once. I spent a long time thinking about it and came up with adg in the end. So there.
@@ -82,11 +82,11 @@ I suggest you put the definitions for the /dependencies system and the /serial s
  (defsystem something-awful
    :components
    #.(let ((component-file (make-pathname :name "something-awful-components"
-										  :type "lisp-expr"
-										  :defaults *load-truename*)))
-	   (when (probe-file component-file)
-		 (with-open-file (f component-file :direction :input)
-		   (read f)))))
+                                          :type "lisp-expr"
+                                          :defaults *load-truename*)))
+       (when (probe-file component-file)
+         (with-open-file (f component-file :direction :input)
+           (read f)))))
 ```
 
 And that's it. You can now load the separate file, run `(asdf:oos 'asdf:dependency-op :something-awful/dependencies)` and have it emit the component information into something-awful-components.lisp-expr. Done! Your users can now load the new system and hack on it, and ASDF can rely on the dependency information in that file.
@@ -94,4 +94,4 @@ And that's it. You can now load the separate file, run `(asdf:oos 'asdf:dependen
 You should re-generate the component file (using the :dependency-op) in these cases:
 
 * After hacking on something and incrementally compiling, the system breaks. This probably means that a compile/load-time dependency was introduced somewhere down the line.
-* After adding a new file. This requires that you find a sensible place for it in the serial order of the /serial system, then have adg re-generate component info. 
+* After adding a new file. This requires that you find a sensible place for it in the serial order of the /serial system, then have adg re-generate component info.

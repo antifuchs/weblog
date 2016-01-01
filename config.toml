@@ -6,6 +6,11 @@ title = "Andreas Fuchs' Journal"
 metaDataFormat = "yaml"
 newContentEditor = "/usr/local/bin/emacsclient"
 
+# Backwards-compatible URLs:
+uglyUrls = true
+[permalinks]
+  post = "/:year/:month/:slug/"
+
 [params]
   twitterName = "antifuchs"
   githubName = "antifuchs"

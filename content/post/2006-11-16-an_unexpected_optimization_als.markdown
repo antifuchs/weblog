@@ -2,7 +2,7 @@
 date: 2006-11-16T22:55:40Z
 mt_id: 59
 title: An unexpected optimization (also, archiving IMAP mail with mel-base)
-url: /2006/11/16/an_unexpected_optimization_als/
+url: /archives/2006/11/an_unexpected_optimization_als.html
 ---
 
 As I own my own mail server, my mail setup is very much engineered to fit my own needs. This means everything works as I think it should, but it also means I have to hack things myself if I need them. This time, I needed a program that can move IMAP mails to archive mailboxes.
@@ -49,4 +49,4 @@ As it is, we can easily make a method that specializes on the case where we copy
 ```
 Evaluate this, and suddenly everything is 10 times as fast, and marks are preserved after moving the message.
 
-The lesson for today: Good libraries provide functionality that works well enough for the typical use case. Great libraries let you extend them to support your own use cases. 
+The lesson for today: Good libraries provide functionality that works well enough for the typical use case. Great libraries let you extend them to support your own use cases.

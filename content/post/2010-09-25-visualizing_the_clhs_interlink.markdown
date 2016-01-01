@@ -3,7 +3,7 @@ categories: ["Lisp"]
 date: 2010-09-25T00:52:02Z
 mt_id: 104
 title: Visualizing the CLHS interlinking structure
-url: /2010/09/25/visualizing_the_clhs_interlink/
+url: /archives/2010/09/visualizing_the_clhs_interlink.html
 ---
 
 Lately, I've been wondering what we could use the ~110k Hyperlinks in the CLHS for, other than click through the spec in a web browser. For example, given a glossary entry, how do you find out which functions refer to it?
@@ -14,4 +14,4 @@ Lots of tools exist to visualize and manipulate the facts in an RDF graph alread
 
 {% img /assets/images/gruff-with-hyperspec-rdf.png Gruff with Hyperspec RDF %}
 
-You can get the code to create the RDF graph [at github](http://github.com/antifuchs/clsem/). 
+You can get the code to create the RDF graph [at github](http://github.com/antifuchs/clsem/).

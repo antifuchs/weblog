@@ -2,7 +2,7 @@
 date: 2006-02-12T13:46:39Z
 mt_id: 40
 title: Starting daemonized lisp images in debian
-url: /2006/02/12/starting_daemonized_lisp_image_1/
+url: /archives/2006/02/starting_daemonized_lisp_image_1.html
 ---
 
 On baker, I'm running two lisp images: [autobench's web
@@ -38,27 +38,27 @@ script.
 A typical lisp image definition (for my chavatar instance) looks like
 this:
 
-	# The user to whom to switch before running the lisp image
-	RUN_AS="asf"
+    # The user to whom to switch before running the lisp image
+    RUN_AS="asf"
 
-	# these paths must be absolute:
-	# Base directory; we chdir to it before running the lisp
-	ABROOT="/home/asf/dl/svn/chavatar"
-	# Directory where detachtty places its pipe and pid file
-	VARROOT=$ABROOT/+var
-	# Directory where detachtty dribble output goes
-	LOGROOT=$ABROOT/+log
+    # these paths must be absolute:
+    # Base directory; we chdir to it before running the lisp
+    ABROOT="/home/asf/dl/svn/chavatar"
+    # Directory where detachtty places its pipe and pid file
+    VARROOT=$ABROOT/+var
+    # Directory where detachtty dribble output goes
+    LOGROOT=$ABROOT/+log
 
-	# The command that we use to run the lisp.
-	LISP_LOAD="/home/asf/bin/sbcl --noinform --userinit $ABROOT/+web-userinit.lisp"
+    # The command that we use to run the lisp.
+    LISP_LOAD="/home/asf/bin/sbcl --noinform --userinit $ABROOT/+web-userinit.lisp"
 
-	# The port where we start swank on demand.
-	SWANKPORT=4008
+    # The port where we start swank on demand.
+    SWANKPORT=4008
 
 Give it a descriptive name, and you're ready to roll. run
 `/etc/init.d/lisp-images start image-name` and you should see:
 
-	Starting Lisp images: image-name.
+    Starting Lisp images: image-name.
 
 To attach to the lisp, run `/etc/init.d/lisp-images attach image-name`.
 

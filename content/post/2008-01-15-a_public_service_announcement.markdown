@@ -3,7 +3,7 @@ categories: ["Lisp"]
 date: 2008-01-15T16:15:06Z
 mt_id: 92
 title: A public service announcement
-url: /2008/01/15/a_public_service_announcement/
+url: /archives/2008/01/a_public_service_announcement.html
 ---
 
 (This blog entry is **outdated**. The currently recommended way to get lisp software and its dependencies is [quicklisp](http://quicklisp.org/)).

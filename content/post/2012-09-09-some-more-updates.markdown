@@ -3,7 +3,7 @@ categories: ["Lisp"]
 comments: true
 date: 2012-09-09T00:00:00Z
 title: Some more updates
-url: /2012/09/09/some-more-updates/
+url: /archives/2012/09/some-more-updates.html
 ---
 
 So I've been moving stuff off my 6 year old server to a machine hosted

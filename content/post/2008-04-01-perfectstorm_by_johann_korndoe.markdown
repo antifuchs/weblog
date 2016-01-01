@@ -3,7 +3,7 @@ categories: ["Lisp"]
 date: 2008-04-01T17:34:53Z
 mt_id: 93
 title: Perfectstorm by Johann Korndoerfer
-url: /2008/04/01/perfectstorm_by_johann_korndoe/
+url: /archives/2008/04/perfectstorm_by_johann_korndoe.html
 ---
 
 ![perfectstorm screenshot](http://erleuchtet.org/with-health-bars-thumb-300x225.png)
@@ -14,4 +14,4 @@ This isn't original work, so perhaps more suited to being in my [soup](http://mu
 
 Looks very very interesting. Google SoC students take note: this is an open source project (-:
 
-<small>(found via [neingeist](http://nein.gei.st/post/1968414/perfectstorm-is-a-real-time-strategy-game))</small> 
+<small>(found via [neingeist](http://nein.gei.st/post/1968414/perfectstorm-is-a-real-time-strategy-game))</small>

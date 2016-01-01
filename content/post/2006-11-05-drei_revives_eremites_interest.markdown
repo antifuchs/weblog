@@ -2,7 +2,7 @@
 date: 2006-11-05T01:51:50Z
 mt_id: 52
 title: DREI Raises Engineer's Interest
-url: /2006/11/05/drei_revives_eremites_interest/
+url: /archives/2006/11/drei_revives_eremites_interest.html
 ---
 
 [Troels Henriksen](http://sigkill.dk/blog/) has [made available](http://article.gmane.org/gmane.lisp.mcclim.devel/1216) his modifications to McCLIM: He added an input editor (named "DREI") that is based on [climacs](http://common-lisp.net/project/climacs/). The greater plan seems to be to make Climacs use that input editor for all its editing panes.
@@ -15,4 +15,4 @@ shows:
 
 * Lisp syntax highlighting,
 * (almost) correct indentation of forms, and
-* nicely formatted "noise" strings: *(pathname)*. 
+* nicely formatted "noise" strings: *(pathname)*.

@@ -2,7 +2,7 @@
 date: 2007-12-02T16:30:37Z
 mt_id: 89
 title: XML-RPC client library using Drakma and CXML
-url: /2007/12/02/xmlrpc_client_library_using_dr/
+url: /archives/2007/12/xmlrpc_client_library_using_dr.html
 ---
 
 A few weeks ago, I tried using [S-XML-RPC](http://common-lisp.net/project/s-xml-rpc/ "S-XML-RPC") for use with a hunchentoot-based web interface to [rtorrent](http://libtorrent.rakshasa.no/ "The libTorrent and rTorrent Project - Trac"). Unfortunately, it comes with a long list of dependencies that are already implemented better by [Ediware](http://weitz.de) such as [drakma](http://www.weitz.de/drakma/ "DRAKMA - A Common Lisp web client"): it can speak HTTPS, connect via proxies, and allows cookies (although I'm not aware of any xml-rpc implementation that supports this (-:).
@@ -19,4 +19,4 @@ So I re-implemented s-xml-rpc's client part to use the libraries that are alread
 
 It's entirely undocumented right now, and some names (and interfaces) may be subject to change, but I'm making it available now anyway, at [my git repository](http://sbcl.boinkor.net/gitweb?p=cxml-rpc.git;a=summary).
 
-The plans for the near future (e.g. next weekend) include a server part based on [Hunchentoot](http://weitz.de/hunchentoot), and, um, test cases and documentation. Stay tuned! 
+The plans for the near future (e.g. next weekend) include a server part based on [Hunchentoot](http://weitz.de/hunchentoot), and, um, test cases and documentation. Stay tuned!

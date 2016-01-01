@@ -3,10 +3,10 @@ categories: ["Lisp"]
 date: 2007-03-17T01:02:22Z
 mt_id: 77
 title: Simple visualization tool for string search
-url: /2007/03/17/simple_visualization_tool_for/
+url: /archives/2007/03/simple_visualization_tool_for.html
 ---
 
-I recently discovered that several of my (programming) friends know no string search algorithms other than the naïve left-to-right, one character at a time scan. There are much better algorithms out there, among them the one by [Boyer-Moore](http://www.cs.utexas.edu/users/moore/best-ideas/string-searching/). 
+I recently discovered that several of my (programming) friends know no string search algorithms other than the naïve left-to-right, one character at a time scan. There are much better algorithms out there, among them the one by [Boyer-Moore](http://www.cs.utexas.edu/users/moore/best-ideas/string-searching/).
 
 When I first heard about Boyer-Moore, it made me realize how easy it is to overlook opportunities for optimization -- I hadn't thought it feasible to speed up string search, either.
 

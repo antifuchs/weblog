@@ -2,7 +2,7 @@
 date: 2007-04-11T01:59:09Z
 mt_id: 82
 title: Being an account of activities at ILC07
-url: /2007/04/11/being_an_account_of_activities/
+url: /archives/2007/04/being_an_account_of_activities.html
 ---
 
 [Xach nudges](http://xach.livejournal.com/112763.html), I comply. To summarize the text that is to come, the conference was great. Hooray for Nick Levine, whose conference organization talents are deeply awesome.
@@ -10,7 +10,7 @@ url: /2007/04/11/being_an_account_of_activities/
 The setup
 ---------
 
-I had chosen the worst possible time to fly: a 23:45 (local time) arrival on Saturday guaranteed that I would have to wait 1 hour for the last bus to Cambridge, then arrive there at around 2:00. One bus broke down before that journey started, and a longer-than-expected walk across Cambridge later (which was packed full with drunk english teenagers -- one of them was trying to beat up buildings!), I finally entered the land of Nod at around 3:30. 
+I had chosen the worst possible time to fly: a 23:45 (local time) arrival on Saturday guaranteed that I would have to wait 1 hour for the last bus to Cambridge, then arrive there at around 2:00. One bus broke down before that journey started, and a longer-than-expected walk across Cambridge later (which was packed full with drunk english teenagers -- one of them was trying to beat up buildings!), I finally entered the land of Nod at around 3:30.
 
 Tutorials
 ---------
@@ -20,7 +20,7 @@ I managed to wake up on time for breakfast, after which the tutorials started. I
 Favorite quote from Sunday's sessions (Duane Rettig):
 
 > Paul Dietz' test suite doesn't look kindly to adding arguments to standard functions.
-> 
+>
 > It doesn't stop us from doing so, but it does give me pause.
 
 The talks

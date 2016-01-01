@@ -2,7 +2,7 @@
 date: 2007-01-14T23:35:49Z
 mt_id: 68
 title: McCLIM 0.9.4 "Orthodox New Year" released!
-url: /2007/01/14/mcclim_094_orthodox_new_year_r_1/
+url: /archives/2007/01/mcclim_094_orthodox_new_year_r_1.html
 ---
 
 We [released](http://common-lisp.net/pipermail/mcclim-announce/2007-January/000004.html) McCLIM 0.9.4 today. You may be wondering what's so cool about it this time, so here's a short list:
@@ -14,4 +14,4 @@ We [released](http://common-lisp.net/pipermail/mcclim-announce/2007-January/0000
 (Of course, there are probably lots of new bugs in there, too. Please let us know about them at mcclim-devel at common-lisp.net!)
 
 (And of course, the release announcement has the obligatory editing-under-stress error. You will get the following reward for finding it:<br/>
-) 
+)

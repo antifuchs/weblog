@@ -2,7 +2,7 @@
 date: 2007-01-21T13:58:24Z
 mt_id: 70
 title: '"make depend" for lisp'
-url: /2007/01/21/make_depend_for_lisp/
+url: /archives/2007/01/make_depend_for_lisp.html
 ---
 
 As the software-publishing planet.lisp.org crowd probably knows,
@@ -14,7 +14,7 @@ error. After that, it's easier to use a serial system definition: just
 find a defined order to compile and load the files.
 
 There's a tradeoff, though: Serial system definitions are a pain for
-users who want to hack on your code. If someone changes a file (e.g. one 
+users who want to hack on your code. If someone changes a file (e.g. one
 close to the start of the series of components), every single component after it in the series must be recompiled. Dependencies would help, but we already
 established that they're too hard to maintain by hand in a large system. What's a system definition maintainer to do?
 
@@ -72,4 +72,4 @@ with 192 non-redundant dependencies!
 If you want to try your luck with asdf-dependency-grovel, check out the
 [cliki page](http://www.cliki.net/asdf-dependency-grovel).
 
-Also, here are two graphs of the new [McCLIM system's dependencies](http://boinkor.net/lisp/mcclim/CLIM-2007.png) and [the CLX system's dependencies](http://boinkor.net/lisp/mcclim/CLX-2007.png). 
+Also, here are two graphs of the new [McCLIM system's dependencies](http://boinkor.net/lisp/mcclim/CLIM-2007.png) and [the CLX system's dependencies](http://boinkor.net/lisp/mcclim/CLX-2007.png).

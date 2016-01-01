@@ -3,12 +3,14 @@ categories: null
 comments: true
 date: 2015-12-31T17:33:22Z
 title: 2015 in books
-url: /2015/12/31/2015-in-books/
+url: /archives/2015/12/2015-in-books.html
 ---
 
 OK OK, [time](http://www.kiranbot.com/2015-reading-log/) to join in
 [the](https://medium.com/philosophy-logic/the-best-of-what-i-read-in-2015-ae3491444a5a#.uf7sk9qms)
 book review fun.
+
+<!--more-->
 
 All these are from memory and goodreads, so I hope you'll forgive me
 if I miss one or two. You'll notice I didn't list almost no

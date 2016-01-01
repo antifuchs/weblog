@@ -3,12 +3,12 @@ categories: ["Lisp"]
 date: 2009-03-29T13:00:14Z
 mt_id: 94
 title: 'Clojure and Art of Illusion: BFF'
-url: /2009/03/29/clojure_and_art_of_illusion_bf/
+url: /archives/2009/03/clojure_and_art_of_illusion_bf.html
 ---
 
 Two weeks ago, [the rotary program dial on my dishwasher broke](http://www.23hq.com/antifuchs/photo/4075448). Luckily, I could fix it with two Lego parts ([a Cross Axle #6 and a 16-teeth gear](http://www.ihmc.us/lego/kits/peices.html)) initially, but the program selection experience suffered from the axle's being too thin: it'd always bend in the turning direction until the selector would too-rapidly rotate past the point I wanted to select. Ugh.
 
-Luckily for me, there's a [reprap](http://reprap.org/bin/view/Main/WebHome) at the [Metalab](http://reprap.soup.io). This is a low-cost 3d printer that can extrude parts made of ABS (the same material that Lego pieces are made of). With the help of [Philipp](http://metalab.at/wiki/Benutzer:Wizard23)'s MetaCADEvaluator plugin to [Art of Illusion (AoI)](http://aoi.sf.net), I managed to create a very nice 3d model of a replacement for the dial. That plugin let me define parameters for each part, so I could easily resize all parts manually once I discovered that I'd mistakenly noted down each part's diameter instead of the radius.  However, this was slightly fiddly business: All editing happens inside Art of Illusion's part name text fields, the syntax is slightly odd, and you can't define your own part library. 
+Luckily for me, there's a [reprap](http://reprap.org/bin/view/Main/WebHome) at the [Metalab](http://reprap.soup.io). This is a low-cost 3d printer that can extrude parts made of ABS (the same material that Lego pieces are made of). With the help of [Philipp](http://metalab.at/wiki/Benutzer:Wizard23)'s MetaCADEvaluator plugin to [Art of Illusion (AoI)](http://aoi.sf.net), I managed to create a very nice 3d model of a replacement for the dial. That plugin let me define parameters for each part, so I could easily resize all parts manually once I discovered that I'd mistakenly noted down each part's diameter instead of the radius.  However, this was slightly fiddly business: All editing happens inside Art of Illusion's part name text fields, the syntax is slightly odd, and you can't define your own part library.
 
 Enter my urge to try out [Clojure](http://clojure.org). This little side project took three steps:
 
@@ -18,7 +18,7 @@ Enter my urge to try out [Clojure](http://clojure.org). This little side project
 
 There's a detailed description of these steps after the jump. Here's [the github project for my AoI clojure plugin](http://github.com/antifuchs/aoi-swank-plugin/).
 
- 
+
 
 ## Embedding clojure inside AoI
 

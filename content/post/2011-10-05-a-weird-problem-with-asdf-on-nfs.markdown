@@ -4,7 +4,7 @@ comments: true
 date: 2011-10-05T00:00:00Z
 title: A Weird Problem With ASDF on NFS (and a workaround)
 updated: 2011-10-11
-url: /2011/10/05/a-weird-problem-with-asdf-on-nfs/
+url: /archives/2011/10/a-weird-problem-with-asdf-on-nfs.html
 ---
 
 Recently, we at Franz have been seeing weird failures when building a
@@ -169,17 +169,17 @@ int main(int argc, char **argv) {
     /* never seems to be triggered */
     if (sb2.st_mtime != sb1.st_mtime) {
       printf("mtime changed between last write (%d) and close (%u)\n",
-	     sb1.st_mtime, sb2.st_mtime);
+         sb1.st_mtime, sb2.st_mtime);
       exit(1);
     }
     if (sb1.st_mtime > tv1.tv_sec) {
       printf("mtime after last write has a future timestamp (%u > %u)\n",
-	     sb1.st_mtime, tv1.tv_sec);
+         sb1.st_mtime, tv1.tv_sec);
       exit(1);
     }
     if (sb2.st_mtime > tv2.tv_sec) {
       printf("mtime after close has a future timestamp (%u > %u)\n",
-	     sb2.st_mtime, tv2.tv_sec);
+         sb2.st_mtime, tv2.tv_sec);
       exit(1);
     }
   }

@@ -2,7 +2,7 @@
 date: 2006-10-23T10:31:42Z
 mt_id: 46
 title: 'SBCL cvs->arch service turned off: use git.'
-url: /2006/10/23/sbcl_cvsarch_service_turned_of/
+url: /archives/2006/10/sbcl_cvsarch_service_turned_of.html
 ---
 
 As [mentioned on the sbcl-devel mailing
@@ -24,4 +24,4 @@ via `git clone git://sbcl.boinkor.net/sbcl.git/`). It's both
 faster and more functional than the arch archive, and has conversion
 tools that work really well.
 
-**Update:** the git repository url was wrong. Please use `git://sbcl.boinkor.net/sbcl.git/` or `http://sbcl.boinkor.net/git/sbcl-beta.git/` if you tried to download from the old url before. 
+**Update:** the git repository url was wrong. Please use `git://sbcl.boinkor.net/sbcl.git/` or `http://sbcl.boinkor.net/git/sbcl-beta.git/` if you tried to download from the old url before.

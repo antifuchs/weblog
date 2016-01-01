@@ -3,7 +3,7 @@ categories: ["Lisp"]
 comments: true
 date: 2011-12-30T00:00:00Z
 title: Converting the Mustache Test Suite to CL
-url: /2011/12/30/converting-the-mustache-test-suite-to-cl/
+url: /archives/2011/12/converting-the-mustache-test-suite-to-cl.html
 ---
 
 Matthew Snyder has a great

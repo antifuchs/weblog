@@ -2,7 +2,7 @@
 date: 2006-01-25T20:20:43Z
 mt_id: 38
 title: SBCL autobenching (a.k.a. "boinkmarking") HOWTO
-url: /2006/01/25/sbcl_autobenching_aka_boinkmar/
+url: /archives/2006/01/sbcl_autobenching_aka_boinkmar.html
 ---
 
 Finally! A life sign! And it's a lisp post, too!
@@ -60,7 +60,7 @@ now. Here's a sample customisation file for an x86-64 machine:
      ;; The directory where you checked out the autobench source.
      (setf *base-dir* #p"/home/sbcl-arch/autobench/")
 
-     
+
      ;;; BUILD STRATEGIES
      (defstrategy +sbcl-64+ sbcl (:mode (:arch :x86_64 :features ())))
      (defstrategy +sbcl-32+ sbcl (:mode (:arch :emulated-x86 :features ())))
@@ -76,7 +76,7 @@ now. Here's a sample customisation file for an x86-64 machine:
                                               :strategies (,+sbcl-32+ ,+sbcl-32-threaded+
                                               ,+sbcl-64+ ,+sbcl-64-threaded+))))
 
-     
+
      ;;; POSTGRES DB SSH TUNNEL VARIABLES
      ;; The function used to ensure the database connection can be established.
      ;; This is different from actually establishing the db connection:
@@ -94,7 +94,7 @@ now. Here's a sample customisation file for an x86-64 machine:
      ;; to the boinkmarks DB host.
      (setf *ssh-remote-username* *db-default-user-name*) ; typically the same. customize if they're not.
 
-     
+
 
 
 While this may look like a lot at first reading, it's nothing compared to, say, `sendmail.cf` (-:
@@ -178,7 +178,7 @@ source. Good thing you got git in the previous steps, right?
   * Hit ctrl-c if it works. If not, see `/autobench-base-dir/+log/`
     for logs of every command that failed (i.e. returned non-0 exit
     status).
-  
+
 * Set up a cron job to execute *base-dir*"/scripts/cron-run-benchmarks" every day on 0:00:
    * `$ crontab -e`
    * add the line `@daily       wherever/scripts/cron-run-benchmarks`
@@ -188,4 +188,3 @@ pretty graphs on
 [http://sbcl-test.boinkor.net/bench/](http://sbcl-test.boinkor.net/bench/)!
 
 **UPDATE:** The arch archive is defunct; this guide now uses the git repository.
- 

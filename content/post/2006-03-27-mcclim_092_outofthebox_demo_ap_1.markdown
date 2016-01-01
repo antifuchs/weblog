@@ -2,7 +2,7 @@
 date: 2006-03-27T14:20:41Z
 mt_id: 43
 title: McCLIM 0.9.2 out-of-the-box demo application available
-url: /2006/03/27/mcclim_092_outofthebox_demo_ap_1/
+url: /archives/2006/03/mcclim_092_outofthebox_demo_ap_1.html
 ---
 
 Following [Christophe's suggestion](http://meme.b9.com/cview.html?channel=lisp&utime=3352443780#utime_requested), I have put up a binary of McCLIM 0.9.2, its demos, and the Inspector, Debugger and Listener applications.
@@ -19,4 +19,4 @@ on the Listener prompt, enter
 
         (/ 1 0)  ; to open the clim debugger
 
-or activate the menu item "Demos -> Plot Fishes using Functional Geometry" to see a nice "Escher" style plot. 
+or activate the menu item "Demos -> Plot Fishes using Functional Geometry" to see a nice "Escher" style plot.

@@ -3,10 +3,10 @@ date: 2007-02-03T23:21:45Z
 mt_id: 72
 title: II - A Discordian shall always use the official discordian document numbering
   system
-url: /2007/02/03/ii_a_discordian_shall_always_u/
+url: /archives/2007/02/ii_a_discordian_shall_always_u.html
 ---
 
-Yay [memes](http://bc.tech.coop/blog/070203.html)! I've been tagged, and not in the comfortably [delicious](http://del.icio.us) way. 
+Yay [memes](http://bc.tech.coop/blog/070203.html)! I've been tagged, and not in the comfortably [delicious](http://del.icio.us) way.
 
 1. I hoped for a long time to somehow avoid [compulsory military service](http://www.bmlv.gv.at/). When I no longer cared about it, they let me go because I had flat feet.
 
@@ -18,4 +18,4 @@ Yay [memes](http://bc.tech.coop/blog/070203.html)! I've been tagged, and not in 
 
 5. I am an Atheist, and a [Discordian](http://en.wikipedia.org/wiki/Discordianism). Disbelief is a very unserious business.
 
-In order to avoid planet.lispy combinatorial explosion (and further in-breeding of this meme), I'll tag [boinkmarks](http://sbcl.boinkor.net/bench/) feeds `baker/SBCL:emulated-x86/(:sb-thread)`, `elgar/SBCL:ppc-on-ppc64`, `elgar/SBCL:ppc-on-ppc64/((not :gencgc))`, `walrus.boinkor.net/SBCL:x86`, `baker/CLISP:x86_64` instead of the few planet.lisp bloggers that are still missing (Xof, rudi -- you are memetically free for another day). Expect their statements in a few days. 
+In order to avoid planet.lispy combinatorial explosion (and further in-breeding of this meme), I'll tag [boinkmarks](http://sbcl.boinkor.net/bench/) feeds `baker/SBCL:emulated-x86/(:sb-thread)`, `elgar/SBCL:ppc-on-ppc64`, `elgar/SBCL:ppc-on-ppc64/((not :gencgc))`, `walrus.boinkor.net/SBCL:x86`, `baker/CLISP:x86_64` instead of the few planet.lisp bloggers that are still missing (Xof, rudi -- you are memetically free for another day). Expect their statements in a few days.
