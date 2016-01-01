@@ -8,6 +8,8 @@ import (
 )
 
 var challenges = map[string]string{
+	// live blog:
+	"vGN3naaZkeVUFR6OFLm2oCuljQeMpWBvetWo4vg6GlY": "vGN3naaZkeVUFR6OFLm2oCuljQeMpWBvetWo4vg6GlY.-dY7lM01g0wLcbiFBYNNacLm5cnT9vrS09MvG2cHhOc",
 	// testblog:
 	"F4BmE6MsjOQQFrEdchLwqu73PRdow03pYZ9hj3uFktU": "F4BmE6MsjOQQFrEdchLwqu73PRdow03pYZ9hj3uFktU.-dY7lM01g0wLcbiFBYNNacLm5cnT9vrS09MvG2cHhOc",
 }
