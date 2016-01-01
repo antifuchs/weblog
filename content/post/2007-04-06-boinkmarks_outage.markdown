@@ -2,6 +2,7 @@
 date: 2007-04-06T07:56:06Z
 mt_id: 81
 title: boinkmarks outage...
+url: /2007/04/boinkmarks-outage
 aliases:
 - /archives/2007/04/boinkmarks_outage.html
 atom_id: http://boinkor.net/archives/2007/04/boinkmarks_outage

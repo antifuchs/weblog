@@ -2,6 +2,7 @@
 date: 2006-11-07T18:32:03Z
 mt_id: 54
 title: This will probably mean nothing to you...
+url: /public/2006/11/this-will-probably-mean-nothin/
 aliases:
 - /archives/2006/11/this_will_probably_mean_nothin.html
 atom_id: http://boinkor.net/archives/2006/11/this_will_probably_mean_nothin
