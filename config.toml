@@ -1,3 +1,4 @@
+theme = "purehugo"
 baseurl = "https://boinkor.net/"
 languageCode = "en-us"
 title = "Andreas Fuchs' Journal"
