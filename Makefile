@@ -2,14 +2,21 @@ CERTS = certs/testblog.boinkor.net.key.pem certs/testblog.boinkor.net.cert.pem
 THEME = themes/purehugo
 THEME_GIT = https://github.com/toru-mano/purehugo
 
+all: deploy
+
 deploy: $(THEME)
 	hugo
 	goapp deploy
 
-$(THEME):
-	git clone $(THEME_GIT) $(THEME)
+demo:
+	hugo serve
 
 certificates: $(CERTS)
+
+# File rules
+
+$(THEME):
+	git clone $(THEME_GIT) $(THEME)
 
 letsencrypt/letsencrypt-auto:
 	git clone https://github.com/letsencrypt/letsencrypt
@@ -24,4 +31,4 @@ certs/testblog.boinkor.net.key.pem: certs
 certs/testblog.boinkor.net.cert.pem: certs
 	sudo cat /etc/letsencrypt/live/testblog.boinkor.net/fullchain.pem > $@
 
-.PHONY: phony deploy certificates
+.PHONY: phony all deploy certificates demo
