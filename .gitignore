@@ -18,3 +18,6 @@ node_modules
 
 # Letsencrypt checkout
 /letsencrypt/
+
+# Certificates from letsencrypt
+/certs/
