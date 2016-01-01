@@ -4,7 +4,7 @@ date: 2009-11-15T22:11:36Z
 mt_id: 99
 title: Hunchentoot gets a debugging-acceptor
 url: /archives/2009/11/hunchentoot_gets_a_debugging-a.html
-atom_id: /archives/2009/11/hunchentoot_gets_a_debugging-a
+atom_id: http://boinkor.net/archives/2009/11/hunchentoot_gets_a_debugging-a
 ---
 
 Today, I submitted a patch (the first free software lisp one in months for me!) to the [Hunchentoot](http://weitz.de/hunchentoot/) project, and it got accepted. Yay!

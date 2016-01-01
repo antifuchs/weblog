@@ -3,7 +3,7 @@ date: 2007-03-20T14:31:53Z
 mt_id: 78
 title: Text search visualizer an unexpected success
 url: /archives/2007/03/text_search_visualizer_an_unex.html
-atom_id: /archives/2007/03/text_search_visualizer_an_unex
+atom_id: http://boinkor.net/archives/2007/03/text_search_visualizer_an_unex
 ---
 
 I did a preview demo of the text search visualizer ([see](http://boinkor.net/archives/2007/03/simple_visualization_tool_for.html)) today and achieved understanding in one other person. Yay!

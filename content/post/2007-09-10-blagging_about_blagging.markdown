@@ -3,7 +3,7 @@ date: 2007-09-10T17:10:47Z
 mt_id: 87
 title: Blagging about blagging
 url: /archives/2007/09/blagging_about_blagging.html
-atom_id: /archives/2007/09/blagging_about_blagging
+atom_id: http://boinkor.net/archives/2007/09/blagging_about_blagging
 ---
 
 I just upgraded this blog to MovableType 4, for which this is a test entry. While I'm at it, I might as well say things about where I've been gone in the last couple of months. First, I spent a lovely week in Cambridge, MA, consulting for ITA software. (Photographic evidence [here](http://www.23hq.com/antifuchs/album/2315744).)

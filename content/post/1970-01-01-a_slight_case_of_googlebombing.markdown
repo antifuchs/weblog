@@ -4,7 +4,7 @@ date: 1970-01-01T10:03:04Z
 mt_id: 88
 title: A slight case of googlebombing
 url: /archives/1970/01/a_slight_case_of_googlebombing.html
-atom_id: /archives/1970/01/a_slight_case_of_googlebombing
+atom_id: http://boinkor.net/archives/1970/01/a_slight_case_of_googlebombing
 ---
 
 So, a google search for "Lisp tutorial" gives you obsolete (and not-so-obsolete) crap, mostly. If you're as frustrated by this as I am, take a look at this [Lisp tutorial][tut]. It's a great [Common Lisp tutorial][tut], as well.

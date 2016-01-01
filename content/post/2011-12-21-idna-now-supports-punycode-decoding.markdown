@@ -4,7 +4,7 @@ comments: true
 date: 2011-12-21T00:00:00Z
 title: IDNA Now Supports Punycode Decoding
 url: /archives/2011/12/idna-now-supports-punycode-decoding.html
-atom_id: /archives/2011/12/idna-now-supports-punycode-decoding
+atom_id: http://boinkor.net/archives/2011/12/idna-now-supports-punycode-decoding
 ---
 
 My [IDNA library](http://github.com/antifuchs/idna) now supports

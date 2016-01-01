@@ -4,7 +4,7 @@ date: 2006-11-14T12:50:10Z
 mt_id: 57
 title: Three useful .emacs hacks for lispers
 url: /archives/2006/11/three_useful_emacs_hacks_for_l.html
-atom_id: /archives/2006/11/three_useful_emacs_hacks_for_l
+atom_id: http://boinkor.net/archives/2006/11/three_useful_emacs_hacks_for_l
 ---
 
 I gave in and updated my lisp hacking-related emacs configuration today. These three snippets make my life easier now:

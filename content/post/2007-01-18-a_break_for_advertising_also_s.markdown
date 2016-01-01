@@ -3,7 +3,7 @@ date: 2007-01-18T00:09:24Z
 mt_id: 69
 title: A break for advertising (and a bit of synchronicity)
 url: /archives/2007/01/a_break_for_advertising_also_s.html
-atom_id: /archives/2007/01/a_break_for_advertising_also_s
+atom_id: http://boinkor.net/archives/2007/01/a_break_for_advertising_also_s
 ---
 
 (No Lisp content here, move along, planet.lisp reader...)

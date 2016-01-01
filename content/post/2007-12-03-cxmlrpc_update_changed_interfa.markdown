@@ -3,7 +3,7 @@ date: 2007-12-03T22:45:16Z
 mt_id: 90
 title: 'CXML-RPC update: changed interface, includes server part'
 url: /archives/2007/12/cxmlrpc_update_changed_interfa.html
-atom_id: /archives/2007/12/cxmlrpc_update_changed_interfa
+atom_id: http://boinkor.net/archives/2007/12/cxmlrpc_update_changed_interfa
 ---
 
 I didn't really like the DWIM interface for type translations on the client, so I made the type information mandatory. (-:

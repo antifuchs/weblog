@@ -4,7 +4,7 @@ comments: true
 date: 2015-12-31T17:33:22Z
 title: 2015 in books
 url: /archives/2015/12/2015-in-books.html
-atom_id: /archives/2015/12/2015-in-books
+atom_id: http://boinkor.net/archives/2015/12/2015-in-books
 ---
 
 OK OK, [time](http://www.kiranbot.com/2015-reading-log/) to join in

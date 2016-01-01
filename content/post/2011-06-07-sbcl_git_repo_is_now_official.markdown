@@ -4,7 +4,7 @@ date: 2011-06-07T06:16:02Z
 mt_id: 106
 title: SBCL git repo is now official!
 url: /archives/2011/06/sbcl_git_repo_is_now_official.html
-atom_id: /archives/2011/06/sbcl_git_repo_is_now_official
+atom_id: http://boinkor.net/archives/2011/06/sbcl_git_repo_is_now_official
 ---
 
 Almost exactly four years after I [announced](http://comments.gmane.org/gmane.lisp.steel-bank.devel/7033) the availability of the first iteration of the SBCL cvs->git mirror (and a few more years after the [cvs->arch mirror even](http://permalink.gmane.org/gmane.lisp.steel-bank.devel/2536)!), we now have an official SBCL repository! Many thanks to Nikodemus for doing all the heavy lifting! (-:

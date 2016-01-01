@@ -4,7 +4,7 @@ date: 2008-01-15T16:15:06Z
 mt_id: 92
 title: A public service announcement
 url: /archives/2008/01/a_public_service_announcement.html
-atom_id: /archives/2008/01/a_public_service_announcement
+atom_id: http://boinkor.net/archives/2008/01/a_public_service_announcement
 ---
 
 (This blog entry is **outdated**. The currently recommended way to get lisp software and its dependencies is [quicklisp](http://quicklisp.org/)).

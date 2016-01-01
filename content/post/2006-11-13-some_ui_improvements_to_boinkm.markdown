@@ -3,7 +3,7 @@ date: 2006-11-13T20:14:38Z
 mt_id: 56
 title: Some UI improvements to boinkmarks
 url: /archives/2006/11/some_ui_improvements_to_boinkm.html
-atom_id: /archives/2006/11/some_ui_improvements_to_boinkm
+atom_id: http://boinkor.net/archives/2006/11/some_ui_improvements_to_boinkm
 ---
 
 I've spent the last few hours adding a bit of javascript/araneida magick to [the boinkmarks web interface](http://sbcl.boinkor.net/bench/). If you have javascript enabled, and your browser is supported by [dojo](http://dojotoolkit.org), it's possible to select the hosts, implementations, releases that you want in a matter of seconds (and not in 2-3 minutes). Yay!

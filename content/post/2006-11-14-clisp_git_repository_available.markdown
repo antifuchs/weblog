@@ -3,7 +3,7 @@ date: 2006-11-14T17:05:54Z
 mt_id: 58
 title: CLISP git repository available
 url: /archives/2006/11/clisp_git_repository_available.html
-atom_id: /archives/2006/11/clisp_git_repository_available
+atom_id: http://boinkor.net/archives/2006/11/clisp_git_repository_available
 ---
 
 As a pleasant side-effect from [CLISP boinkmarks](http://boinkor.net/archives/2006/11/clisp_boinkmarks_available.html) availability, I can now make available a git-ified clone of CLISP's CVS repository that is synced once every hour.

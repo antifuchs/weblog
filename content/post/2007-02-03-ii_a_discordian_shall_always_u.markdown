@@ -3,7 +3,7 @@ date: 2007-02-03T23:21:45Z
 mt_id: 72
 title: II - A Discordian shall always use the official discordian document numbering system
 url: /archives/2007/02/ii_a_discordian_shall_always_u.html
-atom_id: /archives/2007/02/ii_a_discordian_shall_always_u
+atom_id: http://boinkor.net/archives/2007/02/ii_a_discordian_shall_always_u
 ---
 
 Yay [memes](http://bc.tech.coop/blog/070203.html)! I've been tagged, and not in the comfortably [delicious](http://del.icio.us) way.

@@ -3,7 +3,7 @@ date: 2006-11-04T19:29:26Z
 mt_id: 51
 title: 'Hacking Objective C for fun and profit: An SSH plugin for Quicksilver'
 url: /archives/2006/11/hacking_objective_c_for_fun_an.html
-atom_id: /archives/2006/11/hacking_objective_c_for_fun_an
+atom_id: http://boinkor.net/archives/2006/11/hacking_objective_c_for_fun_an
 ---
 
 In a [recent entry](http://boinkor.net/archives/2006/04/a_ssh_plugin_for_deskbarapplet.html), I compared [deskbar-applet](http://raphael.slinckx.net/deskbar/) with [Quicksilver](http://quicksilver.blacktree.net) and introduced a plugin I had written. Well, I now own a macintosh, and so I wanted Quicksilver to gracefully handle SSH connections, too.

@@ -3,7 +3,7 @@ date: 2006-11-08T15:11:18Z
 mt_id: 55
 title: CLISP boinkmarks available
 url: /archives/2006/11/clisp_boinkmarks_available.html
-atom_id: /archives/2006/11/clisp_boinkmarks_available
+atom_id: http://boinkor.net/archives/2006/11/clisp_boinkmarks_available
 ---
 
 Here's the explanation of [yesterday's cryptic announcement](http://boinkor.net/archives/2006/11/this_will_probably_mean_nothin.html):

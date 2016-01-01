@@ -3,7 +3,7 @@ date: 2006-11-17T00:16:09Z
 mt_id: 60
 title: A negligibly inconvenient truth
 url: /archives/2006/11/a_negligiblyinconvenient_truth.html
-atom_id: /archives/2006/11/a_negligiblyinconvenient_truth
+atom_id: http://boinkor.net/archives/2006/11/a_negligiblyinconvenient_truth
 ---
 
 Xach [writes](http://xach.livejournal.com/91271.html):

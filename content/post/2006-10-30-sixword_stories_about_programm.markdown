@@ -3,7 +3,7 @@ date: 2006-10-30T20:50:34Z
 mt_id: 47
 title: Six-word stories about programming languages
 url: /archives/2006/10/sixword_stories_about_programm.html
-atom_id: /archives/2006/10/sixword_stories_about_programm
+atom_id: http://boinkor.net/archives/2006/10/sixword_stories_about_programm
 ---
 
 [This](http://undefined.com/ia/2006/10/27/six-word-stories-about-programming-languages/) made me laugh:

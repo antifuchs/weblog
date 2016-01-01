@@ -4,7 +4,7 @@ comments: true
 date: 2013-01-19T00:00:00Z
 title: 'Elixir: First Impressions'
 url: /archives/2013/01/elixir-first-impressions.html
-atom_id: /archives/2013/01/elixir-first-impressions
+atom_id: http://boinkor.net/archives/2013/01/elixir-first-impressions
 ---
 
 For the longest time now, I've admired

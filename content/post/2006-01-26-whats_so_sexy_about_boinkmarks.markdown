@@ -3,7 +3,7 @@ date: 2006-01-26T19:49:21Z
 mt_id: 39
 title: What's so sexy about boinkmarks?
 url: /archives/2006/01/whats_so_sexy_about_boinkmarks.html
-atom_id: /archives/2006/01/whats_so_sexy_about_boinkmarks
+atom_id: http://boinkor.net/archives/2006/01/whats_so_sexy_about_boinkmarks
 ---
 
 Xach on #lisp asked me why people would want to run autobench to repeatedly build & benchmark sbcl. That's a good question, and I think I found a few answers:

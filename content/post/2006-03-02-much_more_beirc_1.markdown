@@ -3,7 +3,7 @@ date: 2006-03-02T23:09:04Z
 mt_id: 41
 title: MUCH MORE BEIRC
 url: /archives/2006/03/much_more_beirc_1.html
-atom_id: /archives/2006/03/much_more_beirc_1
+atom_id: http://boinkor.net/archives/2006/03/much_more_beirc_1
 ---
 
 While [several](http://www.lisphacker.com/) [others](http://cyrusharmon.org/cl/blog/) are busy porting [sbcl](http://www.sbcl.org) to [platforms](http://www.microsoft.com/windows/default.mspx) [that God itself hates](http://www.apple.com/imac/), I've been hacking on something much more trivial, but much more fun (and rewarding, in the short term): [beirc][b].

@@ -5,7 +5,7 @@ date: 2011-10-05T00:00:00Z
 title: A Weird Problem With ASDF on NFS (and a workaround)
 updated: 2011-10-11
 url: /archives/2011/10/a-weird-problem-with-asdf-on-nfs.html
-atom_id: /archives/2011/10/a-weird-problem-with-asdf-on-nfs
+atom_id: http://boinkor.net/archives/2011/10/a-weird-problem-with-asdf-on-nfs
 ---
 
 Recently, we at Franz have been seeing weird failures when building a

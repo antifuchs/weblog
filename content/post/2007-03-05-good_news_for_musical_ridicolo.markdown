@@ -3,7 +3,7 @@ date: 2007-03-05T16:37:07Z
 mt_id: 76
 title: Good news for musical ridicologists
 url: /archives/2007/03/good_news_for_musical_ridicolo.html
-atom_id: /archives/2007/03/good_news_for_musical_ridicolo
+atom_id: http://boinkor.net/archives/2007/03/good_news_for_musical_ridicolo
 ---
 
 It's a great tradition on the channel [#lisp](irc://freenode.net/lisp) to watch the [Eurovision Song contest](http://www.eurovision.tv/) live transmission, make fun of participants, and get drunk in the process. From [today's news](http://blog.wired.com/tableofmalcontents/2007/03/nice_try_sweden.html), it sounds like 2007 is going to be a good year for this kind of thing:

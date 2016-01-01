@@ -4,7 +4,7 @@ date: 2010-09-25T00:52:02Z
 mt_id: 104
 title: Visualizing the CLHS interlinking structure
 url: /archives/2010/09/visualizing_the_clhs_interlink.html
-atom_id: /archives/2010/09/visualizing_the_clhs_interlink
+atom_id: http://boinkor.net/archives/2010/09/visualizing_the_clhs_interlink
 ---
 
 Lately, I've been wondering what we could use the ~110k Hyperlinks in the CLHS for, other than click through the spec in a web browser. For example, given a glossary entry, how do you find out which functions refer to it?
