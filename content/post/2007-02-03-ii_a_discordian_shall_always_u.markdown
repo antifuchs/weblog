@@ -1,9 +1,8 @@
 ---
 date: 2007-02-03T23:21:45Z
 mt_id: 72
-title: II - A Discordian shall always use the official discordian document numbering
-  system
-  url: /archives/2007/02/ii_a_discordian_shall_always_u.html
+title: II - A Discordian shall always use the official discordian document numbering system
+url: /archives/2007/02/ii_a_discordian_shall_always_u.html
 atom_id: /archives/2007/02/ii_a_discordian_shall_always_u
 ---
 
