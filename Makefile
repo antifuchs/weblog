@@ -1,8 +1,13 @@
 CERTS = certs/testblog.boinkor.net.key.pem certs/testblog.boinkor.net.cert.pem
+THEME = themes/purehugo
+THEME_GIT = https://github.com/toru-mano/purehugo
 
-deploy:
+deploy: $(THEME)
 	hugo
 	goapp deploy
+
+$(THEME):
+	git clone $(THEME_GIT) $(THEME)
 
 certificates: $(CERTS)
 
