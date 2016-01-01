@@ -1,5 +1,5 @@
 ---
-categories: null
+categories: ["Books"]
 comments: true
 date: 2015-12-31T17:33:22Z
 title: 2015 in books
