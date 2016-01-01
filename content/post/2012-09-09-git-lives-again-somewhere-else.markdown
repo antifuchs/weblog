@@ -4,6 +4,7 @@ comments: true
 date: 2012-09-09T00:00:00Z
 title: Git lives again - somewhere else
 url: /archives/2012/09/git-lives-again-somewhere-else.html
+atom_id: /archives/2012/09/git-lives-again-somewhere-else
 ---
 
 I've revived the git repos affected by

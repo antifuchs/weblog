@@ -4,6 +4,7 @@ comments: true
 date: 2011-10-08T00:00:00Z
 title: Accessing the Stripe API From Lisp
 url: /archives/2011/10/accessing-the-stripe-api-from-lisp.html
+atom_id: /archives/2011/10/accessing-the-stripe-api-from-lisp
 ---
 
 [Stripe](https://stripe.com) is a new payment processor on the Web,

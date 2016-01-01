@@ -4,6 +4,7 @@ comments: true
 date: 2012-08-24T00:00:00Z
 title: git.boinkor.net outage
 url: /archives/2012/08/git-dot-boinkor-dot-net-outage.html
+atom_id: /archives/2012/08/git-dot-boinkor-dot-net-outage
 ---
 
 I'm currently moving some of boinkor.net's services off the creaky old

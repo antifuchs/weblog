@@ -4,6 +4,7 @@ comments: true
 date: 2012-12-26T00:00:00Z
 title: 'Write gmail filters in a nice Ruby DSL: gmail-britta'
 url: /archives/2012/12/write-gmail-filters-in-a-nice-ruby-dsl-gmail-britta.html
+atom_id: /archives/2012/12/write-gmail-filters-in-a-nice-ruby-dsl-gmail-britta
 ---
 
 I've just finished (mostly) documenting and writing tests for my

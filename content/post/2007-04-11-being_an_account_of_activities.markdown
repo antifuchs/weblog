@@ -3,6 +3,7 @@ date: 2007-04-11T01:59:09Z
 mt_id: 82
 title: Being an account of activities at ILC07
 url: /archives/2007/04/being_an_account_of_activities.html
+atom_id: /archives/2007/04/being_an_account_of_activities
 ---
 
 [Xach nudges](http://xach.livejournal.com/112763.html), I comply. To summarize the text that is to come, the conference was great. Hooray for Nick Levine, whose conference organization talents are deeply awesome.

@@ -4,6 +4,7 @@ date: 2006-11-03T11:13:41Z
 mt_id: 50
 title: Using git bisect to locate bugs in SBCL
 url: /archives/2006/11/using_git_bisect_to_locate_bug_1.html
+atom_id: /archives/2006/11/using_git_bisect_to_locate_bug_1
 ---
 
 I've announced the git repository a few weeks ago. Here's something very nice you can do with it: Run a binary search on revisions to find out the version of SBCL that caused a bug. This helps enormously when searching for the cause of bugs.

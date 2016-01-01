@@ -4,6 +4,7 @@ date: 2010-11-20T08:28:00Z
 mt_id: 105
 title: Userscript for nicer l1sp.org search
 url: /archives/2010/11/userscript_for_nicer_l1sporg_s.html
+atom_id: /archives/2010/11/userscript_for_nicer_l1sporg_s
 ---
 
 I love the [l1sp.org](http://l1sp.org) documentation redirection service. It is quick and easy to look stuff up there if you know the name, and it has a pretty good search if you don't. However, the search results are not presented very nicely: They're very close together, and the ones I'm looking for most often (mostly CLHS pages) are buried somewhere in the middle.

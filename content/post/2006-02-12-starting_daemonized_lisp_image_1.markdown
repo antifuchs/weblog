@@ -3,6 +3,7 @@ date: 2006-02-12T13:46:39Z
 mt_id: 40
 title: Starting daemonized lisp images in debian
 url: /archives/2006/02/starting_daemonized_lisp_image_1.html
+atom_id: /archives/2006/02/starting_daemonized_lisp_image_1
 ---
 
 On baker, I'm running two lisp images: [autobench's web

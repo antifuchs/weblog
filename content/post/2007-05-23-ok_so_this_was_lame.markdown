@@ -3,6 +3,7 @@ date: 2007-05-23T23:26:49Z
 mt_id: 85
 title: Ok, so this was lame.
 url: /archives/2007/05/ok_so_this_was_lame.html
+atom_id: /archives/2007/05/ok_so_this_was_lame
 ---
 
 I just attended my first [CACert](http://www.cacert.org/ "CAcert.org") assurance party thing. It started off with a 2-hour talk that gave information that could be easily extracted (with a bit of patience for bad english grammar and spelling) from [their wiki](http://wiki.cacert.org/wiki/FAQ "CACert Wiki - FAQ"). Two things that stuck out to me (like, indeed, sore thumbs):

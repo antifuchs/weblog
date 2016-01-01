@@ -3,6 +3,7 @@ date: 2006-11-17T23:24:46Z
 mt_id: 61
 title: Threads for SBCL on FreeBSD
 url: /archives/2006/11/threads_for_sbcl_on_freebsd.html
+atom_id: /archives/2006/11/threads_for_sbcl_on_freebsd
 ---
 
 I [don't use FreeBSD anymore](http://boinkor.net/archives/2005/06/anger_management_2.html), but [for some reason](http://www.ircbrowse.com/channel/lisp/20030713?utime=3267097749#utime_requested), this topic still interests me.

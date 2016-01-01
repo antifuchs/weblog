@@ -3,6 +3,7 @@ date: 2007-02-14T15:46:42Z
 mt_id: 75
 title: SMTP and IPv6, oh my!
 url: /archives/2007/02/smtp_and_ipv6_oh_my.html
+atom_id: /archives/2007/02/smtp_and_ipv6_oh_my
 ---
 
 This entry is a reminder to myself more than a contribution to any [ongoing or dead discussions](http://www.ripe.net/ripe/maillists/archives/ipv6-wg/2005/msg00526.html) about this topic. (Thanks to **Stoffi** for the initial explanation.)

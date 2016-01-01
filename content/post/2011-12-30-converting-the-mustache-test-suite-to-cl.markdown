@@ -4,6 +4,7 @@ comments: true
 date: 2011-12-30T00:00:00Z
 title: Converting the Mustache Test Suite to CL
 url: /archives/2011/12/converting-the-mustache-test-suite-to-cl.html
+atom_id: /archives/2011/12/converting-the-mustache-test-suite-to-cl
 ---
 
 Matthew Snyder has a great

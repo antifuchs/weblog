@@ -3,6 +3,7 @@ date: 2006-11-02T19:29:27Z
 mt_id: 49
 title: McCLIM 0.9.3 "All Souls' Day" released!
 url: /archives/2006/11/mcclim_093_all_souls_day_relea.html
+atom_id: /archives/2006/11/mcclim_093_all_souls_day_relea
 ---
 
 We released [McCLIM](http://common-lisp.net/project/mcclim/) 0.9.3, code-named "All Souls' Day" today. Most prominently, this release:

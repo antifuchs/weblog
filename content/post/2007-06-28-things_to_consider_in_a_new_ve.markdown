@@ -4,6 +4,7 @@ date: 2007-06-28T01:05:18Z
 mt_id: 86
 title: Things to consider in a new version of ASDF
 url: /archives/2007/06/things_to_consider_in_a_new_ve.html
+atom_id: /archives/2007/06/things_to_consider_in_a_new_ve
 ---
 
 [ASDF](http://cliki.net/asdf)([reference manual](http://constantly.at/lisp/asdf/)) is a fine piece of software: I like to use it, and find some of the design choices in it to be very good (besides, it's the thing that has allowed things like [clbuild](http://common-lisp.net/project/clbuild) and [asdf-install](http://www.cliki.net/ASDF-Install "CLiki : ASDF-Install") to grow). However, it is now in wide enough use that people are looking at its internals and are scratching their heads when finding some not-so-very-good design choices.

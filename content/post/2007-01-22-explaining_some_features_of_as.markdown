@@ -3,6 +3,7 @@ date: 2007-01-22T00:45:16Z
 mt_id: 71
 title: Explaining some features of asdf-dependency-grovel
 url: /archives/2007/01/explaining_some_features_of_as.html
+atom_id: /archives/2007/01/explaining_some_features_of_as
 ---
 
 Some people asked me why asdf-dependency-grovel (abbreviated adg, to save my fingers) merges systems. Since I wrote it, a few more questions came up, and so I'll try to answer them.

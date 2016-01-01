@@ -3,6 +3,7 @@ date: 2006-11-05T19:24:31Z
 mt_id: 53
 title: More Quicksilverification
 url: /archives/2006/11/more_quicksilverification.html
+atom_id: /archives/2006/11/more_quicksilverification
 ---
 
 Hacked on [the SSH Plugin](http://boinkor.net/archives/2006/11/hacking_objective_c_for_fun_an.html) some more. Now it can do:

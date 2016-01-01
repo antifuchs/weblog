@@ -4,6 +4,7 @@ date: 2007-02-13T19:13:59Z
 mt_id: 74
 title: A silly CL-PPCRE performance test
 url: /archives/2007/02/a_silly_clppcre_performance_te.html
+atom_id: /archives/2007/02/a_silly_clppcre_performance_te
 ---
 
 I read ["Regular Expression Matching can be Simple and Fast"](http://swtch.com/~rsc/regexp/regexp1.html) today (via [DF](http://daringfireball.net/linked/2007/february#tue-13-cox_regex)), and I immediately had to try its test for exponential-ness with Edi Weitz's excellent [cl-ppcre](http://weitz.de/cl-ppcre/).

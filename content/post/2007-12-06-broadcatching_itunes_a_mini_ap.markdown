@@ -3,6 +3,7 @@ date: 2007-12-06T01:18:37Z
 mt_id: 91
 title: Broadcatching, iTunes, a "mini" Apple TV
 url: /archives/2007/12/broadcatching_itunes_a_mini_ap.html
+atom_id: /archives/2007/12/broadcatching_itunes_a_mini_ap
 ---
 
 Recently, I got a used Mac Mini from a friend; I decided to put it to good use as a media station in my living room, and it does indeed work pretty well (after fixing it up with codecs that are in use in the real world, but that's not the topic of this article (-:).

@@ -4,6 +4,7 @@ date: 2009-03-29T13:00:14Z
 mt_id: 94
 title: 'Clojure and Art of Illusion: BFF'
 url: /archives/2009/03/clojure_and_art_of_illusion_bf.html
+atom_id: /archives/2009/03/clojure_and_art_of_illusion_bf
 ---
 
 Two weeks ago, [the rotary program dial on my dishwasher broke](http://www.23hq.com/antifuchs/photo/4075448). Luckily, I could fix it with two Lego parts ([a Cross Axle #6 and a 16-teeth gear](http://www.ihmc.us/lego/kits/peices.html)) initially, but the program selection experience suffered from the axle's being too thin: it'd always bend in the turning direction until the selector would too-rapidly rotate past the point I wanted to select. Ugh.

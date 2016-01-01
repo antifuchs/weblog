@@ -3,6 +3,7 @@ date: 2006-11-07T18:32:03Z
 mt_id: 54
 title: This will probably mean nothing to you...
 url: /archives/2006/11/this_will_probably_mean_nothin.html
+atom_id: /archives/2006/11/this_will_probably_mean_nothin
 ---
 
 ...But to me, it spells "success":
