@@ -21,3 +21,6 @@ node_modules
 
 # Certificates from letsencrypt
 /certs/
+
+# Themes are immutable I guess
+/themes/
