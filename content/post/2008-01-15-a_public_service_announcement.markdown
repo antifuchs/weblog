@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2008-01-15T16:15:06Z
 mt_id: 92
 title: A public service announcement

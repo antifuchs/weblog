@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2010-04-28T19:51:47Z
 mt_id: 102
 title: I think this is going to be pretty sweet.

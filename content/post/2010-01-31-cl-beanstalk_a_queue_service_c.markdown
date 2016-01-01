@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2010-01-31T17:49:52Z
 mt_id: 100
 title: 'cl-beanstalk: A queue service client'

@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2009-11-15T22:11:36Z
 mt_id: 99
 title: Hunchentoot gets a debugging-acceptor

@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2010-02-19T10:02:49Z
 mt_id: 101
 title: Vienna informal Lisp meeting 2010-02-27

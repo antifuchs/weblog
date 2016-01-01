@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2007-02-13T19:13:59Z
 mt_id: 74
 title: A silly CL-PPCRE performance test

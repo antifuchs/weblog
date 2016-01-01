@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2007-06-28T01:05:18Z
 mt_id: 86
 title: Things to consider in a new version of ASDF

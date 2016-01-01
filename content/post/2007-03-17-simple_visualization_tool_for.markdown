@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2007-03-17T01:02:22Z
 mt_id: 77
 title: Simple visualization tool for string search

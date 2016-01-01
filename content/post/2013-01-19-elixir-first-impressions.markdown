@@ -1,5 +1,5 @@
 ---
-categories: Hacks
+categories: ["Hacks"]
 comments: true
 date: 2013-01-19T00:00:00Z
 title: 'Elixir: First Impressions'

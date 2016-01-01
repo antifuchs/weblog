@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2009-03-29T13:00:14Z
 mt_id: 94
 title: 'Clojure and Art of Illusion: BFF'

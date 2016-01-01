@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2006-11-03T11:13:41Z
 mt_id: 50
 title: Using git bisect to locate bugs in SBCL

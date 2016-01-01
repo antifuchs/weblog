@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2010-08-11T00:09:39Z
 mt_id: 103
 title: Huge life changes ahead.

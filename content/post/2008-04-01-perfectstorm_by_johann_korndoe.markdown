@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2008-04-01T17:34:53Z
 mt_id: 93
 title: Perfectstorm by Johann Korndoerfer

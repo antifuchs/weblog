@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 1970-01-01T10:03:04Z
 mt_id: 88
 title: A slight case of googlebombing

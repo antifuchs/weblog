@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2011-06-07T06:16:02Z
 mt_id: 106
 title: SBCL git repo is now official!

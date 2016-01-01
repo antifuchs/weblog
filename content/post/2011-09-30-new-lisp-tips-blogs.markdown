@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 comments: true
 date: 2011-09-30T00:00:00Z
 title: New Lisp Tips Blogs

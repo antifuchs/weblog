@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2006-11-14T12:50:10Z
 mt_id: 57
 title: Three useful .emacs hacks for lispers

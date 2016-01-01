@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 comments: true
 date: 2011-12-30T00:00:00Z
 title: Converting the Mustache Test Suite to CL

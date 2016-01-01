@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 date: 2007-02-06T23:43:38Z
 mt_id: 73
 title: Unintended consequences

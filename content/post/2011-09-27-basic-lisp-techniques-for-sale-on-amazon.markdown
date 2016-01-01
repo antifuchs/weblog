@@ -1,5 +1,5 @@
 ---
-categories: Lisp
+categories: ["Lisp"]
 comments: true
 date: 2011-09-27T00:00:00Z
 title: '"Basic Lisp Techniques" for sale on Amazon'

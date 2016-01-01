@@ -1,5 +1,5 @@
 ---
-categories: Hacks Lisp
+categories: ["Hacks", "Lisp"]
 date: 2010-11-20T08:28:00Z
 mt_id: 105
 title: Userscript for nicer l1sp.org search
