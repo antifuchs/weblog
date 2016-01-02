@@ -4,7 +4,9 @@ languageCode = "en-us"
 title = "Andreas Fuchs' Journal"
 
 metaDataFormat = "yaml"
-newContentEditor = "/usr/local/bin/emacsclient"
+newContentEditor = "/usr/local/bin/emacsclient" # overridden in my emacs config
+
+footnotereturnlinkcontents = "↩"
 
 [author]
   name = "Andreas Fuchs"
