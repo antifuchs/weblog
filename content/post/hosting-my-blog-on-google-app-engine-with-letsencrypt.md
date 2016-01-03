@@ -77,11 +77,11 @@ pretty trivial, and this is what it does (follow the links if you like
 bash scripts):
 
 * When letsencrypt requests a response to a challenge, the hook
-  [now writes this go handler and deploys it](https://github.com/antifuchs/weblog/blob/master/scripts/letsencrypt-hook#L12-L42),
+  [now writes this go handler and deploys it](https://github.com/antifuchs/weblog/blob/ff6d95f/scripts/letsencrypt-hook#L12-L42),
 * when the challenge/response process is done,
-  [it cleans up that handler](https://github.com/antifuchs/weblog/blob/master/scripts/letsencrypt-hook#L44-L46), and
+  [it cleans up that handler](https://github.com/antifuchs/weblog/blob/ff6d95f/scripts/letsencrypt-hook#L44-L46), and
 * when the certificate is issued, it
-  [provides instructions](https://github.com/antifuchs/weblog/blob/master/scripts/letsencrypt-hook#L48-L59)
+  [provides instructions](https://github.com/antifuchs/weblog/blob/ff6d95f/scripts/letsencrypt-hook#L48-L59)
   to correctly upload the SSL certificate to GAE pages (I couldn't
   find an API to do this, so it uses `pbcopy` to put the relevant
   things on the clipboard - please
@@ -91,9 +91,9 @@ All this is held together by a kinda convoluted Makefile - here are
 the most important targets:
 
 * `make deploy` calls
-  [this script](https://github.com/antifuchs/weblog/blob/master/scripts/build)
+  [this script](https://github.com/antifuchs/weblog/blob/ff6d95f/scripts/build)
   to generate the latest HTML, and deploy the app to GAE.
-* [`make certificates`](https://github.com/antifuchs/weblog/blob/master/Makefile#L17-L18)
+* [`make certificates`](https://github.com/antifuchs/weblog/blob/ff6d95f/Makefile#L17-L18)
   calls `letsencrypt.sh` with the right arguments and should allow me
   to renew the certificates that I created once they are closer to
   expiring (2016-03-31!)
