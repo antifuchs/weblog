@@ -119,8 +119,8 @@ that the install process could find them, like so:
 `ln -sf /usr/local/opt/openssl/include/openssl/ /usr/local/include/openssl`
 
 With the symlink in place, these two modules could install, and I
-finally convert the private key to the right format. (Finding the
-right combination of cpan and file system things took me about an
+could finally convert the private key to the right format. (Finding
+the right combination of cpan and file system things took me about an
 hour, ugh.)
 
 Conclusion: letsencrypt, your client's private key format sucks &
