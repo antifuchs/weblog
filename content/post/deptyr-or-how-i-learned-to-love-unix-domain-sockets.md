@@ -8,11 +8,13 @@ title: Deptyr, or how I learned to love UNIX domain sockets
 
 Let's say you have a program that needs to do I/O on a terminal (it
 draws really nice ascii graphics!), but it usually runs
-unsupervised. If the program crashes, you want a think like [s6] or
-[systemd] to restart that program. The problem here is the terminal
-I/O: Since most process supervision tools usually redirect standard
-I/O to a log file, the wonderful terminal graphics just end up being
-non-ascii chunder that confuses you if you try to tail the log file.
+unsupervised. If the program crashes, you want a think like
+[s6](http://skarnet.org/software/s6/) or
+[systemd](http://www.freedesktop.org/wiki/Software/systemd/) to
+restart that program. The problem here is the terminal I/O: Since most
+process supervision tools usually redirect standard I/O to a log file,
+the wonderful terminal graphics just end up being non-ascii chunder
+that confuses you if you try to tail the log file.
 
 My usual approach would have been to start the program under screen
 (`screen -D -m` if you're interested), but that way you lose part of
@@ -27,7 +29,8 @@ available elsewhere, and also make the pseudo-terminal'ed process be a
 direct child of the process supervisor. One feels reminded of a cake
 that is had & eaten.
 
-I searched up and down, and besides [some djb announcement] in the
+I searched up and down, and besides
+[some djb announcement](http://unix.stackexchange.com/a/215071) in the
 early 90s of a tool that *might* be made to do what I want (which
 doesn't compile under modern OSes anymore, and is also fantastically
 underdocumented), I didn't find anything. `screen -Dm` was my best
@@ -36,18 +39,21 @@ semantics. Spoiler: We **totally** can.
 
 ## First: Pseudo Terminals - how do they work?
 
-Pseudo Terminals (aka. PTYs) are a fun and kinda horrible facility in
-UNIX: A process can allocate a PTY, and gets a controlling and a
-client end[^1]. If you're writing a terminal-emulation program like
-xterm, it would keep the controlling end - this is what allows it to
-read what's being written to the client end and send text to the
-client. Your terminal emulator would pass the client end to a shell
-session and then read what the shell sends to stdout or stderr.[^2]
+Pseudo Terminals (aka pseudo TTYs or PTYs) are a fun and kinda
+horrible facility in UNIX: A process can allocate a PTY, and gets a
+controlling and a client end[^1]. If you're writing a
+terminal-emulation program like xterm, it would keep the controlling
+end - this is what allows it to read what's being written to the
+client end and send text to the client, as if that text appeared in a
+real terminal. Your terminal emulator would pass the client end to a
+shell session and then read what the shell sends to stdout or
+stderr.[^2]
 
-The one thing you really need to know about PTYs here though is that
-the controlling and the client end both come as UNIX file
+The one thing you really need to know about PTYs here is that the
+controlling and the client end both come as UNIX file
 descriptors. They're a number attached to a process, much like file
-handles, sockets or other silly things.
+handles, sockets or other silly things you can use with
+`read`/`write`.
 
 So, my thinking goes: Let me write a little UNIX tool that sets up a
 new PTY, then sends the controlling end to another process, then
@@ -55,6 +61,8 @@ retains the client end for itself and calls `exec` to start my crashy
 program. Calling `exec` doesn't adjust the process hierarchy, and
 would be exactly what other tools do to start programs under process
 supervision.
+
+![A diagram of the process tree with a wormhole](/assets/images/deptyr-wormhole.png)
 
 ## If only there was a way to send that controlling end elsewhere...
 
@@ -104,7 +112,7 @@ update with the config I used to actually run it under
 supervision. Initial experiments point to yes, but we'll see (-:
 
 
-[^1]: the standard terminology for the controlling and client end is is the "master" and "slave" ends, but I'm not gonna call them that, yuck!
+[^1]: the standard terminology for the controlling and client end is is the "master" and "slave" ends. I find the standard terms extremeny distasteful; in addition to extreme lack of taste, they don't even correctly convey what's going on, so controlling/client ends it is.
 
 [^2]: This is what tools like screen and xterm do! It's pretty interesting to learn about this in detail -- it's pretty easy to run into a situation where you want to control a tool like a terminal emulator would. Sadly, I don't know a lot of literature on PTYs. [Send me](mailto:asf@boinkor.net) your favorites!
 
