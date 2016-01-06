@@ -9,7 +9,7 @@ TEST_APP = plated-analyzer-117711
 
 all: $(TEST_DOMAIN)
 
-demo:
+demo: deploy_deps
 	hugo serve
 
 ## (Re-)issuing certificates:
