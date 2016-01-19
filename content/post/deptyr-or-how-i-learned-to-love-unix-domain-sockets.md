@@ -112,7 +112,7 @@ update with the config I used to actually run it under
 supervision. Initial experiments point to yes, but we'll see (-:
 
 
-[^1]: the standard terminology for the controlling and client end is is the "master" and "slave" ends. I find the standard terms extremeny distasteful; in addition to extreme lack of taste, they don't even correctly convey what's going on, so controlling/client ends it is.
+[^1]: the standard terminology for the controlling and client end is is the "master" and "slave" ends. I find the standard terms extremely distasteful; in addition to extreme lack of taste, they don't even correctly convey what's going on, so controlling/client ends it is.
 
 [^2]: This is what tools like screen and xterm do! It's pretty interesting to learn about this in detail -- it's pretty easy to run into a situation where you want to control a tool like a terminal emulator would. Sadly, I don't know a lot of literature on PTYs. [Send me](mailto:asf@boinkor.net) your favorites!
 
