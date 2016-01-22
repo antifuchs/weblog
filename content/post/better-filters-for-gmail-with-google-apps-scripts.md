@@ -88,7 +88,7 @@ simple RFC822 headers, but not multi-line ones). The resulting script
 is
 [in this gist](https://gist.github.com/antifuchs/dde7d18d757d57478ba8).
 
-### Setting this up in your gmail account
+## Setting this up in your gmail account
 
 This is a pretty manual process, sorry there's no shell script you can
 pipe into bash (-:
