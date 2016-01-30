@@ -10,7 +10,7 @@ aliases: /About.html
 ---
 ## Some Trivia
 
-Born in 1982, connected to the global TCP/IP network since 1996. Also known as [asf@boinkor.net](mailto:asf@boinkor.net) (GPG key ID [7D14ADF4F332BDEA](http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x7D14ADF4F332BDEA)) or antifuchs on IRC. Beware: I use [Reverse Smileys (aka left-handed smileys)](/reverse_smileys/).
+Born in 1982, connected to the global TCP/IP network since 1996. Also known as [asf@boinkor.net](mailto:asf@boinkor.net) (GPG key ID [1526E64EDCAFCB0B for personal email](http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x1526E64EDCAFCB0B) and [7D14ADF4F332BDEA for work-related things](http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x7D14ADF4F332BDEA)) or antifuchs on IRC. Beware: I use [Reverse Smileys (aka left-handed smileys)](/reverse_smileys/).
 
 ## What is Andreas Fuchs doing right now?
 
@@ -27,6 +27,10 @@ To learn what I'm up to as it happens, read my [weblog](/). Here's a summary: I 
   [antifuchs at last.fm](http://www.last.fm/user/antifuchs/)
 * Find out [What google knows about me](http://www.google.com/search?q=antifuchs)
 
-This site was generated with [Octopress](http://gohugo.io/) from [this source code](https://github.com/antifuchs/octopress).
+This site was generated with [Hugo](http://gohugo.io/) from
+[this source code](https://github.com/antifuchs/weblog). My site uses
+the [purehugo](https://github.com/dplesca/purehugo) theme. Hosting and
+SSL termination provided by
+[Google App Engine using Letsencrypt](/2016/01/hosting-my-blog-on-google-app-engine-with-letsencrypt/).
 
 If you want to know more, just ask me at [asf@boinkor.net](mailto:asf@boinkor.net).
