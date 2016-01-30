@@ -104,7 +104,7 @@ method specialized on `(operation component)`, which does the
 following in the branch that applies to `load-op`:
 
 ``` cl
-(defmethod operation-done-p (operation component))
+(defmethod operation-done-p (operation component)
   (let ((out-files (output-files o c))
         (op-time (component-operation-time o c)))
     (flet ((latest-in ()
@@ -121,6 +121,8 @@ following in the branch that applies to `load-op`:
 
          ;; ...[some more branches here]
          )
+         ;; [...]
+         )))
 ```
 
 This consults a registry of times when an operation was performed on a
