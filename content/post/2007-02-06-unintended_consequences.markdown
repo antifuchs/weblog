@@ -9,7 +9,7 @@ atom_id: http://boinkor.net/archives/2007/02/unintended_consequences
 ---
 
 [asdf-dependency-grovel](http://boinkor.net/archives/2007/01/make_depend_for_lisp.html) seems to be more of a hit than I'd anticipated. Not only have I received great feedback from several people, ignas on #lisp already found the first a use case for it that I hadn't anticipated.
-
+<!--more-->
 `* ignas loves asdf-dependency-grovel`<br/>
 `<antifuchs> ignas: it works for you? (:`<br/>
 `<antifuchs> cool!`<br/>

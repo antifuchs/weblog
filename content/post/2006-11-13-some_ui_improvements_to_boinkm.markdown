@@ -18,14 +18,18 @@ In other news, [Postgresql](http://www.postgresql.org) = love. It's really a joy
 
 When you join a small table to a big table in order to *limit* the number of resulting rows to ones matched in a big table, don't use JOIN, use WHERE EXISTS.
 
-For example, if you want smalltable's foo column for rows that are related to those rows in bigtable that match bigtable.condition='something', don't use
+For example, if you want smalltable's foo column for rows that are related to those rows in bigtable that match `bigtable.condition='something'`, don't use
 
 ``` sql
-select smalltable.id, smalltable.foo from smalltable join bigtable on bigtable.id=smalltable.id where bigtable.condition = 'something'
+select smalltable.id, smalltable.foo
+from smalltable join bigtable on bigtable.id=smalltable.id
+where bigtable.condition = 'something'
 ```
   , use:
 ``` sql
-select id, foo from smalltable where exists (select * from bigtable where bigtable.id = smalltable.id and bigtable.condition = 'something' limit 1)
+select id, foo
+from smalltable
+where exists (select * from bigtable where bigtable.id = smalltable.id and bigtable.condition = 'something' limit 1)
 ```
 
 (And don't forget to keep an index on `(bigtable.id, bigtable.condition)`!) Rewriting sql statements like this (and using an index) gave the queries in the boinkmarks web app a speed boost of anything between 30x and 200x.

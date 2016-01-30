@@ -1,6 +1,8 @@
 ---
 categories: ["Lisp"]
 date: 2006-11-03T11:13:41Z
+additional_syntax:
+- cl
 mt_id: 50
 title: Using git bisect to locate bugs in SBCL
 aliases:
@@ -58,14 +60,14 @@ $ cat version.lisp-expr
   As mentioned above, you can always view the bisection history using `git bisect visualize`.
 9. Repeat steps 7 and 8, until there are no more versions to bisect. After running the final test and marking the version with `git bisect good` or `git bisect bad`, You'll get something like the following output:
 
-```
+<pre>
 a30a3d82293eca3eb036ea0c713b0da31c0467dc is first bad commit
 commit a30a3d82293eca3eb036ea0c713b0da31c0467dc
 Author: Nikodemus Siivola &lt;nikodemus@random-state.net&gt;
 Date:   Thu Nov 2 15:11:25 2006 +0000
     0.9.18.27: fix darwin build
      [...]
-```
+</pre>
 
 And that's it! You identified the broken revision. When reporting bugs to the sbcl mailing list, please include the version number (in the example above, that would be 0.9.18.27).
 

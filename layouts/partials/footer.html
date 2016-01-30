@@ -1,0 +1,19 @@
+<div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+        </ul>
+    </div>
+</div>
+<script src="/js/prism.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>
+  hljs.configure({languages: []}) // No autodetection.
+  hljs.initHighlightingOnLoad();
+</script>
+{{ if in .Params.additional_syntax "cl" }}
+<script src="/js/highlight-lisp.js"></script>
+<script>
+  HighlightLisp.highlight_auto({className: "language-cl"});
+  HighlightLisp.paren_match();
+</script>
+{{ end }}

@@ -1,6 +1,8 @@
 ---
 date: 2006-11-16T22:55:40Z
 mt_id: 59
+additional_syntax:
+- cl
 title: An unexpected optimization (also, archiving IMAP mail with mel-base)
 aliases:
 - /archives/2006/11/an_unexpected_optimization_als.html
@@ -26,7 +28,7 @@ So, this is how you use it:
 (setf *my-host* "imap-server")
 ```
 2. load message-archiver.lisp.
-3. run `(imap-archiver:archive-messages "lisp.phemlock")` ; and it will move all mails in the mailbox "mail.lisp.phemlock" to the mailbox "archive.&lt;year&gt;.lisp.phemlock", with &lt;year&gt; being the year in the message's Date: header field.
+3. run `(imap-archiver:archive-messages "lisp.phemlock")` and it will move all mails in the mailbox "mail.lisp.phemlock" to the mailbox "archive.&lt;year&gt;.lisp.phemlock", with &lt;year&gt; being the year in the message's Date: header field.
 
 But wait! This is very slow on current versions of mel-base (0.7-2)! Why? The code that copies a message from one folder to another works the same for all folder types: it reads the entire message from the server and sends it back again. As a side effect, this removes all marks. Ow. But we're lucky that Jochen Schmidt is a good hacker and designed mel such that this is easily fixed.
 

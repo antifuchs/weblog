@@ -5,31 +5,33 @@ title: 'CXML-RPC update: changed interface, includes server part'
 aliases:
 - /archives/2007/12/cxmlrpc_update_changed_interfa.html
 atom_id: http://boinkor.net/archives/2007/12/cxmlrpc_update_changed_interfa
+additional_syntax:
+- cl
 ---
 
 I didn't really like the DWIM interface for type translations on the client, so I made the type information mandatory. (-:
-
+<!--more-->
 This means that instead of:
 
-{% codeblock lang:cl %}
+``` cl
 * (xrpc:call "http://localhost:8080/RPC2" "addNumbers" '(1 2 3.0)) ; WRONG
-{% endcodeblock %}
+```
 
 You get to do this:
 
-{% codeblock lang:cl %}
+``` cl
 * (xrpc:call "http://localhost:8080/RPC2" "addNumbers" '(:integer 1
                                                          :double 2
                                                          :double 3.0))
-6.0
-{% endcodeblock %}
+;; => 6.0
+```
 
 This doesn't look vastly superior, but consider this case:
 
-{% codeblock lang:cl %}
+``` cl
 * (xrpc:call "http://localhost:8080/RPC2" "weekDay" `(:time ,(get-universal-time)))
-0
-{% endcodeblock %}
+;; => 0
+```
 
 Where before, you had to construct an xml-rpc-date structure; ew. This also allows nicer handling of (unsigned-byte 8) vectors (you can base64-encode them now), and you don't have to construct yucky xml-rpc-struct objects anymore: just use alists. The decoding functions now return the type tag that they saw in the response or request.
 

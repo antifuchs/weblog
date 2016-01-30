@@ -1,5 +1,7 @@
 ---
 date: 2007-01-21T13:58:24Z
+additional_syntax:
+- cl
 mt_id: 70
 title: '"make depend" for lisp'
 aliases:
@@ -37,18 +39,18 @@ Here's an outline of what it does for the prime example of a compile-time
 dependency: a file uses a macro that is defined in another file:
 
 ``` cl
-        (defmethod asdf:perform :around ((op asdf:compile-op) (comp asdf:cl-source-file))
-          (let* ((old-hook *macroexpand-hook*)
-                 (*macroexpand-hook*
-                  (lambda (fun form env)
-                     (when (listp form)
-                       (case (first form)
-                         ((defmacro)
-                          (signal-macroexpansion 'provides (second form) (first form) comp))
-                          ;; many many more form types cut
-                         (t (signal-macroexpansion 'uses (second form) (first form) comp))))
-                     (funcall old-hook fun form env))))
-            (call-next-method)))
+(defmethod asdf:perform :around ((op asdf:compile-op) (comp asdf:cl-source-file))
+  (let* ((old-hook *macroexpand-hook*)
+         (*macroexpand-hook*
+          (lambda (fun form env)
+             (when (listp form)
+               (case (first form)
+                 ((defmacro)
+                  (signal-macroexpansion 'provides (second form) (first form) comp))
+                  ;; many many more form types cut
+                 (t (signal-macroexpansion 'uses (second form) (first form) comp))))
+             (funcall old-hook fun form env))))
+    (call-next-method)))
 ```
 
 And all that signal-macroexpansion does is send a little notice to the function that keeps track of dependencies (i.e. it invokes a closure on a hook)

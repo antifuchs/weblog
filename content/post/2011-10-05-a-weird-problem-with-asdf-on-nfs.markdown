@@ -1,5 +1,7 @@
 ---
 categories: ["Lisp"]
+additional_syntax:
+- cl
 comments: true
 date: 2011-10-05T00:00:00Z
 title: A Weird Problem With ASDF on NFS (and a workaround)
@@ -101,7 +103,8 @@ to handle the most common cases of operations on ASDF components: the
 method specialized on `(operation component)`, which does the
 following in the branch that applies to `load-op`:
 
-``` cl (defmethod operation-done-p (operation component))
+``` cl
+(defmethod operation-done-p (operation component))
   (let ((out-files (output-files o c))
         (op-time (component-operation-time o c)))
     (flet ((latest-in ()
@@ -137,7 +140,7 @@ This was the time when we started scratching our heads.
 
 First, we wrote a little test program to verify we weren't crazy:
 
-``` c wtf.c
+``` c
 #include <stdio.h>
 #include <sys/fcntl.h>
 #include <unistd.h>
@@ -221,7 +224,7 @@ decided it would be easiest to alter the method that records this
 timestamp: Instead of the current time, it should record whichever is
 later: the current time or the timestamp of the file that it loaded.
 
-``` cl ASDF work-around for NFS files created in the future
+``` cl
 (defmethod perform :after ((operation load-op) (c component))
   (setf (gethash (type-of operation) (component-operation-times c))
     (reduce #'max (cons (get-universal-time)
