@@ -120,9 +120,7 @@ following in the branch that applies to `load-op`:
          (and op-time (>= op-time (latest-in))))
 
          ;; ...[some more branches here]
-         )
-         ;; [...]
-         )))
+         ))))
 ```
 
 This consults a registry of times when an operation was performed on a
