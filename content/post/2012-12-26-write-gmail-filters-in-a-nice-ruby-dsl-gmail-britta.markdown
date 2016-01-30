@@ -1,5 +1,6 @@
 ---
 categories: ["Hacks"]
+tags: ["gmail", "ruby"]
 comments: true
 date: 2012-12-26T00:00:00Z
 title: 'Write gmail filters in a nice Ruby DSL: gmail-britta'
