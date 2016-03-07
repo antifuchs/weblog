@@ -42,10 +42,9 @@ EOF
         ;;
 
     deploy_cert)
-        echo "Now open a browser window at the following URLs:"
-        echo "   https://console.cloud.google.com/appengine/settings/certificates?project=plated-analyzer-117711&moduleId=default&versionId=1"
+        echo "Now open a browser window at the following URL:"
         echo "   https://console.cloud.google.com/appengine/settings/certificates?project=boinkor-net-blog-live&moduleId=default&versionId=1"
-        echo "and hit 'Upload new cert', then paste the thing I just copied into the 'public key' field"
+        echo "and hit 'Upload a new certificate', then paste the thing I just copied into the 'public key' field"
         pbcopy < "$CHAIN"
         input=''
         while [ "$input" != 'DONE' ] ; do
