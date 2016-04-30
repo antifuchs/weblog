@@ -139,7 +139,6 @@ Here are the things I learned and did that helped me the most:
   exercise your back, shoulders and arms, they will get stronger and
   you will be better able to keep a good posture, and make those large
   motions that help you type the right way.
-
   The key here is to not overdo exercise, especially in the
   beginning. You will feel like you have something to catch up to, but
   the way to improvement is by steadily putting in a little work so
