@@ -164,7 +164,7 @@ setup.
 
 ## What happened to me since then
 
-For the past (gosh) 13 years, I've worked in IT, there were long
+For the past (gosh) 13 years I've worked in IT, there were long
 periods where I was in no pain, but there were also stressful periods
 when RSI returned. These are the worst - not only am I in pain when
 this happens, but the whole set of old thoughts and habits comes
