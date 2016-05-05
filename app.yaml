@@ -184,6 +184,11 @@ handlers:
   script: letsencrypt
   secure: optional  # These need to be able to be HTTP for bootstrapping.
 
+# URL redirector
+- url: /go/(.*)
+  script: redirect
+  secure: always
+
 # index files
 - url: /(.+)/
   static_files: public/\1/index.html
