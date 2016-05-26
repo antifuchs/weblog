@@ -25,6 +25,7 @@ node_modules
 # Stuff for generating certs:
 /letsencrypt.sh/
 /letsencrypt.go
+/private_key.*
 
 # The hugo dev server:
 /dev/
