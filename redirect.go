@@ -2,13 +2,14 @@ package letsencrypt
 
 import "net/http"
 
-var challenges = map[string]string{
+var redirects = map[string]string{
 	"fdfun":     "https://github.com/antifuchs/bangbangcon-talk-2016",
 	"!!con2016": "https://github.com/antifuchs/bangbangcon-talk-2016",
 }
 
 func init() {
-	for name, target := range challenges {
+
+	for name, target := range redirects {
 		http.HandleFunc("/go/"+name, redirect(target))
 	}
 }
