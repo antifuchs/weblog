@@ -29,7 +29,8 @@ WELLKNOWN="${HOME}/.letsencrypt/.acme-challenges"
 PRIVATE_KEY="${HOME}/.letsencrypt/private_key.pem"
 
 # Default keysize for private keys (default: 4096)
-#KEYSIZE="4096"
+# GAE doesn't allow keys longer than 2048 bits, so let's use that:
+KEYSIZE="2048"
 
 # Path to openssl config file (default: <unset> - tries to figure out system default)
 #OPENSSL_CNF=
