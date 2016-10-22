@@ -53,8 +53,15 @@ EOF
         done
 
 
-        echo "Now go and paste the thing I'm copying into the 'private key' field"
+        echo "Now go and paste the thing I'm copying into the 'private key' field and enter 'DONE'"
         openssl rsa -inform pem -in "$PRIVKEY" -outform pem | pbcopy
+        input=''
+        while [ "$input" != 'DONE' ] ; do
+            echo "...Enter 'DONE' and hit return when you're done pasting"
+            read input
+        done
+        echo "Now go to https://console.cloud.google.com/appengine/settings/certificates?project=plated-analyzer-117711&versionId=1"
+        echo "Open new certificate, select 'testblog.boinkor.net', save, then delete the old one."
         ;;
 
     *)
