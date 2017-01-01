@@ -1,5 +1,5 @@
 THEME = themes/purehugo
-THEME_GIT = https://github.com/toru-mano/purehugo
+THEME_GIT = https://github.com/antifuchs/weblog-purehugo
 
 DOMAIN = boinkor.net
 TEST_DOMAIN = testblog.boinkor.net
