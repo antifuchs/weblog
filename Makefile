@@ -15,7 +15,7 @@ demo: deploy_deps
 ## (Re-)issuing certificates:
 
 certificates: letsencrypt.sh $(HOME)/.letsencrypt certs
-	./letsencrypt.sh/letsencrypt.sh -c -f letsencrypt-config.sh
+	./letsencrypt.sh/dehydrated -c -f letsencrypt-config.sh
 
 ## Uploading the blog:
 
