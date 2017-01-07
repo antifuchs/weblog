@@ -26,6 +26,7 @@ node_modules
 /letsencrypt.sh/
 /letsencrypt.go
 /private_key.*
+/accounts
 
 # The hugo dev server:
 /dev/
