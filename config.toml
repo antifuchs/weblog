@@ -23,3 +23,6 @@ footnotereturnlinkcontents = "↩"
 
 [blackfriday]
   plainIDAnchors = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
