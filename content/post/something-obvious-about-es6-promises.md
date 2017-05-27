@@ -91,7 +91,7 @@ have let do this short piece of code:
   run a function across an array's contents and the previous
   function's return value.
 
-And so, using the resolved promise is a zero element, this piece of
+And so, using the resolved promise as a zero element, this piece of
 code gathers up requests, one after the other.
 
 Kinda amazing.
