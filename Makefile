@@ -24,11 +24,11 @@ $(TEST_DOMAIN): deploy_test
 
 build: $(THEME)
 	git clean -fdx public/
-	hugo -b https://${DOMAIN}
+	hugo -b https://${DOMAIN}/
 
 build_test: $(THEME)
 	git clean -fdx public/
-	hugo -b https://${TEST_DOMAIN}
+	hugo -b https://${TEST_DOMAIN}/
 
 deploy_test: deploy_deps
 	scripts/build https://$(TEST_DOMAIN) $(TEST_APP)
