@@ -22,6 +22,14 @@ certificates: letsencrypt.sh $(HOME)/.letsencrypt certs
 $(DOMAIN): deploy
 $(TEST_DOMAIN): deploy_test
 
+build: $(THEME)
+	git clean -fdx public/
+	hugo -b https://${DOMAIN}
+
+build_test: $(THEME)
+	git clean -fdx public/
+	hugo -b https://${TEST_DOMAIN}
+
 deploy_test: deploy_deps
 	scripts/build https://$(TEST_DOMAIN) $(TEST_APP)
 
@@ -41,4 +49,4 @@ letsencrypt.sh:
 certs:
 	mkdir -p certs
 
-.PHONY: phony all deploy_test certificates demo deploy_deps $(DOMAIN) $(TEST_DOMAIN)
+.PHONY: phony all deploy_test certificates demo deploy_deps build build_test $(DOMAIN) $(TEST_DOMAIN)
