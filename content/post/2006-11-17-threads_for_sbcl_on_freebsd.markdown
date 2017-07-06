@@ -2,8 +2,6 @@
 date: 2006-11-17T23:24:46Z
 mt_id: 61
 title: Threads for SBCL on FreeBSD
-aliases:
-- /archives/2006/11/threads_for_sbcl_on_freebsd.html
 atom_id: http://boinkor.net/archives/2006/11/threads_for_sbcl_on_freebsd
 ---
 

@@ -2,8 +2,6 @@
 date: 2007-02-14T15:46:42Z
 mt_id: 75
 title: SMTP and IPv6, oh my!
-aliases:
-- /archives/2007/02/smtp_and_ipv6_oh_my.html
 atom_id: http://boinkor.net/archives/2007/02/smtp_and_ipv6_oh_my
 ---
 

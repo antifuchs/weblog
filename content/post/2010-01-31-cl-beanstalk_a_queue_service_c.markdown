@@ -3,8 +3,6 @@ categories: ["Lisp"]
 date: 2010-01-31T17:49:52Z
 mt_id: 100
 title: 'cl-beanstalk: A queue service client'
-aliases:
-- /archives/2010/01/cl-beanstalk_a_queue_service_c.html
 atom_id: http://boinkor.net/archives/2010/01/cl-beanstalk_a_queue_service_c
 ---
 

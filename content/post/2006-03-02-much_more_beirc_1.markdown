@@ -2,8 +2,6 @@
 date: 2006-03-02T23:09:04Z
 mt_id: 41
 title: MUCH MORE BEIRC
-aliases:
-- /archives/2006/03/much_more_beirc_1.html
 atom_id: http://boinkor.net/archives/2006/03/much_more_beirc_1
 ---
 

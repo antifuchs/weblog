@@ -3,8 +3,6 @@ categories: ["Lisp"]
 date: 2009-03-29T13:00:14Z
 mt_id: 94
 title: 'Clojure and Art of Illusion: BFF'
-aliases:
-- /archives/2009/03/clojure_and_art_of_illusion_bf.html
 atom_id: http://boinkor.net/archives/2009/03/clojure_and_art_of_illusion_bf
 ---
 

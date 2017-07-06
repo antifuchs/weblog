@@ -2,8 +2,6 @@
 date: 2007-04-13T13:50:53Z
 mt_id: 84
 title: Some details about CLAPPA
-aliases:
-- /archives/2007/04/some_details_about_clappa.html
 atom_id: http://boinkor.net/archives/2007/04/some_details_about_clappa
 ---
 

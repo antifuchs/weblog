@@ -3,8 +3,6 @@ categories: ["Hacks"]
 date: 2009-09-06T21:24:46Z
 mt_id: 98
 title: 'There are only two hard problems in Austrian family law:'
-aliases:
-- /archives/2009/09/two_hard_problems.html
 atom_id: http://boinkor.net/archives/2009/09/two_hard_problems
 ---
 

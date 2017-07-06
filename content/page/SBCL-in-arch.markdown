@@ -6,8 +6,6 @@ comments: true
 sharing: true
 footer: true
 url: /sbcl-in-arch
-aliases:
-- /SBCL-in-arch.html
 ---
 <p><strong>SBCL cvs-&gt;arch synchronisation is turned off. The last
 version is 0.9.17.17.</strong> You can use the <a href="http://sourceforge.net/projects/sbcl/develop"><strong>official</strong> SBCL git repository</a> now! I

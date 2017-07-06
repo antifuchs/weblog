@@ -6,8 +6,6 @@ comments: true
 sharing: true
 footer: true
 url: /sbcl-in-git
-aliases:
-- /SBCL_in_git.html
 ---
 ## SBCL CVS->Git mirror is no longer active
 

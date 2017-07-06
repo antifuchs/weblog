@@ -3,8 +3,6 @@ categories: ["Lisp"]
 comments: true
 date: 2011-09-30T00:00:00Z
 title: New Lisp Tips Blogs
-aliases:
-- /archives/2011/09/new-lisp-tips-blogs.html
 atom_id: http://boinkor.net/archives/2011/09/new-lisp-tips-blogs
 ---
 

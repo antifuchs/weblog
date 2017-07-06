@@ -6,8 +6,6 @@ comments: true
 sharing: true
 footer: true
 url: /hacks
-aliases:
-- /Hacks.html
 ---
 Here's some stuff I've been working on ([github](http://github.com/antifuchs) has the most recent & up-to-date info):
 

@@ -2,8 +2,6 @@
 date: 2006-01-25T20:20:43Z
 mt_id: 38
 title: SBCL autobenching (a.k.a. "boinkmarking") HOWTO
-aliases:
-- /archives/2006/01/sbcl_autobenching_aka_boinkmar.html
 atom_id: http://boinkor.net/archives/2006/01/sbcl_autobenching_aka_boinkmar
 ---
 

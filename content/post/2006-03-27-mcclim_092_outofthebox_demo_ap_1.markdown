@@ -2,8 +2,6 @@
 date: 2006-03-27T14:20:41Z
 mt_id: 43
 title: McCLIM 0.9.2 out-of-the-box demo application available
-aliases:
-- /archives/2006/03/mcclim_092_outofthebox_demo_ap_1.html
 atom_id: http://boinkor.net/archives/2006/03/mcclim_092_outofthebox_demo_ap_1
 ---
 

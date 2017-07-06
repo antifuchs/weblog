@@ -5,8 +5,6 @@ additional_syntax:
 - cl
 mt_id: 74
 title: A silly CL-PPCRE performance test
-aliases:
-- /archives/2007/02/a_silly_clppcre_performance_te.html
 atom_id: http://boinkor.net/archives/2007/02/a_silly_clppcre_performance_te
 ---
 

@@ -5,8 +5,6 @@ additional_syntax:
 comments: true
 date: 2011-12-21T00:00:00Z
 title: IDNA Now Supports Punycode Decoding
-aliases:
-- /archives/2011/12/idna-now-supports-punycode-decoding.html
 atom_id: http://boinkor.net/archives/2011/12/idna-now-supports-punycode-decoding
 ---
 

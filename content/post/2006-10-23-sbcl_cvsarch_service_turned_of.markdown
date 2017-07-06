@@ -2,8 +2,6 @@
 date: 2006-10-23T10:31:42Z
 mt_id: 46
 title: 'SBCL cvs->arch service turned off: use git.'
-aliases:
-- /archives/2006/10/sbcl_cvsarch_service_turned_of.html
 atom_id: http://boinkor.net/archives/2006/10/sbcl_cvsarch_service_turned_of
 ---
 

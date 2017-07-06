@@ -2,8 +2,6 @@
 date: 2007-01-14T23:35:49Z
 mt_id: 68
 title: McCLIM 0.9.4 "Orthodox New Year" released!
-aliases:
-- /archives/2007/01/mcclim_094_orthodox_new_year_r_1.html
 atom_id: http://boinkor.net/archives/2007/01/mcclim_094_orthodox_new_year_r_1
 ---
 

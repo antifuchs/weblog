@@ -2,8 +2,6 @@
 date: 2006-11-17T00:16:09Z
 mt_id: 60
 title: A negligibly inconvenient truth
-aliases:
-- /archives/2006/11/a_negligiblyinconvenient_truth.html
 atom_id: http://boinkor.net/archives/2006/11/a_negligiblyinconvenient_truth
 ---
 

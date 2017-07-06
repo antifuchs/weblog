@@ -5,8 +5,6 @@ additional_syntax:
 - cl
 mt_id: 57
 title: Three useful .emacs hacks for lispers
-aliases:
-- /archives/2006/11/three_useful_emacs_hacks_for_l.html
 atom_id: http://boinkor.net/archives/2006/11/three_useful_emacs_hacks_for_l
 ---
 

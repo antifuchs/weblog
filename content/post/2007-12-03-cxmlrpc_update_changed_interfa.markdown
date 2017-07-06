@@ -2,8 +2,6 @@
 date: 2007-12-03T22:45:16Z
 mt_id: 90
 title: 'CXML-RPC update: changed interface, includes server part'
-aliases:
-- /archives/2007/12/cxmlrpc_update_changed_interfa.html
 atom_id: http://boinkor.net/archives/2007/12/cxmlrpc_update_changed_interfa
 additional_syntax:
 - cl

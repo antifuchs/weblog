@@ -3,8 +3,6 @@ categories: ["Lisp"]
 date: 2010-09-25T00:52:02Z
 mt_id: 104
 title: Visualizing the CLHS interlinking structure
-aliases:
-- /archives/2010/09/visualizing_the_clhs_interlink.html
 atom_id: http://boinkor.net/archives/2010/09/visualizing_the_clhs_interlink
 ---
 

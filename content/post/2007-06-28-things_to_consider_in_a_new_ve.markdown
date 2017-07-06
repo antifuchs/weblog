@@ -5,8 +5,6 @@ additional_syntax:
 - cl
 mt_id: 86
 title: Things to consider in a new version of ASDF
-aliases:
-- /archives/2007/06/things_to_consider_in_a_new_ve.html
 atom_id: http://boinkor.net/archives/2007/06/things_to_consider_in_a_new_ve
 ---
 

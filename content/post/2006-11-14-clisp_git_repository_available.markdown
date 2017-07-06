@@ -2,8 +2,6 @@
 date: 2006-11-14T17:05:54Z
 mt_id: 58
 title: CLISP git repository available
-aliases:
-- /archives/2006/11/clisp_git_repository_available.html
 atom_id: http://boinkor.net/archives/2006/11/clisp_git_repository_available
 ---
 

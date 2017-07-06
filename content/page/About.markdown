@@ -6,7 +6,6 @@ comments: true
 sharing: true
 footer: true
 url: /about
-aliases: /About.html
 ---
 ## Some Trivia
 

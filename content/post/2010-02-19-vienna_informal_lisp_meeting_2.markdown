@@ -3,8 +3,6 @@ categories: ["Lisp"]
 date: 2010-02-19T10:02:49Z
 mt_id: 101
 title: Vienna informal Lisp meeting 2010-02-27
-aliases:
-- /archives/2010/02/vienna_informal_lisp_meeting_2.html
 atom_id: http://boinkor.net/archives/2010/02/vienna_informal_lisp_meeting_2
 ---
 

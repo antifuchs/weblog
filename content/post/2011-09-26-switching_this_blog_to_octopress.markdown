@@ -3,8 +3,6 @@ categories: null
 comments: true
 date: 2011-09-26T00:00:00Z
 title: Switching this blog to Octopress
-aliases:
-- /archives/2011/09/switching_this_blog_to_octopress.html
 atom_id: http://boinkor.net/archives/2011/09/switching_this_blog_to_octopress
 ---
 

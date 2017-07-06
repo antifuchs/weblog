@@ -7,8 +7,6 @@ comments: true
 sharing: true
 footer: true
 url: /screen-scraper
-aliases:
-- /screen-scraper.html
 ---
 ## An extensible vt100 terminal emulator for Common Lisp
 

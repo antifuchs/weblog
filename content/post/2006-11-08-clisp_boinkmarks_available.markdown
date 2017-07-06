@@ -2,8 +2,6 @@
 date: 2006-11-08T15:11:18Z
 mt_id: 55
 title: CLISP boinkmarks available
-aliases:
-- /archives/2006/11/clisp_boinkmarks_available.html
 atom_id: http://boinkor.net/archives/2006/11/clisp_boinkmarks_available
 ---
 

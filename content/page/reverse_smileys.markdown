@@ -6,8 +6,6 @@ comments: true
 sharing: true
 footer: true
 url: /reverse_smileys
-aliases:
-- /reverse_smileys.html
 ---
 # (-:
 

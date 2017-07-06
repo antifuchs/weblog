@@ -2,8 +2,6 @@
 date: 2006-11-04T19:29:26Z
 mt_id: 51
 title: 'Hacking Objective C for fun and profit: An SSH plugin for Quicksilver'
-aliases:
-- /archives/2006/11/hacking_objective_c_for_fun_an.html
 atom_id: http://boinkor.net/archives/2006/11/hacking_objective_c_for_fun_an
 ---
 

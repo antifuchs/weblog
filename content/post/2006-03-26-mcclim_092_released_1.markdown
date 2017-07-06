@@ -2,8 +2,6 @@
 date: 2006-03-26T22:52:42Z
 mt_id: 42
 title: McCLIM 0.9.2 released
-aliases:
-- /archives/2006/03/mcclim_092_released_1.html
 atom_id: http://boinkor.net/archives/2006/03/mcclim_092_released_1
 ---
 

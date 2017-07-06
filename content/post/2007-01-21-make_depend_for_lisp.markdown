@@ -4,8 +4,6 @@ additional_syntax:
 - cl
 mt_id: 70
 title: '"make depend" for lisp'
-aliases:
-- /archives/2007/01/make_depend_for_lisp.html
 atom_id: http://boinkor.net/archives/2007/01/make_depend_for_lisp
 ---
 

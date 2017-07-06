@@ -3,8 +3,6 @@ categories: ["Lisp"]
 date: 2009-11-15T22:11:36Z
 mt_id: 99
 title: Hunchentoot gets a debugging-acceptor
-aliases:
-- /archives/2009/11/hunchentoot_gets_a_debugging-a.html
 atom_id: http://boinkor.net/archives/2009/11/hunchentoot_gets_a_debugging-a
 ---
 

@@ -2,8 +2,6 @@
 date: 2006-09-25T23:03:46Z
 mt_id: 45
 title: How I found free time and what I did to it when I found it
-aliases:
-- /archives/2006/09/how_i_found_free_time_and_what_1.html
 atom_id: http://boinkor.net/archives/2006/09/how_i_found_free_time_and_what_1
 ---
 

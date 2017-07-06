@@ -2,8 +2,6 @@
 date: 2006-10-30T20:50:34Z
 mt_id: 47
 title: Six-word stories about programming languages
-aliases:
-- /archives/2006/10/sixword_stories_about_programm.html
 atom_id: http://boinkor.net/archives/2006/10/sixword_stories_about_programm
 ---
 
