@@ -1,6 +1,8 @@
 ---
 date: 2006-01-25T20:20:43Z
 mt_id: 38
+additional_syntax:
+- cl
 title: SBCL autobenching (a.k.a. "boinkmarking") HOWTO
 atom_id: http://boinkor.net/archives/2006/01/sbcl_autobenching_aka_boinkmar
 ---
@@ -55,45 +57,45 @@ going to do now.
 As I mentioned, we're going to create an .autobench.lisp file
 now. Here's a sample customisation file for an x86-64 machine:
 
-
-     ;;; SIMPLE (important) CUSTOMIZABLE VARIABLES.
-     ;; The directory where you checked out the autobench source.
-     (setf *base-dir* #p"/home/sbcl-arch/autobench/")
-
-
-     ;;; BUILD STRATEGIES
-     (defstrategy +sbcl-64+ sbcl (:mode (:arch :x86_64 :features ())))
-     (defstrategy +sbcl-32+ sbcl (:mode (:arch :emulated-x86 :features ())))
-
-     (defstrategy +sbcl-64-threaded+ sbcl (:mode (:arch :x86_64 :features (:sb-thread)))
-                  :build-p (every-nth-revision 4))
-     (defstrategy +sbcl-32-threaded+ sbcl (:mode (:arch :emulated-x86 :features (:sb-thread)))
-                  :build-p (every-nth-revision 4))
+``` cl
+ ;;; SIMPLE (important) CUSTOMIZABLE VARIABLES.
+ ;; The directory where you checked out the autobench source.
+ (setf *base-dir* #p"/home/sbcl-arch/autobench/")
 
 
-     ;;; implementations that should be automatically built. supports only sbcl right now.
-     (setq *implementations-to-build* `((sbcl :directory #p"/home/sbcl-arch/space/autobench/+newest-64/"
-                                              :strategies (,+sbcl-32+ ,+sbcl-32-threaded+
-                                              ,+sbcl-64+ ,+sbcl-64-threaded+))))
+ ;;; BUILD STRATEGIES
+ (defstrategy +sbcl-64+ sbcl (:mode (:arch :x86_64 :features ())))
+ (defstrategy +sbcl-32+ sbcl (:mode (:arch :emulated-x86 :features ())))
+
+ (defstrategy +sbcl-64-threaded+ sbcl (:mode (:arch :x86_64 :features (:sb-thread)))
+              :build-p (every-nth-revision 4))
+ (defstrategy +sbcl-32-threaded+ sbcl (:mode (:arch :emulated-x86 :features (:sb-thread)))
+              :build-p (every-nth-revision 4))
 
 
-     ;;; POSTGRES DB SSH TUNNEL VARIABLES
-     ;; The function used to ensure the database connection can be established.
-     ;; This is different from actually establishing the db connection:
-     ;; Think of it as a cheap :before method/hook (:
-     (setf *db-connection-setup-function* #'ensure-ssh-tunnel-connected)
+ ;;; implementations that should be automatically built. supports only sbcl right now.
+ (setq *implementations-to-build* `((sbcl :directory #p"/home/sbcl-arch/space/autobench/+newest-64/"
+                                          :strategies (,+sbcl-32+ ,+sbcl-32-threaded+
+                                          ,+sbcl-64+ ,+sbcl-64-threaded+))))
 
-     ;; The user name to use for connections to the data base.
-     (setf *db-default-user-name* "test-db-user")
 
-     ;; The default port for ssh forwards is 5096.
-     ;; Uncomment if this port is in use on your autobuild machine.
-     ;; (setf *ssh-port* 5096)
+ ;;; POSTGRES DB SSH TUNNEL VARIABLES
+ ;; The function used to ensure the database connection can be established.
+ ;; This is different from actually establishing the db connection:
+ ;; Think of it as a cheap :before method/hook (:
+ (setf *db-connection-setup-function* #'ensure-ssh-tunnel-connected)
 
-     ;; The user name to use for the ssh connection that establishes the tunnel
-     ;; to the boinkmarks DB host.
-     (setf *ssh-remote-username* *db-default-user-name*) ; typically the same. customize if they're not.
+ ;; The user name to use for connections to the data base.
+ (setf *db-default-user-name* "test-db-user")
 
+ ;; The default port for ssh forwards is 5096.
+ ;; Uncomment if this port is in use on your autobuild machine.
+ ;; (setf *ssh-port* 5096)
+
+ ;; The user name to use for the ssh connection that establishes the tunnel
+ ;; to the boinkmarks DB host.
+ (setf *ssh-remote-username* *db-default-user-name*) ; typically the same. customize if they're not.
+```
 
 
 
@@ -111,10 +113,12 @@ boinkmarks db".
 
 The things that control how SBCL is built are called build strategies. They're defined via defstrategy like so:
 
-     (defstrategy +strategy-name+ implementation-name
-                  (;; initargs, for example:
-                   :mode (:arch architecture :features (:sb-thread))
-                  [:build-p build-p])
+``` cl
+(defstrategy +strategy-name+ implementation-name
+             (;; initargs, for example:
+              :mode (:arch architecture :features (:sb-thread))
+             [:build-p build-p])
+```
 
 This defines a variable bound to a strategy object, which you can then use on *implementations-to-build*.
 
