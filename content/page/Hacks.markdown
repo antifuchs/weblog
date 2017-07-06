@@ -15,7 +15,7 @@ Here's some stuff I've been working on ([github](http://github.com/antifuchs) ha
  * Actual code: a [gdbinit for SBCL](http://static.boinkor.net/lisp/sbcl/gdbinit)
 * I helped resurrect [iterate](http://common-lisp.net/project/iterate/) from the CMU AI repository. Joerg Hoehle and Attila Lendvai are taking good care of it now.
 * I wrote a [UBF encoder/decoder](http://common-lisp.net/project/ubf) for Common Lisp when I was bored. ([see](http://www.sics.se/~joe/ubf/site/home.html))
-* I wrote [Autobench](2006/01/sbcl-autobenching-a.k.a.-boinkmarking-howto/) to burn CPU cycles on this box.
+* I wrote [Autobench](/2006/01/sbcl-autobenching-a.k.a.-boinkmarking-howto/) to burn CPU cycles on this box.
 * A [VT100 screen scraper](/screen-scraper) I wrote during my time at SILVER SERVER Gmbh was released as Open Source software.
 
 See also my blog's category [Lisp](/categories/lisp/)
