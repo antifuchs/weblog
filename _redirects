@@ -1,0 +1,6 @@
+# /go: quick redirects
+/go/fdfun               https://github.com/antifuchs/bangbangcon-talk-2016
+/go/%21%21con2016       https://github.com/antifuchs/bangbangcon-talk-2016
+
+# old weblog URLs
+/public/2006/11/this-will-probably-mean-nothin/ /2006/11/this-will-probably-mean-nothin/ 301
