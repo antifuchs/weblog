@@ -7,7 +7,7 @@ atom_id: http://boinkor.net/archives/2006/11/clisp_boinkmarks_available
 
 Here's the explanation of [yesterday's cryptic announcement](http://boinkor.net/archives/2006/11/this_will_probably_mean_nothin.html):
 
-Prompted by a [late-night discussion on #lisp](http://www.ircbrowse.com/channel/lisp/20061103?utime=3371840108#utime_requested), I added build/benchmark support for CLISP to [autobench](http://boinkor.net/weblog/mt.cgi?__mode=view&_type=entry&id=38&blog_id=2). It's currently churning away at early releases, but some numbers are already in.
+Prompted by a [late-night discussion on #lisp](http://www.ircbrowse.com/channel/lisp/20061103?utime=3371840108#utime_requested), I added build/benchmark support for CLISP to [autobench](/2006/11/this-will-probably-mean-nothin/). It's currently churning away at early releases, but some numbers are already in.
 
 Graphs are available for [AMD64 in 32-bit mode](http://sbcl.boinkor.net/bench/?HOST=baker&IMPLEMENTATIONS=CLISP%2C%28%3AARCH+%3AEMULATED-X86%29&ONLY-RELEASE=NIL) and [AMD64 in native mode](http://sbcl.boinkor.net/bench/?HOST=baker&IMPLEMENTATIONS=CLISP%2C%28%3AARCH+%3AX86_64%29&ONLY-RELEASE=NIL).
 
