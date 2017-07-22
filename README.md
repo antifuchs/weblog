@@ -6,26 +6,15 @@ write a post is not going to make you want to write more posts.
 
 ## How to deploy
 
-This blog is hosted on Google App Engine. There's a test and a live app, both live behind SSL. To deploy the test app, run:
+This blog is hosted on [netlify](https://app.netlify.com), and it's
+set up to deploy the site whenever the master branch gets pushed.
 
-    make deploy_test
+## How to test out stuff
 
-And visit https://testblog.boinkor.net
+The `develop` branch deploys to the test blog setup in netlify,
+definitely check that out too.
 
-`make deploy` and the https://boinkor.net for the live app.
+## Redirects
 
-## How to SSL
-
-I use letsencrypt. This requires renewing certs every 3 months. But
-it's fairly painless, except you have to text-edit a bunch of stuff.
-
-Step 0: Have `~/.letsencrypt`
-
-1. Make sure you are on the main branch & nothing is uncommitted.
-2. Run `make certificates`
-3. If it doesn't give you instructions and you know you must do a thing, run:
-   `./scripts/letsencrypt-hook deploy_certificate boinkor.net ./certs/boinkor.net/privkey.pem ./certs/boinkor.net/cert.pem ./certs/boinkor.net/fullchain.pem`
-
-## TODO
-
-* Redirects
+These live in `static/_redirects`; They
+follow [netlify's scheme](https://www.netlify.com/docs/redirects/).

@@ -7,20 +7,12 @@ TEST_DOMAIN = testblog.boinkor.net
 LIVE_APP = boinkor-net-blog-live
 TEST_APP = plated-analyzer-117711
 
-all: $(TEST_DOMAIN)
+all: demo
 
 demo: deploy_deps
 	hugo serve -d dev
 
-## (Re-)issuing certificates:
-
-certificates: letsencrypt.sh $(HOME)/.letsencrypt certs
-	./letsencrypt.sh/dehydrated -c -f letsencrypt-config.sh
-
 ## Uploading the blog:
-
-$(DOMAIN): deploy
-$(TEST_DOMAIN): deploy_test
 
 build: $(THEME)
 	git clean -fdx public/
@@ -30,12 +22,6 @@ build_test: $(THEME)
 	git clean -fdx public/
 	hugo -b https://${TEST_DOMAIN}/
 
-deploy_test: deploy_deps
-	scripts/build https://$(TEST_DOMAIN) $(TEST_APP)
-
-deploy: deploy_deps
-	scripts/build https://$(DOMAIN) $(LIVE_APP)
-
 deploy_deps: $(THEME)
 
 # File rules
@@ -43,10 +29,4 @@ deploy_deps: $(THEME)
 $(THEME):
 	git clone $(THEME_GIT) $(THEME)
 
-letsencrypt.sh:
-	git clone https://github.com/lukas2511/letsencrypt.sh
-
-certs:
-	mkdir -p certs
-
-.PHONY: phony all deploy_test certificates demo deploy_deps build build_test $(DOMAIN) $(TEST_DOMAIN)
+.PHONY: all demo deploy_deps build build_test
