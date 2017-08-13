@@ -1,9 +1,9 @@
 /*
-        Link: </css/all.min.css>; rel=preload; as=stylesheet
-        Link: </css/blog.css>; rel=preload; as=stylesheet
-        Link: </css/font-awesome.min.css>; rel=preload; as=stylesheet
+        Link: </css/all.min.css>; rel=preload; as=style
+        Link: </css/blog.css>; rel=preload; as=style
+        Link: </css/font-awesome.min.css>; rel=preload; as=style
         Link: </js/prism.js>; rel=preload; as=script
         Link: </js/highlightjs/highlight.pack.js>; rel=preload; as=script
-        Link: </css/highlightjs/default.css>; rel=preload; as=stylesheet
-        Link: </css/highlight-lisp/github.css>; rel=preload; as=stylesheet
+        Link: </css/highlightjs/default.css>; rel=preload; as=style
+        Link: </css/highlight-lisp/github.css>; rel=preload; as=style
         Link: </js/highlight-lisp.js>; rel=preload; as=script
