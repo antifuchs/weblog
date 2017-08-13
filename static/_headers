@@ -3,6 +3,7 @@
         Link: </css/blog.css>; rel=preload; as=stylesheet
         Link: </css/font-awesome.min.css>; rel=preload; as=stylesheet
         Link: </js/prism.js>; rel=preload; as=script
-        Link: </js/highlight.pack.js>; rel=preload; as=script
+        Link: </js/highlightjs/highlight.pack.js>; rel=preload; as=script
+        Link: </css/highlightjs/default.css>; rel=preload; as=stylesheet
         Link: </css/highlight-lisp/github.css>; rel=preload; as=stylesheet
         Link: </js/highlight-lisp.js>; rel=preload; as=script
