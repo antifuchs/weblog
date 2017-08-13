@@ -1,0 +1,6 @@
+/*
+        Link: </css/blog.css>; rel=preload; as=stylesheet
+        Link: </css/all.min.css>; rel=preload; as=stylesheet
+        Link: </js/highlight.pack.js>; rel=preload; as=sript
+        Link: </css/highlight-lisp/github.css>; rel=preload; as=stylesheet
+        Link: </js/highlight-lisp.js>; rel=preload; as=script
