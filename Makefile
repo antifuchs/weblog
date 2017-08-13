@@ -4,9 +4,6 @@ THEME_GIT = https://github.com/antifuchs/weblog-purehugo
 DOMAIN = boinkor.net
 TEST_DOMAIN = testblog.boinkor.net
 
-LIVE_APP = boinkor-net-blog-live
-TEST_APP = plated-analyzer-117711
-
 all: demo
 
 demo: deploy_deps
