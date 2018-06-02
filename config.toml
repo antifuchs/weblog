@@ -26,3 +26,28 @@ footnotereturnlinkcontents = "↩"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
+
+# For an explanation of these settings, see <https://gohugo.io/about/hugo-and-gdpr/>:
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    # We use google analytics, but only with anonymized user data, and
+    # with non-permanent tracking (it uses session data instead of
+    # cookies).
+    disable = false
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = true
+  [privacy.speakerDeck]
+    disable = true
+  [privacy.twitter]
+    disable = true
+    enableDNT = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+    privacyEnhanced = false
