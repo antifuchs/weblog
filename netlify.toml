@@ -1,12 +1,21 @@
+# Reference: https://www.netlify.com/docs/netlify-toml-reference/
+
 [build]
 publish = "public"
-
-[context.production.environment]
-HUGO_VERSION = "0.52"
 command = "make build"
+
+[build.environment]
 HUGO_ENV = "production"
+HUGO_VERSION = "0.52"
+
+[context.production]
+[context.production.environment]
+# env vars for production only
+
+[context.deploy-preview]
+[context.deploy-preview.environment]
+# env vars for pull reqs
 
 [context.branch-deploy]
-HUGO_VERSION = "0.52"
-command = "make build_test"
-HUGO_ENV = "production"
+[context.branch-deploy.environment]
+# env vars for branch deploys
