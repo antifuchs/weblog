@@ -35,6 +35,9 @@
 {{ if in .Params.additional_syntax "cl" }}
 <link rel="stylesheet" href="/css/highlight-lisp/github.css">
 {{ end }}
+{{ with .HasShortcode "video" }}
+<link href="/css/video-js.min.css" rel="stylesheet">
+{{ end }}
 
     <link href="/favicon.png" rel="icon">
 </head>
