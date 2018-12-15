@@ -20,11 +20,9 @@ demo: deploy_deps
 
 build: $(THEME)
 	git clean -fdx public/
-	hugo -b https://${DOMAIN}/
-
-build_test: $(THEME)
-	git clean -fdx public/
 	hugo -b /
+
+build_test: build
 
 deploy_deps: $(DEPLOY_DEPS)
 
