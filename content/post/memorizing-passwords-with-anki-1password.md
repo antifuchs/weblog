@@ -3,6 +3,10 @@ title: "Memorizing passwords with Anki & 1Password"
 Tags: ["macos", "anki", "1password"]
 Categories: ["Security"]
 date: "2018-11-28T01:50:00+02:00"
+aliases:
+- /2018/11/memorizing-passwords-with-anki-1pssword/
+- /2018/11/memorizing-passwords-with-anki-1password/
+- /2018/11/memorizing-passwords-with-anki--1password/
 ---
 Recently, I started using [Anki](https://apps.ankiweb.net/), a spaced repetition scheduler[^2], a lot to learn French using the [Fluent Forever](https://fluent-forever.com/) method, and while there have been setbacks, it's been a pretty great experience overall. It seems to be super useful for memorizing and retaining all sorts of information! Since I have to memorize all sorts of passwords (phone unlock code, laptop login password, gym locker combination), why not use 1Password to help me retain them?
 
