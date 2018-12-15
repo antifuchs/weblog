@@ -4,13 +4,17 @@ publish = "public"
 [context.production.environment]
 HUGO_VERSION = "0.52"
 HUGO_ENV = "production"
-
 [context.production]
 command = "make build"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.52"
 HUGO_ENV = "production"
-
 [context.deploy-preview]
+command = "make build_test"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.52"
+HUGO_ENV = "production"
+[context.branch-deploy]
 command = "make build_test"
