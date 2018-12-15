@@ -4,6 +4,7 @@ Tags: ["macos", "anki", "1password"]
 Categories: ["Security"]
 date: "2018-11-28T01:50:00+02:00"
 aliases:
+- /2018/11/memorizing-passwords-with-anki--1pssword/
 - /2018/11/memorizing-passwords-with-anki-1pssword/
 - /2018/11/memorizing-passwords-with-anki-1password/
 - /2018/11/memorizing-passwords-with-anki--1password/
