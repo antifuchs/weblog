@@ -52,14 +52,14 @@
 
 {{ if .IsNamedParams }}
 
-  <video class="video-js vjs-big-play-centered" controls preload="auto" {{ if (.Get "poster") }} poster="{{.Get "poster"}}"{{end}} data-setup="{}">
+  <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" {{ if (.Get "poster") }} poster="{{.Get "poster"}}"{{end}} data-setup="{}">
     <source src="{{ .Get "mp4" }}" type="video/mp4"></source>
     <source src="{{ .Get "webm" }}" type="video/webm"></source>
   </video>
 
 {{ else }}
 
-  <video class="video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+  <video class="video-js vjs-big-play-centered vjs-16-9" controls preload="auto" data-setup="{}">
     <source src="{{ .Get 0 }}" type="video/mp4"></source>
     <source src="{{ .Get 1 }}" type="video/webm"></source>
   </video>
