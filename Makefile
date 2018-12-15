@@ -24,7 +24,7 @@ build: $(THEME)
 
 build_test: $(THEME)
 	git clean -fdx public/
-	hugo -b https://${TEST_DOMAIN}/
+	hugo -b /
 
 deploy_deps: $(DEPLOY_DEPS)
 
