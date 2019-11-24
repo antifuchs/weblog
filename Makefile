@@ -7,7 +7,7 @@ THEME_GIT = https://github.com/antifuchs/weblog-purehugo
 
 FONTAWESOME_VERSION = v4.3.0
 FONTAWESOME_GIT = https://github.com/FortAwesome/Font-Awesome
-FONTAWESOME = statics/
+FONTAWESOME = static/
 
 DEPLOY_DEPS := $(THEME) $(FONTAWESOME)
 
@@ -15,6 +15,7 @@ BASE_URL := "https://boinkor.net/"
 
 all: demo
 
+dev: demo
 demo: deploy_deps
 	hugo serve -d dev
 
