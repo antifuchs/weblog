@@ -4,15 +4,19 @@ TEST_DOMAIN = testblog.boinkor.net
 ## deps for running / deploying:
 THEME = themes/purehugo
 THEME_GIT = https://github.com/antifuchs/weblog-purehugo
+THEME_BRANCH = 2019
 
 FONTAWESOME_VERSION = v4.3.0
 FONTAWESOME_GIT = https://github.com/FortAwesome/Font-Awesome
-FONTAWESOME = statics/
+FONTAWESOME = static/
 
 DEPLOY_DEPS := $(THEME) $(FONTAWESOME)
 
+BASE_URL := "https://boinkor.net/"
+
 all: demo
 
+dev: demo
 demo: deploy_deps
 	hugo serve -d dev
 
@@ -20,7 +24,8 @@ demo: deploy_deps
 
 build: $(THEME)
 	git clean -fdx public/
-	hugo -b /
+	(cd $(THEME) ; git fetch origin && git checkout $(THEME_BRANCH) && git reset --hard origin/$(THEME_BRANCH))
+	hugo --gc --minify -b $(BASE_URL)
 
 build_test: build
 
@@ -30,7 +35,7 @@ deploy_deps: $(DEPLOY_DEPS)
 
 # Not vendored, but also not a submodule, ugh:
 $(THEME):
-	git clone $(THEME_GIT) $(THEME)
+	git clone --single-branch -b $(THEME_BRANCH) $(THEME_GIT) $(THEME)
 
 # Vendored; `make fontawesome` to update these.
 fontawesome:

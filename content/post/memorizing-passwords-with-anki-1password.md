@@ -30,7 +30,7 @@ Of course, you should make your memorization job as easy as possible - use [dice
 
 Setting up the deck is really not that much work, especially as I've pre-made an (empty) Anki deck with a card type that you can import & then start filling out with references to things you need to memorize. Here's a step-by-step guide:
 
-1. In order to use the 1Password URL scheme effectively, you have to set an "advanced" option in 1Password first. In the settings, check the setting to enable "Copy UUID": ![the "advanced settings" window in 1Password](/assets/images/anki-1password-advanced.png)
+1. In order to use the 1Password URL scheme effectively, you have to set an "advanced" option in 1Password first. In the settings, check the setting to enable "Copy UUID": {{%img alt="the \"advanced settings\" window in 1Password" src="/assets/images/anki-1password-advanced.png"%}}
 
 2. Now, identify the passwords that you need to memorize. Ideally, that list is very short. I tagged them "memorize" in 1Password so they all appear in one place, but whatever works for you is best.
 
@@ -40,9 +40,9 @@ Setting up the deck is really not that much work, especially as I've pre-made an
 
 5. There, you see it has a name and a UUID. That UUID identifies the 1Password entry that you wish to memorize, but isn't itself secret - in the example card, it belongs to a test password that I created for this blog post.
 
-6. Delete that card (it's useless to you, after all!) and close the card browser: ![right-click the item and select "Delete"](/assets/images/anki-1password-delete-example.png)
+6. Delete that card (it's useless to you, after all!) and close the card browser: {{%img src="/assets/images/anki-1password-delete-example.png" alt="right-click the item and select \"Delete\"" %}}
 
-7. Click "Add" in Anki's deck view and give the new entry a name; then, in 1Password, open one of the entries you want to memorize and select "Copy UUID": ![The 1Password context menu for a password with "Copy UUID" selected](/assets/images/anki-1password-copy-uuid.png)
+7. Click "Add" in Anki's deck view and give the new entry a name; then, in 1Password, open one of the entries you want to memorize and select "Copy UUID": {{%img alt="The 1Password context menu for a password with \"Copy UUID\" selected" src="/assets/images/anki-1password-copy-uuid.png"%}}
 
 8. Back in Anki, paste that UUID into the "UUID" field.
 
