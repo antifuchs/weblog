@@ -12,8 +12,11 @@ footnotereturnlinkcontents = "↩"
   name = "Andreas Fuchs"
   email = "asf@boinkor.net"
 
-# Backwards-compatible URLs:
+# Backwards-compatible URLs. These are kinda weird.
 [permalinks]
+  # hugo requires this setting, otherwise it'll generate duplicate post entries on the homepage
+  posts = "/:year/:month/:slug/"
+  # purehugo requires this one for some reason, otherwise the permalinks will go to /post/basename
   post = "/:year/:month/:slug/"
 
 [params]
