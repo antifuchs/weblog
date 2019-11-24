@@ -24,6 +24,7 @@ demo: deploy_deps
 
 build: $(THEME)
 	git clean -fdx public/
+	(cd $(THEME) ; git fetch origin && git checkout $(THEME_BRANCH) && git reset --hard origin/$(THEME_BRANCH))
 	hugo --gc --minify -b $(BASE_URL)
 
 build_test: build
