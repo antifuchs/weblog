@@ -1,5 +1,5 @@
 theme = "purehugo"
-baseurl = "https://boinkor.net/"
+baseURL = "https://boinkor.net/" # This gets set & overridden in Makefile / netlify.toml
 languageCode = "en-us"
 title = "Andreas Fuchs' Journal"
 

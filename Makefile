@@ -11,6 +11,8 @@ FONTAWESOME = statics/
 
 DEPLOY_DEPS := $(THEME) $(FONTAWESOME)
 
+BASE_URL := "https://boinkor.net/"
+
 all: demo
 
 demo: deploy_deps
@@ -20,7 +22,7 @@ demo: deploy_deps
 
 build: $(THEME)
 	git clean -fdx public/
-	hugo -b /
+	hugo --gc --minify -b $(BASE_URL)
 
 build_test: build
 

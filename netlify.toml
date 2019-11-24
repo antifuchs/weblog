@@ -6,16 +6,20 @@ command = "make build"
 
 [build.environment]
 HUGO_ENV = "production"
-HUGO_VERSION = "0.52"
+HUGO_VERSION = "0.59.1"
 
 [context.production]
 [context.production.environment]
 # env vars for production only
 
 [context.deploy-preview]
+command = "make build BASE_URL=$DEPLOY_PRIME_URL"
+
 [context.deploy-preview.environment]
 # env vars for pull reqs
 
 [context.branch-deploy]
+command = "make build BASE_URL=$DEPLOY_PRIME_URL"
+
 [context.branch-deploy.environment]
 # env vars for branch deploys
