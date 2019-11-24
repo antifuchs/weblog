@@ -4,9 +4,9 @@
  Referrer-Policy: strict-origin-when-cross-origin
  X-Content-Type-Options: nosniff
  Link: </css/all.min.css>; rel=preload; as=style
- Link: </css/blog.css>; rel=preload; as=style
+ Link: </css/pure/0.6.0/pure-min.css>; rel=preload; as=style
+ Link: </css/pure/0.6.0/grids-responsive-min.css>; rel=preload; as=style
  Link: </css/font-awesome.min.css>; rel=preload; as=style
- Link: </js/prism.js>; rel=preload; as=script
  Link: </js/highlightjs/highlight.pack.js>; rel=preload; as=script
  Link: </css/highlightjs/default.css>; rel=preload; as=style
  Link: </css/highlight-lisp/github.css>; rel=preload; as=style

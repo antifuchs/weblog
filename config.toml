@@ -23,6 +23,7 @@ footnotereturnlinkcontents = "↩"
   twitterName = "antifuchs"
   githubName = "antifuchs"
   google_analytics = "UA-20002026-1"
+  hideShareOptions = true
 
 [blackfriday]
   plainIDAnchors = true
