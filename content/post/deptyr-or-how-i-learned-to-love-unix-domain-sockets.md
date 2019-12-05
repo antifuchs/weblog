@@ -62,7 +62,7 @@ program. Calling `exec` doesn't adjust the process hierarchy, and
 would be exactly what other tools do to start programs under process
 supervision.
 
-![A diagram of the process tree with a wormhole](/assets/images/deptyr-wormhole.png)
+{{%img alt="A diagram of the process tree with a wormhole" src="/assets/images/deptyr-wormhole.png"%}}
 
 ## If only there was a way to send that controlling end elsewhere...
 
