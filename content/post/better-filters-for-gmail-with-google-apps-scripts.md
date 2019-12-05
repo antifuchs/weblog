@@ -105,7 +105,7 @@ pipe into bash (-:
 3. Adjust the variables at the top to reflect the labels that you want
    email to be tagged with.
 4. Set up a trigger: I set mine up like this to call `processMessages` once a minute:
-   ![trigger to call `processMessages` once per minute](/assets/images/gapps-scripts-triggers.png)
+   {{%img alt="trigger to call `processMessages` once per minute" src="/assets/images/gapps-scripts-triggers.png"%}}
 5. Set up notifications for that trigger: If anything should go wrong
    (I have a bug, there was a syntax error while pasting), you should
    get a notification. Click on "notifications" and set up a

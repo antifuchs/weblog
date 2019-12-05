@@ -9,7 +9,7 @@ atom_id: http://boinkor.net/archives/2006/11/drei_revives_eremites_interest
 
 Apart from less code duplication and embeddability of a really nice emacs in every clim application that uses a text-editor gadget, this adds a few cool things to the input editing in current clim applications. This screen shot
 
-![A clim listener with an active DREI input editor](/assets/images/DREI-Listening.png)
+{{%img alt="A clim listener with an active DREI input editor" src="/assets/images/DREI-Listening.png"%}}
 
 shows:
 
