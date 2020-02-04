@@ -9,7 +9,7 @@
 <email>{{ "<![CDATA[ " | safeHTML }}{{ $.Site.Author.email }} ]]></email>
 </author>
 <generator uri="http://gohugo.io/">Hugo</generator>
-{{ range where .Data.Pages "Section" "post" | first 15}}
+{{ range where .Paginator.Pages "Section" "post" | first 15}}
 <entry>
 {{`<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
 <link href="{{ .Permalink }}"/>

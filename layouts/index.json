@@ -1,4 +1,4 @@
-{{ $list := .Data.Pages | first 15}}
+{{ $list := .Paginator.Pages }}
 {{ $length := (len $list) -}}
 {
     "version" : "https://jsonfeed.org/version/1",
@@ -22,7 +22,7 @@
     },
     {{ end -}}
     "items" : [
-    {{ range $index, $element := $list -}}
+    {{ range $index, $element := where $list "Section" "post" | first 15}}
     {
         "title" : {{ .Title | jsonify }},
         "date_published" : "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
