@@ -25,7 +25,7 @@ demo: deploy_deps
 build: $(THEME)
 	git clean -fdx public/
 	(cd $(THEME) ; git fetch origin && git checkout $(THEME_BRANCH) && git reset --hard origin/$(THEME_BRANCH))
-	hugo --gc --minify -b $(BASE_URL)
+	hugo --gc -b $(BASE_URL) # don't --minify until https://github.com/gohugoio/hugo/issues/6472 is fixed
 
 build_test: build
 
