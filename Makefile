@@ -6,7 +6,7 @@ THEME = themes/purehugo
 THEME_GIT = https://github.com/antifuchs/weblog-purehugo
 THEME_BRANCH = 2019
 
-FONTAWESOME_VERSION = v4.3.0
+FONTAWESOME_VERSION = 5.12.0
 FONTAWESOME_GIT = https://github.com/FortAwesome/Font-Awesome
 FONTAWESOME = static/
 
@@ -47,7 +47,7 @@ fontawesome:
 	mkdir -p vendor/ static/fonts/
 	if ! [ -d vendor/fontawesome ] ; then git clone $(FONTAWESOME_GIT) vendor/fontawesome ; else (cd vendor/fontawesome ; git fetch ) ;fi
 	(cd vendor/fontawesome && git reset --hard $(FONTAWESOME_VERSION) )
-	cp vendor/fontawesome/css/font-awesome.min.css static/css/
-	cp vendor/fontawesome/fonts/* static/fonts/
+	cp vendor/fontawesome/css/all.min.css static/css/font-awesome.min.css
+	cp -Rp vendor/fontawesome/webfonts static/
 
 .PHONY: all demo deploy_deps build build_test fontawesome
