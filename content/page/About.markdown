@@ -17,19 +17,19 @@ To learn what I'm up to as it happens, read my [weblog](/). Here's a summary: I 
 
 ## asf on the web
 
-* I tweet as [@antifuchs](http://twitter.com/antifuchs). An @ reply is
+My identities are all gathered on [keybase.io/~asf](https://keybase.io/asf). Here are a couple that are interesting:
+
+* I toot as [@antifuchs@weirder.earth](http://weirder.earth/@antifuchs). An @ reply is
   the preferred method for commenting on this site.
 * My public projects are on [my github account](https://github.com/antifuchs).
 * I keep bookmarks in [pinboard.in](http://pinboard.in):
   [antifuchs' pinboard.in bookmarks](http://pinboard.in/u:antifuchs)
-* I have a [last.fm](http://last.fm) profile:
-  [antifuchs at last.fm](http://www.last.fm/user/antifuchs/)
 * Find out [What google knows about me](http://www.google.com/search?q=antifuchs)
 
-This site was generated with [Hugo](http://gohugo.io/) from
-[this source code](https://github.com/antifuchs/weblog). My site uses
-the [purehugo](https://github.com/dplesca/purehugo) theme. Hosting and
-SSL termination provided by
-[Google App Engine using Letsencrypt](/2016/01/hosting-my-blog-on-google-app-engine-with-letsencrypt/).
+This site was generated with [Hugo](http://gohugo.io/) from [this
+source code](https://github.com/antifuchs/weblog). My site uses a fork
+of the [purehugo](https://github.com/antifuhcs/purehugo)
+theme. Building, hosting and SSL provided by
+[netlify](https://netlify.com).
 
-If you want to know more, just ask me at [asf@boinkor.net](mailto:asf@boinkor.net).
+If you want to know more, ask me at [asf@boinkor.net](mailto:asf@boinkor.net).
