@@ -23,7 +23,7 @@ all: demo
 dev: demo
 demo: deploy_deps
 	git clean -fdx public/
-	${HUGO_BIN} serve -d dev --bind 0.0.0.0
+	${HUGO_BIN} serve -d dev --buildDrafts --buildFuture --bind 0.0.0.0
 
 ## Uploading the blog:
 
