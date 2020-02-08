@@ -7,6 +7,7 @@ command = "make build"
 [build.environment]
 HUGO_ENV = "production"
 HUGO_VERSION = "0.59.1"
+HUGO_BIN = "hugo"
 
 [context.production]
 [context.production.environment]

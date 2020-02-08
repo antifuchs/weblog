@@ -14,18 +14,23 @@ DEPLOY_DEPS := $(THEME) $(FONTAWESOME)
 
 BASE_URL := "https://boinkor.net/"
 
+# HUGO_BIN gets overridden on the build environment in netlify.toml; unless this is set, use the dockerized version.
+$(eval $(shell grep HUGO_VERSION netlify.toml | head -n1))   # use the build.environment version
+HUGO_BIN ?= docker run --rm -it -v `pwd`:/src -v `pwd`/output:/src/public -p 1313:1313 klakegg/hugo:$(HUGO_VERSION)
+
 all: demo
 
 dev: demo
 demo: deploy_deps
-	hugo serve -d dev
+	git clean -fdx public/
+	${HUGO_BIN} serve -d dev --bind 0.0.0.0
 
 ## Uploading the blog:
 
 build: $(THEME)
 	git clean -fdx public/
 	(cd $(THEME) ; git fetch origin && git checkout $(THEME_BRANCH) && git reset --hard origin/$(THEME_BRANCH))
-	hugo --gc -b $(BASE_URL) # don't --minify until https://github.com/gohugoio/hugo/issues/6472 is fixed
+	${HUGO_BIN} --gc -b $(BASE_URL) # don't --minify until https://github.com/gohugoio/hugo/issues/6472 is fixed
 
 build_test: build
 
