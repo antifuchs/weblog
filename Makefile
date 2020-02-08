@@ -29,7 +29,8 @@ demo: deploy_deps
 
 build: $(THEME)
 	git clean -fdx public/
-	(cd $(THEME) ; git fetch origin && git checkout $(THEME_BRANCH) && git reset --hard origin/$(THEME_BRANCH))
+	@(cd $(THEME) ; git fetch origin && git checkout $(THEME_BRANCH) && git reset --hard origin/$(THEME_BRANCH))
+	@drafts=$$(${HUGO_BIN} list drafts) ; [ -z $$drafts ] || (echo "\nCan't deploy - drafts exist:"; echo "$$drafts\n" ; exit 1)
 	${HUGO_BIN} --gc -b $(BASE_URL) # don't --minify until https://github.com/gohugoio/hugo/issues/6472 is fixed
 
 build_test: build
