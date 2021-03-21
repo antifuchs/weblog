@@ -13,7 +13,7 @@ Born in 1982, connected to the global TCP/IP network since 1996. Also known as [
 
 ## What is Andreas Fuchs doing right now?
 
-To learn what I'm up to as it happens, read my [weblog](/). Here's a summary: I work for a [startup company](http://stripe.com) in the SF Bay Area. Before that, I was consulting on lispy problems (Want me to solve problems for you? send me [e-mail](mailto:asf@boinkor.net).) In my spare time, I enjoy hacking in Common Lisp, building robots, listening to music, listening to and reading and watching good stories being told.
+To learn what I'm up to as it happens, read my [weblog](/). Here's a summary: I work for a [database startup company](http://materialize.com) in the New York City. Before that, I worked at a [financial tech company](https://stripe.com), and before that I was consulting on lispy problems (Want me to solve problems for you? send me [e-mail](mailto:asf@boinkor.net).) In my spare time, I enjoy hacking in Rust, Nix, Common Lisp, building robots, listening to music, listening to and reading and watching good stories being told.
 
 ## asf on the web
 
