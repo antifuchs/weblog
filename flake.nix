@@ -2,63 +2,54 @@
   description = "my blog";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-20.09";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
   };
 
-  outputs = { self, nixpkgs, flake-utils }: flake-utils.lib.eachDefaultSystem (system:
-    let
-      pkgs = nixpkgs.legacyPackages.${system};
-      nativeBuildInputs = with pkgs; [ hugo font-awesome ];
-    in
-    rec {
-      devShell = pkgs.mkShell {
-        inherit nativeBuildInputs;
-      };
-
-      apps = {
-        hugo = flake-utils.lib.mkApp {
-          drv = pkgs.hugo;
+  outputs = { self, nixpkgs, flake-utils, nix-flake-tests }: flake-utils.lib.eachSystem [
+    "x86_64-darwin"
+    "x86_64-linux"
+  ]
+    (system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+        nativeBuildInputs = with pkgs; [ hugo font-awesome ];
+      in
+      rec {
+        devShell = pkgs.mkShell {
+          inherit nativeBuildInputs;
         };
 
-        repl =
-          flake-utils.lib.mkApp {
-            drv = pkgs.writeShellScriptBin "repl" ''
-              confnix=$(mktemp)
-              echo "builtins.getFlake (toString $(git rev-parse --show-toplevel))" >$confnix
-              trap "rm $confnix" EXIT
-              nix repl $confnix
-            '';
+        apps = {
+          hugo = flake-utils.lib.mkApp {
+            drv = pkgs.hugo;
           };
-      };
 
-      # from https://gitlab.com/panakeia/flake-unit-tests/-/blob/master/flake.nix, emulate a test runner:
-      packages.tests =
-        let
-          results = pkgs.lib.concatLists (map (path: pkgs.callPackage path { }) [ ./tests ]);
-          resultToString = { name, expected, result }: ''
-            ${name} failed: expected ${builtins.toString expected}, but got ${
-              builtins.toString result
-            }
-          '';
-        in
-        if results != [ ] then
-          builtins.throw (pkgs.lib.concatStringsSep "\n" (map resultToString results))
-        else
-          ""; # all tests passed
-
-      checks =
-        let
-          runTestCommand = name: command:
-            pkgs.runCommand name { } ''
-              set -o errexit
-              cd ${self}
-              ${command}
-              touch $out
-            '';
-        in
-        {
-          tests = runTestCommand "tests" "nix eval --raw .#tests";
+          repl =
+            flake-utils.lib.mkApp {
+              drv = pkgs.writeShellScriptBin "repl" ''
+                confnix=$(mktemp)
+                echo "builtins.getFlake (toString $(git rev-parse --show-toplevel))" >$confnix
+                trap "rm $confnix" EXIT
+                nix repl $confnix
+              '';
+            };
         };
-    });
+
+        checks.versions = nix-flake-tests.lib.check {
+          inherit pkgs;
+          tests = {
+            testMatch =
+              let
+                netlifyVersion = (builtins.fromTOML (builtins.readFile ./netlify.toml)).build.environment.HUGO_VERSION;
+                pkgsVersion = pkgs.hugo.version;
+              in
+              {
+                expected = netlifyVersion;
+                expr = pkgsVersion;
+              };
+          };
+        };
+      });
 }
