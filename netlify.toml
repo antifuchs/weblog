@@ -6,7 +6,8 @@ command = "make build"
 
 [build.environment]
 HUGO_ENV = "production"
-HUGO_VERSION = "0.59.1"
+# This must match the version we get from nixpkgs:
+HUGO_VERSION = "0.74.3"
 HUGO_BIN = "hugo"
 
 [context.production]
