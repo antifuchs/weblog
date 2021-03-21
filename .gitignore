@@ -30,3 +30,4 @@ node_modules
 
 # The hugo dev server:
 /dev/
+/.direnv/

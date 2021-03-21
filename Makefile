@@ -15,8 +15,7 @@ DEPLOY_DEPS := $(THEME) $(FONTAWESOME)
 BASE_URL := "https://boinkor.net/"
 
 # HUGO_BIN gets overridden on the build environment in netlify.toml; unless this is set, use the dockerized version.
-$(eval $(shell grep HUGO_VERSION netlify.toml | head -n1))   # use the build.environment version
-HUGO_BIN ?= docker run --rm -it -v `pwd`:/src -v `pwd`/output:/src/public -p 1313:1313 klakegg/hugo:$(HUGO_VERSION)
+HUGO_BIN ?= nix run ".\#hugo" --
 
 all: demo
 
