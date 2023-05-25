@@ -7,7 +7,3 @@
  Link: </css/pure/0.6.0/pure-min.css>; rel=preload; as=style
  Link: </css/pure/0.6.0/grids-responsive-min.css>; rel=preload; as=style
  Link: </css/font-awesome.min.css>; rel=preload; as=style
- Link: </js/highlightjs/highlight.pack.js>; rel=preload; as=script
- Link: </css/highlightjs/default.css>; rel=preload; as=style
- Link: </css/highlight-lisp/github.css>; rel=preload; as=style
- Link: </js/highlight-lisp.js>; rel=preload; as=script

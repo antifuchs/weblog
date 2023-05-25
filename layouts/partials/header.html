@@ -26,11 +26,6 @@
 
     <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="/index.xml" />
     <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="/index.json" />
-
-    <link rel="stylesheet" href="/css/highlightjs/default.css">
-{{ if in .Params.additional_syntax "cl" }}
-<link rel="stylesheet" href="/css/highlight-lisp/github.css">
-{{ end }}
 {{ with .HasShortcode "video" }}
 <link href="/css/video-js.min.css" rel="stylesheet">
 {{ end }}
