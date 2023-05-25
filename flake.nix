@@ -2,12 +2,13 @@
   description = "my blog";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
     flake-utils.url = "github:numtide/flake-utils";
     nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
   };
 
   outputs = { self, nixpkgs, flake-utils, nix-flake-tests }: flake-utils.lib.eachSystem [
+    "aarch64-darwin"
     "x86_64-darwin"
     "x86_64-linux"
   ]
@@ -15,9 +16,8 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         nativeBuildInputs = with pkgs; [ hugo font-awesome ];
-      in
-      rec {
-        devShell = pkgs.mkShell {
+      in {
+        devShells.default = pkgs.mkShell {
           inherit nativeBuildInputs;
         };
 
@@ -45,10 +45,10 @@
                 netlifyVersion = (builtins.fromTOML (builtins.readFile ./netlify.toml)).build.environment.HUGO_VERSION;
                 pkgsVersion = pkgs.hugo.version;
               in
-              {
-                expected = netlifyVersion;
-                expr = pkgsVersion;
-              };
+                {
+                  expected = netlifyVersion;
+                  expr = pkgsVersion;
+                };
           };
         };
       });
