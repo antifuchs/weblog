@@ -8,7 +8,7 @@ url: /privacy
 ---
 # Your Privacy on This Website
 
-Like any other person on the internet these days, I have to provide a privacy policy and imprint here. Here's a link to a pretty permissive (but accurate) privacy policy and imprint that I generated on iubenda: <a href="https://www.iubenda.com/privacy-policy/18029834" class="iubenda-white iubenda-embed " title="Privacy Policy">Privacy Policy</a>.
+Like any other person on the internet these days, I have to provide a privacy policy and imprint here. Here's a link to a pretty permissive (but accurate) privacy policy and imprint that I generated on iubenda: [Privacy Policy](https://www.iubenda.com/privacy-policy/18029834).
 
 If any lawyers come knocking, this is the policy that is current & applies to this site.
 
