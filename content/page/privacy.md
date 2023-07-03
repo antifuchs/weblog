@@ -17,7 +17,6 @@ If any lawyers come knocking, this is the policy that is current & applies to th
 Unfortunately for you and me, this policy gives me way more permission do to stuff with your data than I'm comfortable with. So here's the exact things I additionally do to keep away from your personal data:
 
 * I configure [hugo with fairly strict privacy settings](https://gohugo.io/about/hugo-and-gdpr/) - here's the [config file](https://github.com/antifuchs/weblog/blob/master/config.toml):
-  * This site uses Google Analytics, but with anonymized IP addresses and without cookies (this uses session storage only - if you want to get untracked, restart your browser).
   * No automated embeds at all - I have disabled twitter, instagram and youtube embedding (unsure if I've ever even had any of those).
 * This site doesn't set cookies.
 

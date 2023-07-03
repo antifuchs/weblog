@@ -21,7 +21,6 @@ footnotereturnlinkcontents = "↩"
 [params]
   twitterName = "antifuchs"
   githubName = "antifuchs"
-  google_analytics = "UA-20002026-1"
   hideShareOptions = true
 
 [blackfriday]
@@ -51,13 +50,8 @@ home = [ "HTML", "RSS", "JSON"]
   [privacy.disqus]
     disable = true
   [privacy.googleAnalytics]
-    # We use google analytics, but only with anonymized user data, and
-    # with non-permanent tracking (it uses session data instead of
-    # cookies).
-    disable = false
-    anonymizeIP = true
-    respectDoNotTrack = true
-    useSessionStorage = true
+    # Turning that off
+    disable = true
   [privacy.instagram]
     disable = true
   [privacy.speakerDeck]
