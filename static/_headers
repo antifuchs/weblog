@@ -3,8 +3,3 @@
  X-XSS-Protection: 1; mode=block
  Referrer-Policy: strict-origin-when-cross-origin
  X-Content-Type-Options: nosniff
- Link: </css/webfonts.css>; rel=preload; as=style
- Link: </css/all.min.css>; rel=preload; as=style
- Link: </css/pure/0.6.0/pure-min.css>; rel=preload; as=style
- Link: </css/pure/0.6.0/grids-responsive-min.css>; rel=preload; as=style
- Link: </css/font-awesome.min.css>; rel=preload; as=style
