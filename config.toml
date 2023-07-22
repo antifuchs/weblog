@@ -1,8 +1,7 @@
-theme = "purehugo"
-baseURL = "https://boinkor.net/" # This gets set & overridden in Makefile / netlify.toml
+baseURL = ""
 languageCode = "en-us"
 title = "Andreas Fuchs' Journal"
-
+#theme =  ["github.com/Mitrichius/hugo-theme-anubis"]
 metaDataFormat = "yaml"
 
 footnotereturnlinkcontents = "↩"

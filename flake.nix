@@ -28,6 +28,7 @@
 
         devshells.default = {
           commands = [
+            {package = pkgs.hugo;}
             {
               name = "dev";
               help = "Run the hugo server";
@@ -37,11 +38,7 @@
               '';
             }
           ];
-          packages = with pkgs; [hugo font-awesome];
-        };
-
-        apps = {
-          hugo.program = pkgs.hugo;
+          packages = with pkgs; [go];
         };
 
         checks.versions = inputs.nix-flake-tests.lib.check {
