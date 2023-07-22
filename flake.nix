@@ -1,55 +1,72 @@
 {
   description = "my blog";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
-    flake-utils.url = "github:numtide/flake-utils";
-    nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
-  };
+  outputs = inputs @ {
+    self,
+    flake-parts,
+    nixpkgs,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      imports = [
+        inputs.devshell.flakeModule
+      ];
 
-  outputs = { self, nixpkgs, flake-utils, nix-flake-tests }: flake-utils.lib.eachSystem [
-    "aarch64-darwin"
-    "x86_64-darwin"
-    "x86_64-linux"
-  ]
-    (system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-        nativeBuildInputs = with pkgs; [ hugo font-awesome ];
-      in {
-        devShells.default = pkgs.mkShell {
-          inherit nativeBuildInputs;
+      systems = [
+        "x86_64-darwin"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "aarch64-linux"
+      ];
+      perSystem = {
+        config,
+        pkgs,
+        final,
+        ...
+      }: {
+        formatter = pkgs.alejandra;
+
+        devshells.default = {
+          commands = [
+            {
+              name = "dev";
+              help = "Run the hugo server";
+              command = ''
+                (sleep 1 ; open http://localhost:1313/) &
+                exec hugo server --noHTTPCache --buildDrafts --buildFuture \"$@\"
+              '';
+            }
+          ];
+          packages = with pkgs; [hugo font-awesome];
         };
 
         apps = {
-          hugo = flake-utils.lib.mkApp {
-            drv = pkgs.hugo;
-          };
-
-          repl =
-            flake-utils.lib.mkApp {
-              drv = pkgs.writeShellScriptBin "repl" ''
-                confnix=$(mktemp)
-                echo "builtins.getFlake (toString $(git rev-parse --show-toplevel))" >$confnix
-                trap "rm $confnix" EXIT
-                nix repl $confnix
-              '';
-            };
+          hugo.program = pkgs.hugo;
         };
 
-        checks.versions = nix-flake-tests.lib.check {
+        checks.versions = inputs.nix-flake-tests.lib.check {
           inherit pkgs;
           tests = {
-            testMatch =
-              let
-                netlifyVersion = (builtins.fromTOML (builtins.readFile ./netlify.toml)).build.environment.HUGO_VERSION;
-                pkgsVersion = pkgs.hugo.version;
-              in
-                {
-                  expected = netlifyVersion;
-                  expr = pkgsVersion;
-                };
+            testMatch = let
+              netlifyVersion = (builtins.fromTOML (builtins.readFile ./netlify.toml)).build.environment.HUGO_VERSION;
+              pkgsVersion = pkgs.hugo.version;
+            in {
+              expected = netlifyVersion;
+              expr = pkgsVersion;
+            };
           };
         };
-      });
+      };
+    };
+
+  inputs = {
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    devshell.url = "github:numtide/devshell";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
+    nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
+  };
 }
