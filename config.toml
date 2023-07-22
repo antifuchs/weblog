@@ -1,7 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Andreas Fuchs' Journal"
-#theme =  ["github.com/Mitrichius/hugo-theme-anubis"]
+theme =  ["github.com/Mitrichius/hugo-theme-anubis"]
 metaDataFormat = "yaml"
 
 footnotereturnlinkcontents = "↩"
