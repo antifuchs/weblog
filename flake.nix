@@ -41,6 +41,8 @@
           packages = with pkgs; [go];
         };
 
+        apps.hugo.program = "${pkgs.hugo}/bin/hugo";
+
         checks.versions = inputs.nix-flake-tests.lib.check {
           inherit pkgs;
           tests = {
