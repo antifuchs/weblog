@@ -12,20 +12,31 @@ footnotereturnlinkcontents = "↩"
 
 # Backwards-compatible URLs. These are kinda weird.
 [permalinks]
-  # hugo requires this setting, otherwise it'll generate duplicate post entries on the homepage
   posts = "/:year/:month/:slug/"
-  # purehugo requires this one for some reason, otherwise the permalinks will go to /post/basename
   post = "/:year/:month/:slug/"
 
 [params]
-  twitterName = "antifuchs"
+  author = "Andreas Fuchs"
+  email = "asf@boinkor.net"
+  dateFormat = "2006-01-02"
+  mainSections = [ "post" ]
+  sectionsWithFullContentOnListPage = [ "page" ]
   githubName = "antifuchs"
   hideShareOptions = true
+  style = "auto"
+
+
+[[params.social]]
+  id = "github"
+  name = "antifuchs"
 
 [blackfriday]
   plainIDAnchors = true
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
