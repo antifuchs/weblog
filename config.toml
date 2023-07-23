@@ -30,6 +30,10 @@ footnotereturnlinkcontents = "↩"
   id = "github"
   name = "antifuchs"
 
+[[params.social]]
+  id = "mastodon"
+  name = "https://weirder.earth/@antifuchs"
+
 [blackfriday]
   plainIDAnchors = true
 
