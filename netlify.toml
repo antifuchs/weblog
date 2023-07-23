@@ -4,6 +4,9 @@
 publish = "public"
 build = "hugo --minify"
 
+[build.processing]
+skip_processing = true
+
 [build.environment]
 HUGO_ENV = "production"
 # This must match the version we get from nixpkgs:
