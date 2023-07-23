@@ -2,6 +2,7 @@
 
 [build]
 publish = "public"
+build = "hugo --minify"
 
 [build.environment]
 HUGO_ENV = "production"
