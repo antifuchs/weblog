@@ -1,2 +1,4 @@
 github.com/Mitrichius/hugo-theme-anubis v0.0.0-20230722124546-d5bd8c284841 h1:VjO53+jM69iCPmThxapr1GB/FqRd8wuFphSra9mI+s8=
 github.com/Mitrichius/hugo-theme-anubis v0.0.0-20230722124546-d5bd8c284841/go.mod h1:FKD3NbdsQzL+cXsC3x99XD/t/Rd5EyhDlNBAxQhULbo=
+github.com/gethugothemes/hugo-modules/videos v0.0.0-20230723035230-6e3f9ed58472 h1:NGNZa61tgKwrax9FUiXcFwZ7iI0DKGC8g4kBm7GYx5Q=
+github.com/gethugothemes/hugo-modules/videos v0.0.0-20230723035230-6e3f9ed58472/go.mod h1:P722lLWdnNhdZVq6gvMrOLqECUwrAYQWaOWlChta5H0=

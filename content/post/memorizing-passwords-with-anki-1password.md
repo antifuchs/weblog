@@ -55,7 +55,7 @@ Now comes the magic part: When you study that deck, Anki will ask you what the p
 This works in both the iOS and macOS versions of Anki and 1Password; I haven't yet tested the windows versions, but I suspect/hope they'll work, too - let me know!
 
 Here's how it looks in macOS for me:
-{{% video mp4="/assets/videos/anki-and-1password.mp4" webm="/assets/videos/anki-and-1password.webm" %}}
+{{< video src="/videos/anki-and-1password.mp4" loop="true" muted="true" width="100%" autoplay="true" >}}
 
 All that app switching is a bit of a hassle, but I believe it's the best we can do for now! It sure feels better than storing important credentials in plaintext, and definitely is better than forgetting them!
 

@@ -19,20 +19,17 @@ definitely check that out too.
 These live in `static/_redirects`; They
 follow [netlify's scheme](https://www.netlify.com/docs/redirects/).
 
-## Custom Shortcodes
+## Shortcodes
 
 ### `video`
 
-This allows embedding videos, screencasts. To ensure maximum
-compatibility, you have to provide both a `webm` and a `mp4`
-video. You can do that via ffmpeg.
+This allows embedding videos, screencasts.
 
 To create the compatible videos from a QuickTime screen recording, use:
 
 ``` sh
 INPUT=the-video-file.mov   # set this to your filename
-WEBM="$(basename "$INPUT" .mov).webm"
 MP4="$(basename "$INPUT" .mov).mp4"
 ffmpeg -i "$INPUT" ~blog/static/assets/videos/"$MP4"
-ffmpeg -i "$INPUT" -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis ~blog/static/assets/videos/"$WEBM"
 ```
+

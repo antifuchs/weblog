@@ -39,20 +39,23 @@ footnotereturnlinkcontents = "↩"
   name = "antifuchs"
 
 [[menu.main]]
-identifier = "about"
-name = "About"
-url = "/about/"
-weight = 1
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 1
 [[menu.main]]
-name = "Hacks"
-identifier = "archive"
-url = "/hacks/"
-weight = 2
+  name = "Hacks"
+  identifier = "archive"
+  url = "/hacks/"
+  weight = 2
 [[menu.main]]
-name = "Privacy"
-identifier = "privacy"
-url = "/privacy/"
-weight = 3
+  name = "Privacy"
+  identifier = "privacy"
+  url = "/privacy/"
+  weight = 3
+
+[[module.imports]]
+  path = "github.com/gethugothemes/hugo-modules/videos"
 
 [blackfriday]
   plainIDAnchors = true
