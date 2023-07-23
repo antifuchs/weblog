@@ -1,55 +1,81 @@
 {
   description = "my blog";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
-    flake-utils.url = "github:numtide/flake-utils";
-    nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
-  };
+  outputs = inputs @ {
+    self,
+    flake-parts,
+    nixpkgs,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      imports = [
+        inputs.devshell.flakeModule
+      ];
 
-  outputs = { self, nixpkgs, flake-utils, nix-flake-tests }: flake-utils.lib.eachSystem [
-    "aarch64-darwin"
-    "x86_64-darwin"
-    "x86_64-linux"
-  ]
-    (system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-        nativeBuildInputs = with pkgs; [ hugo font-awesome ];
-      in {
-        devShells.default = pkgs.mkShell {
-          inherit nativeBuildInputs;
-        };
+      systems = [
+        "x86_64-darwin"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "aarch64-linux"
+      ];
+      perSystem = {
+        config,
+        pkgs,
+        final,
+        ...
+      }: {
+        formatter = pkgs.alejandra;
 
-        apps = {
-          hugo = flake-utils.lib.mkApp {
-            drv = pkgs.hugo;
+        devshells.default = let
+          fakeGit = pkgs.writeShellApplication {
+            # Fixes the issue on macOS where `git` as-invoked by hugo
+            # is unable to download from github due to an ssl error:
+            name = "git";
+            text = ''
+              [ -x /usr/bin/git ] && exec /usr/bin/git "$@"
+              exec ${pkgs.git}/bin/git "$@"
+            '';
           };
-
-          repl =
-            flake-utils.lib.mkApp {
-              drv = pkgs.writeShellScriptBin "repl" ''
-                confnix=$(mktemp)
-                echo "builtins.getFlake (toString $(git rev-parse --show-toplevel))" >$confnix
-                trap "rm $confnix" EXIT
-                nix repl $confnix
+        in {
+          commands = [
+            {package = pkgs.hugo;}
+            {
+              name = "dev";
+              help = "Run the hugo server";
+              command = ''
+                (sleep 1 ; open http://localhost:1313/) &
+                exec hugo server --noHTTPCache --buildDrafts --buildFuture \"$@\"
               '';
-            };
+            }
+          ];
+          packages = with pkgs; [go fakeGit];
         };
 
-        checks.versions = nix-flake-tests.lib.check {
+        apps.hugo.program = "${pkgs.hugo}/bin/hugo";
+
+        checks.versions = inputs.nix-flake-tests.lib.check {
           inherit pkgs;
           tests = {
-            testMatch =
-              let
-                netlifyVersion = (builtins.fromTOML (builtins.readFile ./netlify.toml)).build.environment.HUGO_VERSION;
-                pkgsVersion = pkgs.hugo.version;
-              in
-                {
-                  expected = netlifyVersion;
-                  expr = pkgsVersion;
-                };
+            testMatch = let
+              netlifyVersion = (builtins.fromTOML (builtins.readFile ./netlify.toml)).build.environment.HUGO_VERSION;
+              pkgsVersion = pkgs.hugo.version;
+            in {
+              expected = netlifyVersion;
+              expr = pkgsVersion;
+            };
           };
         };
-      });
+      };
+    };
+
+  inputs = {
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    devshell.url = "github:numtide/devshell";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
+    nix-flake-tests.url = "github:antifuchs/nix-flake-tests";
+  };
 }

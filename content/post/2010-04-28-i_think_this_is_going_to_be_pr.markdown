@@ -10,7 +10,7 @@ atom_id: http://boinkor.net/archives/2010/04/i_think_this_is_going_to_be_pr
 
 I've been toying around with making a Common Lisp adapter to [Cucumber](http://cukes.info/), a behavior-driven development tool. I think this will really be very sweet.
 <!--more-->
-{{%img alt="Clucumber baby steps" src="/assets/images/clucumber-baby-steps.png"%}}
+{{<image alt="Clucumber baby steps" src="/images/clucumber-baby-steps.png">}}
 
 Here's how the step definition file would look like (these are really just stubs; in reality, you'd put in the lisp code you want to happen for the given textual description):
 

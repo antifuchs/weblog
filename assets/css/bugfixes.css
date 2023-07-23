@@ -1,0 +1,5 @@
+:root {
+  /* https://github.com/Mitrichius/hugo-theme-anubis/issues/193: */
+  --pre-color: #333;
+  --pre-bg-color: #f1f1f1;
+}

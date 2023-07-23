@@ -33,7 +33,7 @@ new
 [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions))
 for accessing HTTP content:
 
-``` js
+```js
 window.fetch('https://boinkor.net/index.xml').
     then((response) => response.text()).
     then((txt) => console.log(txt.split("\n")[0]));
@@ -69,7 +69,7 @@ we wanted to fire the requests off one after the other.
 
 So, without blinking, my pair writes this code:
 
-``` js
+```js
 urls.reduce(
     (p, url) =>
         p.then(() => fetch(url).then(handleResponse)),

@@ -1,8 +1,7 @@
-theme = "purehugo"
-baseURL = "https://boinkor.net/" # This gets set & overridden in Makefile / netlify.toml
+baseURL = ""
 languageCode = "en-us"
 title = "Andreas Fuchs' Journal"
-
+theme =  ["github.com/Mitrichius/hugo-theme-anubis"]
 metaDataFormat = "yaml"
 
 footnotereturnlinkcontents = "↩"
@@ -13,20 +12,62 @@ footnotereturnlinkcontents = "↩"
 
 # Backwards-compatible URLs. These are kinda weird.
 [permalinks]
-  # hugo requires this setting, otherwise it'll generate duplicate post entries on the homepage
   posts = "/:year/:month/:slug/"
-  # purehugo requires this one for some reason, otherwise the permalinks will go to /post/basename
   post = "/:year/:month/:slug/"
 
 [params]
-  twitterName = "antifuchs"
+  author = "Andreas Fuchs"
+  email = "asf@boinkor.net"
+  description = "The personal website of Andreas Fuchs; I work on computer and human systems."
+  dateFormat = "2006-01-02"
+  mainSections = [ "post" ]
+  sectionsWithFullContentOnListPage = [ "page" ]
   githubName = "antifuchs"
   hideShareOptions = true
+  style = "light-without-switcher"
+  customCSS = ["css/bugfixes.css"]
+
+[[params.social]]
+  id = "email"
+  name = "asf@boinkor.net"
+[[params.social]]
+  id = "github"
+  name = "antifuchs"
+[[params.social]]
+  id = "mastodon"
+  name = "https://weirder.earth/@antifuchs"
+[[params.social]]
+  id = "linkedin"
+  name = "antifuchs"
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 1
+[[menu.main]]
+  name = "Hacks"
+  identifier = "archive"
+  url = "/hacks/"
+  weight = 2
+[[menu.main]]
+  name = "Privacy"
+  identifier = "privacy"
+  url = "/privacy/"
+  weight = 3
+
+[[module.imports]]
+  path = "github.com/gethugothemes/hugo-modules/videos"
+[[module.imports]]
+  path = "github.com/gethugothemes/hugo-modules/images"
 
 [blackfriday]
   plainIDAnchors = true
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
