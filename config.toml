@@ -25,7 +25,6 @@ footnotereturnlinkcontents = "↩"
   hideShareOptions = true
   style = "auto"
 
-
 [[params.social]]
   id = "github"
   name = "antifuchs"
@@ -33,6 +32,25 @@ footnotereturnlinkcontents = "↩"
 [[params.social]]
   id = "mastodon"
   name = "https://weirder.earth/@antifuchs"
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 1
+
+[[menu.main]]
+name = "Hacks"
+identifier = "archive"
+url = "/hacks/"
+weight = 2
+
+[[menu.main]]
+name = "Privacy"
+identifier = "privacy"
+url = "/privacy/"
+weight = 3
+
 
 [blackfriday]
   plainIDAnchors = true

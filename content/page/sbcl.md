@@ -6,6 +6,8 @@ comments: true
 sharing: true
 footer: true
 url: /sbcl
+aliases:
+ - "SBCL.html"
 ---
 The host on which this web site is running also provides a few services for the community of [SBCL](http://www.sbcl.org) developers and users:
 
