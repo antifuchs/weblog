@@ -2,7 +2,6 @@
 
 [build]
 publish = "public"
-build = "hugo -b $URL --minify"
 
 [build.processing]
 skip_processing = true
@@ -15,12 +14,13 @@ HUGO_VERSION = "0.115.4"
 HUGO_BIN = "hugo"
 
 [context.production]
-command = "hugo -b $DEPLOY_PRIME_URL --minify"
+command = "hugo -b $URL --minify"
 
 [context.production.environment]
 # env vars for production only
 
 [context.deploy-preview]
+command = "hugo -b $DEPLOY_PRIME_URL --minify"
 
 [context.deploy-preview.environment]
 # env vars for pull reqs
