@@ -25,8 +25,8 @@ My identities are all gathered on [keybase.io/~asf](https://keybase.io/asf). Her
 * Find out [What google knows about me](http://www.google.com/search?q=antifuchs)
 
 This site was generated with [Hugo](http://gohugo.io/) from [this
-source code](https://github.com/antifuchs/weblog). My site uses a fork
-of the [purehugo](https://github.com/antifuhcs/purehugo)
+source code](https://github.com/antifuchs/weblog). My site uses the
+[anubis](https://github.com/Mitrichius/hugo-theme-anubis)
 theme. Building, hosting and SSL provided by
 [netlify](https://netlify.com).
 
