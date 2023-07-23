@@ -9,9 +9,9 @@ url: /sbcl
 aliases:
  - "SBCL.html"
 ---
-The host on which this web site is running also provides a few services for the community of [SBCL](http://www.sbcl.org) developers and users:
+I used to do a bunch of stuff on the SBCL project, but they have a ton of healthy other volunteers that take care of this stuff now. Here's a list of stuff:
 
-* Benchmarks of the current & of old versions of SBCL (a.k.a. boinkmarks): [http://sbcl.boinkor.net/bench/](http://sbcl.boinkor.net/bench/)
-* [The current SBCL manual](http://www.sbcl.org/manual/) and [the current SBCL internals manual](http://www.sbcl.org/sbcl-internals/)
+* Benchmarks of the current & of old versions of SBCL (a.k.a. boinkmarks): <s>`http://sbcl.boinkor.net/bench/`</s> - turned off, see the [retrospective]({{< ref "post/8-years-of-no-autobench.md">}})
+* Used to host [The SBCL manual](http://www.sbcl.org/manual/) and [the SBCL internals manual](http://www.sbcl.org/sbcl-internals/) here, but that's auto-built from the release process now.
 * (**outdated**) The [SBCL git repository](/sbcl-in-git)
 * (**outdated**) the SBCL arch archive: [SBCL in arch](/sbcl-in-arch)
