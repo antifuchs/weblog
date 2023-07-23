@@ -1,0 +1,11 @@
+{{- $starred := getJSON "https://api.github.com/users/antifuchs/starred" -}}
+{{- $len := len $starred -}}
+{{- $starredReversed := slice -}}
+{{- range seq $len -}}
+{{-   $starredReversed = $starredReversed | append (index $starred (sub $len .)) }}
+{{- end -}}
+<ul>
+  {{ range $starredReversed }}{{ if (eq .owner.login "antifuchs") }}
+  <li><a href="{{.html_url}}">{{.name}}</a> - {{.description}}</li>
+  {{end}}{{end}}
+</ul>
