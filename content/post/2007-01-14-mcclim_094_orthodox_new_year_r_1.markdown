@@ -12,5 +12,3 @@ We [released](http://common-lisp.net/pipermail/mcclim-announce/2007-January/0000
 * many cool new features and bug fixes, including a few clim 2.2 functions.
 
 (Of course, there are probably lots of new bugs in there, too. Please let us know about them at mcclim-devel at common-lisp.net!)
-
-)
