@@ -10,6 +10,7 @@ skip_processing = true
 [build.environment]
 HUGO_ENV = "production"
 # This must match the version we get from nixpkgs:
+GO_VERSION = "1.20"
 HUGO_VERSION = "0.115.4"
 HUGO_BIN = "hugo"
 
