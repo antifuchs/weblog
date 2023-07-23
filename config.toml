@@ -18,12 +18,14 @@ footnotereturnlinkcontents = "↩"
 [params]
   author = "Andreas Fuchs"
   email = "asf@boinkor.net"
+  description = "The personal website of Andreas Fuchs; I work on computer and human systems."
   dateFormat = "2006-01-02"
   mainSections = [ "post" ]
   sectionsWithFullContentOnListPage = [ "page" ]
   githubName = "antifuchs"
   hideShareOptions = true
-  style = "auto"
+  style = "light-without-switcher"
+  customCSS = ["css/bugfixes.css"]
 
 [[params.social]]
   id = "email"
