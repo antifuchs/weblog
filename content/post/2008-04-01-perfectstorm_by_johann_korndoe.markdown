@@ -6,7 +6,7 @@ title: Perfectstorm by Johann Korndoerfer
 atom_id: http://boinkor.net/archives/2008/04/perfectstorm_by_johann_korndoe
 ---
 
-{{%img alt="perfectstorm screenshot" src="/assets/images/with-health-bars-thumb-300x225.png"%}}
+{{<image alt="perfectstorm screenshot" src="/images/with-health-bars-thumb-300x225.png">}}
 
 This isn't original work, so perhaps more suited to being in my [soup](http://mublag.boinkor.net) than this blog, but it's so cool it just has to be on Planet Lisp. [perfectstorm](http://erleuchtet.org/2008/03/project-overview-perfectstorm.html) is:
 

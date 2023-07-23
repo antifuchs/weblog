@@ -21,7 +21,7 @@ follow [netlify's scheme](https://www.netlify.com/docs/redirects/).
 
 ## Shortcodes
 
-### `video`
+### [`{{<video ... >}}`](https://github.com/gethugothemes/hugo-modules/tree/master/videos#using-shortcode)
 
 This allows embedding videos, screencasts.
 
@@ -30,6 +30,9 @@ To create the compatible videos from a QuickTime screen recording, use:
 ``` sh
 INPUT=the-video-file.mov   # set this to your filename
 MP4="$(basename "$INPUT" .mov).mp4"
-ffmpeg -i "$INPUT" ~blog/static/assets/videos/"$MP4"
+ffmpeg -i "$INPUT" ~blog/assets/videos/"$MP4"
 ```
 
+### [`{{<image ...>}}`](https://github.com/gethugothemes/hugo-modules/tree/master/images#shortcode-implementation)
+
+Images, scaled right.

@@ -59,7 +59,7 @@ by exporting your new profile as JSON from iTerm's Profiles preferences:
 1. Select the Mosh profile you just created,
 2. Open the "Other Actions" gear menu below the profile list.
 3. Select "Copy Profile as JSON":<br/>
-{{%img alt="\"Copy Profile as JSON\" in the mosh profile's \"Other Actions\" menu" src="/assets/images/iterm-copy-profile.png"%}}
+{{<image alt="'Copy Profile as JSON' in the mosh profile's 'Other Actions' menu" src="/images/iterm-copy-profile.png">}}
 
 To figure out the profile's GUID, run:
 ``` sh
