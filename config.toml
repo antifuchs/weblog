@@ -105,3 +105,12 @@ home = [ "HTML", "RSS", "JSON"]
   [privacy.youtube]
     disable = true
     privacyEnhanced = false
+
+[security]
+[security.exec]
+  osEnv = [
+    # The default:
+    '(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$',
+    # Required for nix on darwin (see https://github.com/NixOS/nixpkgs/issues/245185):
+    "^(NIX_)?SSL_CERT_FILE$",
+  ]

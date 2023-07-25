@@ -26,17 +26,7 @@
       }: {
         formatter = pkgs.alejandra;
 
-        devshells.default = let
-          fakeGit = pkgs.writeShellApplication {
-            # Fixes the issue on macOS where `git` as-invoked by hugo
-            # is unable to download from github due to an ssl error:
-            name = "git";
-            text = ''
-              [ -x /usr/bin/git ] && exec /usr/bin/git "$@"
-              exec ${pkgs.git}/bin/git "$@"
-            '';
-          };
-        in {
+        devshells.default = {
           commands = [
             {package = pkgs.hugo;}
             {
@@ -48,7 +38,7 @@
               '';
             }
           ];
-          packages = with pkgs; [go fakeGit];
+          packages = with pkgs; [go git];
         };
 
         apps.hugo.program = "${pkgs.hugo}/bin/hugo";
