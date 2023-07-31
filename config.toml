@@ -114,3 +114,8 @@ home = [ "HTML", "RSS", "JSON"]
     # Required for nix on darwin (see https://github.com/NixOS/nixpkgs/issues/245185):
     "^(NIX_)?SSL_CERT_FILE$",
   ]
+
+[caches]
+[caches.getjson]
+dir = ":cacheDir/:project"
+maxAge = "10s"

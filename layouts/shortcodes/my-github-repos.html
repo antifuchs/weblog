@@ -5,7 +5,7 @@
 {{-   $starredReversed = $starredReversed | append (index $starred (sub $len .)) }}
 {{- end -}}
 <ul>
-  {{ range $starredReversed }}{{ if (eq .owner.login "antifuchs") }}
+  {{ range $starredReversed }}{{ if (or (eq .owner.login "antifuchs") (eq .owner.login "boinkor-net")) }}
   <li><a href="{{.html_url}}">{{.name}}</a> - {{.description}}</li>
   {{end}}{{end}}
 </ul>
