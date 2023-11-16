@@ -41,13 +41,14 @@ jobs:
   # ...
   can_merge:
     needs: [tests, lints]
-    "runs-on": "ubuntu-latest"
+    runs-on: "ubuntu-latest"
     steps:
-    - "name": "yay"
-      "run": "echo success"
+    - name: yay
+      run: |
+        echo success
 ```
 
-This feels too easy. If you didn't notice the comment, you might have glanced at the scroll bar and notices that there's a lot of article left to go. And you're right. Of course there's a catch.
+This feels too easy. If you didn't notice the comment, you might have glanced at the scroll bar and noticed that there's a lot of article left to go. Yes. Of course there's a catch.
 
 GitHub Actions that have a skipped action on their "needs" list are skipped in turn. This isn't so bad if "tests" passes but "lints" gets skipped. But if "tests" fails, your job will be skipped, which counts as a successful status! You can add `if: always()` to the job - but then the above job will also run (and pass!) even if any of its dependencies have failed. All that would be a massive violation of the "not rocket science" principle of having a code repo that always passes tests. Oops!
 
@@ -59,20 +60,20 @@ jobs:
   can_merge:
     needs: [tests, lints]
     if: always()
-    "permissions":
-      "actions": "read"
-    "runs-on": "ubuntu-latest"
+    permissions:
+      actions: read
+    runs-on: ubuntu-latest
     steps:
-    - "env":
-        "NEEDS_JSON": "${{toJSON(needs)}}"
-      "name": "Transform outcomes"
-      "run": |
+    - env:
+        NEEDS_JSON: "${{toJSON(needs)}}"
+      name: Transform outcomes
+      run: |
         echo "ALL_SUCCESS=$(echo "$NEEDS_JSON" | jq '. | to_entries | map([.value.result == "success", .value.result == "skipped"] | any) | all')" >>$GITHUB_ENV
-    - "name": "check outcomes"
-      "run": "[ $ALL_SUCCESS == true ]"
+    - name: check outcomes
+      run: "[ $ALL_SUCCESS == true ]"
 ```
 
-Now that's a bit more complicated, but you'll notice that it's all based on information that GHA gives to the job (with the appropriate permission)! At least we're not curling weird github API endpoints, I'll tell you that.
+Now that's a bit more complicated, but you'll notice that it's all based on information that GHA passes to the job (with the appropriate permission)! We're not curling weird github API endpoints here.
 
 If you're wondering what's going on in that jq above, it's pretty much the following: "Take the result of all the jobs given on `needs`, then see if each has one of the statuses 'success' or 'skipped'. Emit true if this is true for all jobs."
 
@@ -102,38 +103,40 @@ jobs:
   can_enqueue:
     needs: [tests, lints]
     if: always() && github.event_name != 'merge_group'
-    "permissions":
-      "actions": "read"
-    "runs-on": "ubuntu-latest"
+    permissions:
+      actions: read
+    runs-on: ubuntu-latest
     steps:
-    - "env":
-        "NEEDS_JSON": "${{toJSON(needs)}}"
-      "name": "Transform outcomes"
-      "run": |
+    - env:
+        NEEDS_JSON: "${{toJSON(needs)}}"
+      name: Transform outcomes
+      run: |
         echo "ALL_SUCCESS=$(echo "$NEEDS_JSON" | jq '. | to_entries | map([.value.result == "success", .value.result == "skipped"] | any) | all')" >>$GITHUB_ENV
-    - "name": "check outcomes"
-      "run": "[ $ALL_SUCCESS == true ]"
+    - name: check outcomes
+      run: "[ $ALL_SUCCESS == true ]"
 
   can_merge:
     needs: [tests, lints, expensive_checks]
     if: always() && github.event_name == 'merge_group'
     # Same thing as above, from here on:
-    "permissions":
-      "actions": "read"
-    "runs-on": "ubuntu-latest"
+    permissions:
+      actions: read
+    runs-on: ubuntu-latest
     steps:
-    - "env":
-        "NEEDS_JSON": "${{toJSON(needs)}}"
-      "name": "Transform outcomes"
-      "run": |
+    - env:
+        NEEDS_JSON: "${{toJSON(needs)}}"
+      name: Transform outcomes
+      run: |
         echo "ALL_SUCCESS=$(echo "$NEEDS_JSON" | jq '. | to_entries | map([.value.result == "success", .value.result == "skipped"] | any) | all')" >>$GITHUB_ENV
-    - "name": "check outcomes"
-      "run": "[ $ALL_SUCCESS == true ]"
+    - name: check outcomes
+      run: "[ $ALL_SUCCESS == true ]"
 ```
 
-Sidenote: , ugh, this is a lot of duplication; is there a way you can make this less duplicate-y? No. It's nice to want things, I guess. Maybe you'll want to template this via comething codegen-y. Or I think it would be possible to publish the logic as a third-party action, but I feel this is short enough that this is a cheap-enough way to minimize third-party risk.
+Sidenote: Ugh, this is a lot of duplication; is there a way you can make this less duplicate-y? Not really. Maybe you'll want to template this via something that codegens. Or it would be possible to publish the logic as a third-party action, but I feel this entire duplicated piece of code is short enough that you have a cheap-enough way to minimize third-party risk by just keeping the two bits next to each other in a file.
 
-Notice the `if:` clauses on the various jobs above! These ensure that only the non-expensive jobs run outside the merge queue (the `github.event_name != 'merge_group'` criteria).
+Notice the `if:` clauses on the various test/lint/etc jobs above! These ensure that only the non-expensive jobs run outside the merge queue (the `github.event_name != 'merge_group'` criteria).
+
+That's in contrast to the `if:` clauses on the `can_merge` and `can_enqueue` jobs: The `can_merge` job is set to only run for runs triggered by the merge queue - otherwise it reports a "skipped" status & counts as a success. Its depended-on jobs will still run, unless you add `if:` clauses to those jobs directly. The same applies, vice-versa, to the `can_enqueue` status. It doesn't report a status on the merge queue, but does on any other run (so that the faster tests can prevent an entry to the merge queue).
 
 ### Putting it all together
 
@@ -164,9 +167,11 @@ jobs:
 
 If you add that job's name to the list of required branch protection statuses, you will get a direct link to the github actions workflow being run, and from there it's just a few clicks until you see the concrete test status.
 
-Could GitHub make this easier for us! They sure could. I wish they did.
+# Conclusion
 
 This concludes my walk-through of the solution to the "second round of tests" problem with Github Merge Queues. I hope you find it useful. I've got a few working examples (code-generated) in the github repo for [tsnsrv](https://github.com/boinkor-net/tsnsrv/blob/main/.github/workflows/ci.yml).
+
+All that is a lot of YAML, but when you structure GHA CI like that, it can save you time and money (by not running as many tests over and over, while still ensuring that the protected branch stays CI-passing). Could GitHub make this easier for us? I think they could. I wish they did.
 
 <!-- links -->
 [rocket-science]: https://graydon2.dreamwidth.org/1597.html
