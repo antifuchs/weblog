@@ -21,6 +21,7 @@
       perSystem = {
         config,
         pkgs,
+        lib,
         final,
         ...
       }: {
@@ -37,11 +38,21 @@
                 exec hugo server --noHTTPCache --buildDrafts --buildFuture \"$@\"
               '';
             }
+            {
+              name = "new-post";
+              help = "Create a new post";
+              command = ''
+                date="$(date -Idate)"
+                title="$1"; shift
+
+                set -e
+                hugo new content -k post "$@" content/post/"$date"-"$title".md
+                "$EDITOR" content/post/"$date"-"$title".md
+              '';
+            }
           ];
           packages = with pkgs; [go git];
         };
-
-        apps.hugo.program = "${pkgs.hugo}/bin/hugo";
 
         checks.versions = inputs.nix-flake-tests.lib.check {
           inherit pkgs;
