@@ -1,8 +1,7 @@
 ---
 title: "Neat GitHub Actions patterns for GitHub Merge Queues"
 date: 2023-11-16T10:17:12-05:00
-draft: true # TODO: un-draft to publish this
-
+draft: false
 categories: ["Hacks"]
 ---
 GitHub have enabled their ["merge queue" function](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue), which is really exciting! The ["it's not rocket science rule"][rocket-science] of software development is a pretty good guiding principle for developing stuff in a team (if CI is fast, more on that later!) - so I'm very glad it gets easier to achieve.
