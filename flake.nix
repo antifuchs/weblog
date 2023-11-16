@@ -42,10 +42,11 @@
               name = "new-post";
               help = "Create a new post";
               command = ''
+                set -eu -x
                 date="$(date -Idate)"
-                title="$1"; shift
+                title_plain="$1"; shift
+                title="$(echo "$title_plain" | tr ' A-Z' '-a-z')"
 
-                set -e
                 hugo new content -k post "$@" content/post/"$date"-"$title".md
                 "$EDITOR" content/post/"$date"-"$title".md
               '';
