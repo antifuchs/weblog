@@ -35,4 +35,8 @@ ffmpeg -i "$INPUT" ~blog/assets/videos/"$MP4"
 
 ### [`{{<image ...>}}`](https://github.com/gethugothemes/hugo-modules/tree/master/images#shortcode-implementation)
 
+```
+{{<image src="images/neat-part-you-cant.jpg" alt="That's the neat part: you can't.">}}
+```
+
 Images, scaled right.
