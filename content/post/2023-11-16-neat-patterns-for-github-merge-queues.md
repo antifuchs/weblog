@@ -136,7 +136,7 @@ Sidenote: Ugh, this is a lot of duplication; is there a way you can make this le
 
 Notice the `if:` clauses on the various test/lint/etc jobs above! These ensure that only the non-expensive jobs run outside the merge queue (the `github.event_name != 'merge_group'` criteria).
 
-That's in contrast to the `if:` clauses on the `can_merge` and `can_enqueue` jobs: The `can_merge` job is set to only run for runs triggered by the merge queue - otherwise it reports a "skipped" status & counts as a success. Its depended-on jobs will still run, unless you add `if:` clauses to those jobs directly. The same applies, vice-versa, to the `can_enqueue` status. It doesn't report a status on the merge queue, but does on any other run (so that the faster tests can prevent an entry to the merge queue).
+That's in contrast to the `if:` clauses on the `can_merge` and `can_enqueue` jobs: The `can_merge` job is set to only be active for runs triggered by the merge queue - otherwise it reports a "skipped" status & counts as a success. Its depended-on jobs will still run, unless you add `if:` clauses to those jobs directly. The same applies, vice-versa, to the `can_enqueue` status. It doesn't report a status on the merge queue, but does on any other run (so that the faster tests can prevent an entry to the merge queue).
 
 ### Putting it all together
 
