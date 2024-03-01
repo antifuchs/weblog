@@ -136,7 +136,7 @@ properly.
 So, within 2 hours of setting up end-to-end tests, they had caught a
 legitimate regression.
 
-# In Summary: I'm a fan.
+# In summary: I'm a fan.
 
 I've only been using it for a few days now, but as of now I'm a huge
 fan of the NixOS integration testing library. It's definitely the most
