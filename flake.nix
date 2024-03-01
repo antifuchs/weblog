@@ -40,7 +40,7 @@
             }
             {
               name = "new-post";
-              help = "Create a new post";
+              help = "Create a new post with '[plain-title]'";
               command = ''
                 set -eu -x
                 date="$(date -Idate)"
