@@ -1,7 +1,8 @@
 ---
 title: "Some useful types for database-using Rust web apps"
 date: 2024-04-15T20:47:11-04:00
-categories: ["Rust"]
+categories: ["Hacks"]
+tags: ["rust"]
 ---
 I've been writing a little web app in rust lately, and in it I decided to try to do it without an ORM. Instead, I modeled data access in a way that resembles the [Data Access Layer](https://en.wikipedia.org/wiki/Data_access_layer) pattern: You make a set of abstractions that maps the "business logic" to how the data is stored in the data store. Here are some types that I found useful in this journey so far.
 <!--more-->
