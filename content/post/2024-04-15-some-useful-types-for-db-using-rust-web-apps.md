@@ -62,7 +62,7 @@ pub fn update_bookmark(bm: Bookmark<BookmarkId>) { ... }
 pub fn create_bookmark(bm: Bookmark<NoId>) -> Bookmark<BookmarkId> { ... }
 ```
 
-What's more, the `IdTrait<T>` takes a type parameter that tells us what the "real" ID would be, if a real ID is present. That comes in play with the `NoId` type above: It's a little empty type that just says "I'm not an ID":
+What's more, the `IdTrait<T>` takes a type parameter that tells us what the expected ID type would be. That comes into play with the `NoId` type above: It's a little empty type that just says "I'm not an ID yet":
 
 ```rust
 #[derive(PartialEq, Eq, Clone, Copy, Default, Serialize, Debug)]
@@ -77,7 +77,7 @@ impl<T> IdType<T> for NoId {
 }
 ```
 
-Some neat things in this: One, `NoId` is a generic placeholder for all ID types - meaning you an always say you want a struct representation of a database object that doesn't exist in the database yet. Neat thing two, the "inner" Id can not be retrieved. It's [`convert::Infallible`](https://doc.rust-lang.org/std/convert/enum.Infallible.html), the "never" type, meaning any attempt at retrieving that ID will fail at compile time. The compiler won't let us look at the IDs of objects that haven't gotten any yet! One day, when the [`never` type](https://doc.rust-lang.org/std/primitive.never.html) is stabilized, we can use that. In the meantime, this is equivalent enough!
+Some neat things in this: One, `NoId` is a generic placeholder for all ID types - meaning a function signature can always take a struct representation of a database object that doesn't exist in the database yet. Neat thing two, the "inner" Id can not be retrieved from it. (It doesn't exist, after all!) It's [`convert::Infallible`](https://doc.rust-lang.org/std/convert/enum.Infallible.html), the "never" type, meaning any attempt at retrieving that ID will fail at compile time. The compiler won't let us look at the IDs of objects that haven't gotten any yet! One day, when the [`never` type](https://doc.rust-lang.org/std/primitive.never.html) is stabilized, we can use that. In the meantime, this is equivalent enough!
 
 What's more, the NoId type tells serde to not expect an `id` field whenever you deserialize a Bookmark, say from JSON input on an API route:
 
