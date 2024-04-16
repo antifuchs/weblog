@@ -9,7 +9,9 @@ I've been writing a little web app in rust lately, and in it I decided to try to
 
 The first item is a very subtle little thing that I wasn't sure would work. But it does, and it's really pleasing! Introducing `IdType`, a trait that marks a type used for database identifiers. Say you have a struct `Bookmark` in sqlite that is has a `u64` as a primary key. What prevents you from passing accidentally just about any `u64` (say, a user ID) into a struct and reading any bookmark in the database? Right, that's why we make newtypes.
 
-So you make a newtype that wraps `u64` and define your bookmark struct like so:
+So you make a newtype that wraps `u64` and define your bookmark struct like so[^code-quality]:
+
+[^code-quality]: Please note that approximately none of the code listed here will compile out of the box. Very sorry - this post is meant to provide a basis for a dialog with the rust compiler, not to be an entirely copy/pasteable framework; that would require a bit more boilerplate and wouldn't add much to the quality of the content. You are smart! You got this!
 
 ```rust
 struct BookmarkId(u64);
@@ -113,7 +115,7 @@ impl Transaction {
     /// Commit any changes made in the transaction.
     pub async fn commit(&mut self) { self.txn.commit().await; }
 
-    /// Add a new bookmark and returns its ID.
+    /// Add a new bookmark and return its ID.
     pub async fn add_bookmark(
         &mut self,
         bm: Bookmark<NoId>,
@@ -171,7 +173,7 @@ impl Transaction<ReadWrite> {
     /// Commit any changes made in the transaction.
     pub async fn commit(&mut self) { self.txn.commit().await; }
 
-    /// Add a new bookmark and returns its ID.
+    /// Add a new bookmark and return its ID.
     pub async fn add_bookmark(
         &mut self,
         bm: Bookmark<NoId>,
