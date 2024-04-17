@@ -8,7 +8,7 @@ I've been writing a little web app in rust lately, and in it I decided to try to
 <!--more-->
 ## The `IdType` trait
 
-The first item is a very subtle little thing that I wasn't sure would work. But it does, and it's really pleasing! Introducing `IdType`, a trait that marks a type used for database identifiers. Say you have a struct `Bookmark` in sqlite that is has a `u64` as a primary key. What prevents you from passing accidentally just about any `u64` (say, a user ID) into a struct and reading any bookmark in the database? Right, that's why we make newtypes.
+The first item is a very subtle little thing that I wasn't sure would work. But it does, and it's really pleasing! Introducing `IdType`, a trait that marks a type used for database identifiers. Say you have a struct `Bookmark` in sqlite that has a `u64` as a primary key. What prevents you from passing accidentally just about any `u64` (say, a user ID) into a struct and reading any bookmark in the database? Right, that's why we make newtypes.
 
 So you make a newtype that wraps `u64` and define your bookmark struct like so[^code-quality]:
 
