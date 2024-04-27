@@ -10,7 +10,7 @@ With the Nix project currently [undergoing](https://save-nix-together.org/) [maj
 
 # Nix is a tool-assisted yak-shaving (100%) speedrun bot
 
-That's it, that's the core idea. If all else gets lost, this is what I think we should remember, and re-build in another set of tools and a different kind of community (one that cares about governance, shares the power to direct it, and does its best to remain safe for people at risk of getting harassed).
+That's it, that's the core idea. If all else gets lost, this is what I think we should remember, and re-build in another set of tools and a different kind of community (one that cares about governance, shares the power to direct it, and does its best to remain safe for people at risk of getting hurt by bad actors).
 
 Now, what does that idea mean?
 
