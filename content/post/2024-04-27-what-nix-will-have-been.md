@@ -26,7 +26,7 @@ So fixing your issue took an afternoon. Can you do it faster? Sure, with experie
 
 OK, that was a bit contrived. But the analogy is pretty solid, I think: Everyone I know (me, certainly!) wants to complete the yak-shaving part of any task on the computer as fast as possible, so they can get to the rewarding bit.
 
-I think it would be fair to call it an any% yak-shaving speedrun to fix an issue that is in your way of getting other things done - you completed the task with a minimum of effort, and did it as quickly as possible. There might be other issues with your machine still (maybe git isn't correctly configured to sign your commits?,) but that's irrelevant for the task you're getting to do right now.
+I think it would be fair to call it an any% yak-shaving speedrun to fix an issue that is in your way of getting other things done - you completed the task with a minimum of effort, and did it as quickly as possible. There might be other issues with your machine still (maybe git isn't correctly configured to sign your commits), but that's irrelevant for the task you're getting to do right now.
 
 So, say you can get your terminal tools' ability to properly use copy & paste on the mac working in 20 minutes, but what if you get a new machine? Will you even remember to fix that again? Will you stick with the defaults until something breaks, re-research what it took to repair the issue and then do it? Or keep the customization in that aforementioned dotfile repo and then scratch your head over why your tmux panes immediately exit? (Oh, oops, you forgot to hand-build and install the tool!)
 
