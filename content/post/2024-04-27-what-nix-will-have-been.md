@@ -28,13 +28,13 @@ OK, that was a bit contrived. But the analogy is pretty solid, I think: Everyone
 
 I think it would be fair to call it an any% yak-shaving speedrun to fix an issue that is in your way of getting other things done - you completed the task with a minimum of effort, and did it as quickly as possible. There might be other issues with your machine still (maybe git isn't correctly configured to sign your commits?,) but that's irrelevant for the task you're getting to do right now.
 
-So, say you can get your terminal tools' ability to properly use copy & paste on the mac working in 20 minutes, but what if you get a new machine? Will you even remember to fix that again? Will you stick with the defaults until something is break, re-research what it took to repair the issue and then do it? Or keep the customization in that aforementioned dotfile repo and then scratch your head over why your tmux panes immediately exit? (Oh, oops, you forgot to hand-build and install the tool!)
+So, say you can get your terminal tools' ability to properly use copy & paste on the mac working in 20 minutes, but what if you get a new machine? Will you even remember to fix that again? Will you stick with the defaults until something breaks, re-research what it took to repair the issue and then do it? Or keep the customization in that aforementioned dotfile repo and then scratch your head over why your tmux panes immediately exit? (Oh, oops, you forgot to hand-build and install the tool!)
 
 ## 100% yak-shaving
 
 The thing that I got out of my nix configuration is simply that all the issues I had getting computer stuff done in the past, I solved by writing text files. Those live in git. Then, when I get a new computer I just tell it to apply the configuration in those text files... and after it's done downloading an unholy amount of data, it sits there and works - all the things I ever needed to fix, fixed. All the software I need, installed.
 
-And if I need to fix a thing on this machine, I can add commit that fix, and apply it on all the other machines I ever had. That's what I mean by "100% speed run": Not just the issues standing in your way to your current task are fixed, but all that ever stood in your way.
+And if I need to fix a thing on this machine, I can commit that fix, and apply it on all the other machines I ever had. That's what I mean by "100% speed run": Not just the issues standing in your way to your current task are fixed, but all that ever stood in your way.
 
 The neat side effect is that you get a historical record of all the things you learned (even if you didn't want/mean to learn them) about computers.
 
@@ -58,27 +58,28 @@ Let folks take a step back when they need to, and let people with more energy ta
 
 ## Make sure the community remains healthy for its most vulnerable members
 
-If it weren't so sad and threatening, it might be funny: The nix project had an [RFC for establishing a code of conduct](https://github.com/nixos/rfcs/pull/98). That RFC was concern-trolled and then closed, so now the project has no written code of conduct. Except there is one that gets enforced, and so every use of moderation power gets to get questioned to all hell.
+If it weren't so sad and threatening, it might be funny: The nix project had an [RFC for establishing a code of conduct](https://github.com/nixos/rfcs/pull/98). That RFC was concern-trolled and then closed, so the project has not had a written code of conduct, until the moderation team [realized they were given the power to adopt one 5 months ago](https://discourse.nixos.org/t/adopting-a-code-of-conduct/35136), meaning jerks are now feeling entitled to detailed explanations of why a code of conduct is necessary.
 
-I'm not a person who's particularly at risk in open source spaces, but you can hopefully see how unattractive it makes the job of moderator when prominent members of the community rail agains how unfair it is that moderators tell people to remove links to "unwoke" screeds from their community posts, based on a non-adopted CoC... which those members ensured failed in to get adopted the first place.
+I'm not a person who's particularly at risk in open source spaces, but you can hopefully see how unattractive it makes the job of moderator (or even the job of being a member of the space) when prominent members of the community rail against how unfair it is that moderators tell people to remove links to "unwoke" screeds[^woke] from their community posts, based on a non-adopted CoC... which those members ensured would not get adopted the first place.
 
-Just get these basics right from the start, please. Subtle threats against minority community members like that screed should be discouraged and made impossible. It should be embarrassing to do it publicly in anyone's project - but I guess that's not how the current nix community rolls.
+[^woke]: The irony of people who use their brain to work on systems, demanding that things are "too woke" is something to behold: The term "woke," as originally coined by Black Americans, refers to an alertness to how brutal this violent system of white supremacy that we live in is. Thankfully, understanding complex systems and working with other people isn't their job or anything!
 
+Just get these basics right from the start, please. Subtle threats against minority community members like that screed should be discouraged and be off-topic in a software forum. It should be embarrassing to do it publicly in anyone's project - but I guess that's not how the current nix community is meant to roll. The next one will do better.
 
 ## Have a decision-making process that is binding for leadership as well as the community
 
 Another side-effect (how un-hermetic!) of having a project leader that's also the project founder and has been for decades is that they have an easier time either accidentally steering the ship (optimistically) or meddling (pessimistically). The open letter to the nix foundation gives [a few examples](https://save-nix-together.org/#avoiding-giving-away-authority) here.
 
-Please just rotate out your leaders. Identify and [weed out](https://hackmd.io/@XAMPPRocky/r1HT-Z6_t) accidental remnants of implicit hierarchy structure. A structure will exist, so please make it be the one that you've documented.
+Please just rotate out your leaders. Identify and [weed out](https://hackmd.io/@XAMPPRocky/r1HT-Z6_t) accidental remnants of implicit hierarchy. A structure will exist, so please make it be the one that you've documented.
 
 ## Sustain the infrastructure without outsize donations & attached strings
 
 Nix-the-CI-infrastructure takes a _lot_ of compute power, storage and bandwidth. It might even pay some of the volunteers taking on roles. Recently, they had to scramble to not be hit with a [huge bill for their cache's S3 usage](https://discourse.nixos.org/t/the-nixos-foundations-call-to-action-s3-costs-require-community-support/28672)... $9k/mo, a year ago. As you can imagine, this only gets more expensive over time.
 
-So, ideally find a way to pay for all this, but do so without attracting single "whale" sponsors who then start meddling in the governance of the project. This is hard! I have no solutions outside a promise to pay or some of that, if I end up working with it. Maybe others will, too.
+So, ideally find a way to pay for all this, but do so without attracting single "whale" sponsors who then start meddling in the governance of the project. This is hard! I have no solutions outside a promise to pay for some of that, if I end up working with it. I hope others will, too. And maybe, by that time we'll have figured out how to properly get large for-profit entities pay for the open-source software that they benefit from, without putting all that burden on individuals.
 
 # Conclusion
 
-Well, this sucks: If the rot of the nix project continues as it does, I'll get to undo a bunch of work on my public repositories to remove this project that seems intent on hurting several of my friends.
+Well, this sucks: If the rot of the nix project continues as it does, I'll get to undo a whole bunch of work on my public repositories to remove dependencies on a project that seems intent on hurting several of my friends.
 
 But, on a hopeful note: The technical bits are just a computer yak-shaving problem, one with a technical solution that's written down in an accessible historical record. Maybe it can even be improved upon, much like the project's governance and community definitely can.
