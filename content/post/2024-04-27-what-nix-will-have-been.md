@@ -40,7 +40,7 @@ The neat side effect is that you get a historical record of all the things you l
 
 ## Tool-assisted speed runs / TASbots
 
-Tool-assisted speed run bots are little devices that record your keypad inputs and play them back with perfect timing, so that your runs become reproducible. Bots can often pull off tricks that real humans can't ([or take *impressively long* to perfect](https://www.youtube.com/watch?v=GuJ5UuknsHU)). They are super fun to watch, but for games it's much more impressive to see a human beat them while looking like they are a machine.
+Tool-assisted speed run bots are little devices acting as game console peripherals that record your keypad inputs and play them back with perfect timing, so that your runs become reproducible. Bots can often pull off tricks that real humans can't ([or take *impressively long* to perfect](https://www.youtube.com/watch?v=GuJ5UuknsHU)). They are super fun to watch, but for games it's much more impressive to see a human beat them while looking like they are a machine.
 
 That's pretty much not our goal when yak-shaving: [Laziness is the first of the three great virtues of a programmer](https://thethreevirtues.com/), after all. When we make dot file repos, or craft ansible system configuration, we tell a bot how we want our problems solved.
 
