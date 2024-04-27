@@ -2,7 +2,7 @@
 title: "What Nix Will Have Been"
 date: 2024-04-27T09:03:01-04:00
 ---
-With the Nix project currently [undergoing](https://save-nix-together.org/) [major](https://github.com/NixOS/nixpkgs/issues?q=label:%228.has:+maintainer+removal%22) [turmoil](https://xeiaso.net/blog/2024/much-ado-about-nothing/), it's good to remind ourselves that everything is transient: Every project, no matter how technically sophisticated, will eventually fade away, but its best core ideas can - and should - be identified, documented, and ideally, live on in other projects. So, if nix went away tomorrow, what made it "it"?
+With the Nix project currently [undergoing](https://save-nix-together.org/) [major](https://github.com/NixOS/nixpkgs/issues?q=label:%228.has:+maintainer+removal%22) [turmoil](https://xeiaso.net/blog/2024/much-ado-about-nothing/), it's good to remind ourselves that everything is transient: Every project, no matter how technically sophisticated, will eventually fade away, but its best core ideas can - and should - be identified, documented, and get to live on in other projects. So, if nix went away tomorrow, what made it "it"?
 
 <!--more-->
 
