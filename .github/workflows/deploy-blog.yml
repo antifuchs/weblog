@@ -1,0 +1,9 @@
+name: "Minimal deploy task"
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok
