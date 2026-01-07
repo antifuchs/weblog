@@ -54,6 +54,7 @@
           ];
           packages = with pkgs; [go git];
         };
+        apps.hugo.program = lib.getExe pkgs.hugo;
 
         checks.versions = inputs.nix-flake-tests.lib.check {
           inherit pkgs;

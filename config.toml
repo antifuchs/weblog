@@ -119,3 +119,8 @@ home = [ "HTML", "RSS", "JSON"]
 [caches.getjson]
 dir = ":cacheDir/:project"
 maxAge = "10s"
+
+[deployment]
+  [[deployment.targets]]
+    name = 'production'
+    url = 's3://boinkor.net?region=us-east-1'
