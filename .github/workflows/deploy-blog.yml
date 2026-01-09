@@ -33,3 +33,20 @@ jobs:
 
       - name: Deploy to S3
         run: nix run .#hugo -- deploy --maxDeletes -1 --invalidateCDN --target production --logLevel info
+      - name: Add website redirects
+        env:
+          AWS_PAGER: ""
+          AWS_DEFAULT_OUTPUT: text
+        # https://blog.cavelab.dev/2021/10/hugo-aliases-to-s3-redirects/:
+        run: |
+          while read p; do
+              stringarray=($p)
+              alias=${stringarray[0]}
+              target=${stringarray[1]}
+
+              echo "${alias} --> ${target}"
+              aws s3api put-object \
+           	    --bucket boinkor.net \
+           	    --key ${alias:1}index.html \
+           	    --website-redirect-location "${target}"
+          done <static/_redirects
