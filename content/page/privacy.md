@@ -25,10 +25,9 @@ If you discover that your browser should have set any tracker bugs from a visit 
 
 ## More information about how you're accessing this site
 
-This is a statically generated website and I host it on [Netlify](https://app.netlify.com/); I believe their CDN is further served by [CloudFlare](https://www.cloudflare.com/). I do not get access logs for this site, but *they* do. Here's the GDPR statements for those folks - please review them if you're interested in how your HTTP requests get handled:
+This is a statically generated website and I host it on [AWS](https://aws.amazon.com/), using S3 with cloudfront distribution. I do not get access logs for this site, but *they* do. Here's the GDPR statements for those folks - please review them if you're interested in how your HTTP requests get handled:
 
-* [CloudFlare](https://www.cloudflare.com/gdpr/introduction/)
-* [Netlify](https://www.netlify.com/gdpr/)
+* [AWS - GDPR center](https://aws.amazon.com/compliance/gdpr-center/)
 
 ## Hope that's all, folks!
 

@@ -1,9 +1,52 @@
-name: "Minimal deploy task"
+name: "Deploy to boinkor.net"
 on:
+  push:
+    branches:
+      - master
+      - main
   workflow_dispatch:
 
 jobs:
-  tests:
+  deploy:
+    permissions:
+      id-token: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
-      - run: echo ok
+      - uses: actions/checkout@v2
+        with:
+          # Nix Flakes doesn't work on shallow clones
+          fetch-depth: 0
+      - uses: cachix/install-nix-action@v20
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::101662422416:role/deploy_boinkor_net-20260107215044866800000001
+          role-duration-seconds: 900
+          aws-region: us-east-1
+      - name: Build
+        run: nix run .#hugo -- --gc -DEF --baseURL="https://${{ env.URL }}"
+        env:
+          URL: boinkor.net
+
+      - name: Deploy to S3
+        run: nix run .#hugo -- deploy --maxDeletes -1 --invalidateCDN --target production --logLevel info
+      - name: Add website redirects
+        env:
+          AWS_PAGER: ""
+          AWS_DEFAULT_OUTPUT: text
+        # https://blog.cavelab.dev/2021/10/hugo-aliases-to-s3-redirects/:
+        run: |
+          while read p; do
+              stringarray=($p)
+              alias=${stringarray[0]}
+              target=${stringarray[1]}
+
+              echo "${alias} --> ${target}"
+              aws s3api put-object \
+           	    --bucket boinkor.net \
+           	    --key ${alias:1}index.html \
+           	    --website-redirect-location "${target}"
+          done <static/_redirects
